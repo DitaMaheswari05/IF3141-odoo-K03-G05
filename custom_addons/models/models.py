@@ -1,65 +1,134 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
 
+class Pengguna(models.Model):
+    _name = 'pos.pengguna'
+    _description = 'Entitas Pengguna (Stakeholder)'
+    _rec_name = 'nama_stakeholder'
+
+    id_pengguna = fields.Char(string="ID Pengguna", required=True, copy=False)
+    nama_stakeholder = fields.Char(string="Nama Stakeholder", required=True)
+    peran = fields.Selection([
+        ('ho', 'Head of Operations'),
+        ('finance', 'Finance'),
+        ('marketing', 'Marketing'),
+        ('head_bar', 'Head Bar'),
+        ('head_kitchen', 'Head Kitchen'),
+        ('developer', 'Developer'),
+        ('ext', 'External')
+    ], string="Peran", required=True)
+
+
 class Produk(models.Model):
     _name = 'pos.produk'
     _description = 'Entitas Produk'
+    _rec_name = 'nama_produk'
 
-    name = fields.Char(string="Nama Produk", required=True)
-    harga = fields.Float(string="Harga Satuan", required=True)
-    promo_ids = fields.Many2many('pos.promo', 'pos_promo_produk_rel', 'produk_id', 'promo_id', string="Promo Dipetakan")
+    id_produk = fields.Char(string="ID Produk", required=True, copy=False)
+    nama_produk = fields.Char(string="Nama Produk", required=True)
+    kategori = fields.Char(string="Kategori")
+    harga_dasar = fields.Integer(string="Harga Dasar", required=True)
+
+    # Relasi D-08 (Promo Produk) - Dipetakan di
+    promo_ids = fields.Many2many(
+        comodel_name='pos.promo', 
+        relation='promo_produk', 
+        column1='id_produk', 
+        column2='id_promo', 
+        string="Promo Dipetakan"
+    )
 
 class Promo(models.Model):
     _name = 'pos.promo'
     _description = 'Entitas Promo'
+    _rec_name = 'nama_promo'
 
-    name = fields.Char(string="Nama Promo", required=True)
-    persentase_diskon = fields.Float(string="Diskon (%)")
-    produk_ids = fields.Many2many('pos.produk', 'pos_promo_produk_rel', 'promo_id', 'produk_id', string="Produk Terkait")
+    id_promo = fields.Char(string="ID Promo", required=True, copy=False)
+    nama_promo = fields.Char(string="Nama Promo", required=True)
+    periode_mulai = fields.Date(string="Periode Mulai")
+    periode_selesai = fields.Date(string="Periode Selesai")
+
+    # Relasi D-08 (Promo Produk) - Dipetakan di
+    produk_ids = fields.Many2many(
+        comodel_name='pos.produk', 
+        relation='promo_produk', 
+        column1='id_promo', 
+        column2='id_produk', 
+        string="Produk Terkait"
+    )
 
 class TransaksiPOS(models.Model):
     _name = 'pos.transaksi'
     _description = 'Entitas Transaksi POS'
+    _rec_name = 'id_transaksi'
 
-    name = fields.Char(string="ID Transaksi", required=True, copy=False, readonly=True, default='Baru')
-    tanggal = fields.Datetime(string="Tanggal Transaksi", default=fields.Datetime.now, required=True)
-    # Menggunakan tabel res.users bawaan Odoo untuk entitas Pengguna
-    pengguna_id = fields.Many2one('res.users', string="Kasir / Pengguna", default=lambda self: self.env.user)
-    detail_ids = fields.One2many('pos.detail_transaksi', 'transaksi_id', string="Detail Transaksi")
-    total_transaksi = fields.Float(string="Total Transaksi", compute='_compute_total', store=True)
+    id_transaksi = fields.Char(string="ID Transaksi", required=True, copy=False)
+    waktu_transaksi = fields.Datetime(string="Waktu Transaksi", default=fields.Datetime.now, required=True)
+    total_transaksi = fields.Integer(string="Total Transaksi", compute='_compute_total', store=True)
 
-    @api.depends('detail_ids.subtotal')
+    # Relasi "Terdiri dari" ke Detail Transaksi
+    detail_ids = fields.One2many('pos.detail_transaksi', 'id_transaksi', string="Detail Transaksi")
+
+    @api.depends('detail_ids.harga_satuan', 'detail_ids.jumlah_penjualan')
     def _compute_total(self):
         for record in self:
-            record.total_transaksi = sum(detail.subtotal for detail in record.detail_ids)
-
-class DetailTransaksi(models.Model):
-    _name = 'pos.detail_transaksi'
-    _description = 'Entitas Detail Transaksi'
-
-    transaksi_id = fields.Many2one('pos.transaksi', string="Transaksi", ondelete='cascade')
-    produk_id = fields.Many2one('pos.produk', string="Produk", required=True)
-    harga_satuan = fields.Float(string="Harga Satuan", related='produk_id.harga', readonly=True)
-    jumlah_penjualan = fields.Integer(string="Jumlah Penjualan", default=1, required=True)
-    subtotal = fields.Float(string="Subtotal", compute='_compute_subtotal', store=True)
-
-    @api.depends('harga_satuan', 'jumlah_penjualan')
-    def _compute_subtotal(self):
-        for record in self:
-            record.subtotal = record.harga_satuan * record.jumlah_penjualan
-
-class LaporanOperasional(models.Model):
-    _name = 'pos.laporan'
-    _description = 'Entitas Laporan Operasional'
-
-    tanggal_laporan = fields.Date(string="Tanggal Laporan", required=True)
-    pembuat_id = fields.Many2one('res.users', string="Dibuat Oleh", default=lambda self: self.env.user)
-    total_pendapatan = fields.Float(string="Total Pendapatan Terkalkulasi")
+            record.total_transaksi = sum((detail.harga_satuan * detail.jumlah_penjualan) for detail in record.detail_ids)
 
 class RekapKeuangan(models.Model):
     _name = 'pos.rekap'
     _description = 'Entitas Rekap Keuangan'
+    _rec_name = 'id_rekap'
 
-    periode = fields.Char(string="Periode Rekap", required=True)
-    pembuat_id = fields.Many2one('res.users', string="Dibuat Oleh", default=lambda self: self.env.user)
-    total_keuangan = fields.Float(string="Total Keuangan")
+    id_rekap = fields.Char(string="ID Rekap", required=True, copy=False)
+    tanggal = fields.Date(string="Tanggal Rekap", required=True)
+    total_pemasukan = fields.Integer(string="Total Pemasukan")
+    
+    # FK Pembuat/Pencatat
+    id_pengguna = fields.Many2one('pos.pengguna', string="Pencatat Rekap (Finance)")
+
+    # Relasi Inverse "Membuat" (Dari Laporan Operasional)
+    laporan_ids = fields.One2many('pos.laporan', 'id_rekap', string="Daftar Laporan Operasional")
+
+class LaporanOperasional(models.Model):
+    _name = 'pos.laporan'
+    _description = 'Entitas Laporan Operasional'
+    _rec_name = 'id_laporan'
+
+    id_laporan = fields.Char(string="ID Laporan", required=True, copy=False)
+    tanggal = fields.Date(string="Tanggal Laporan", required=True)
+    isi_laporan = fields.Text(string="Isi Laporan")
+    kendala = fields.Text(string="Kendala Operasional")
+    
+    # FK Pembuat Laporan
+    id_pengguna = fields.Many2one('pos.pengguna', string="Pembuat Laporan")
+
+    # Relasi "Membuat" ke Rekap Keuangan
+    id_rekap = fields.Many2one('pos.rekap', string="Direkap Pada (Rekap Keuangan)")
+
+    # Relasi Inverse "Tercatat di" (Dari Detail Transaksi)
+    detail_transaksi_ids = fields.One2many('pos.detail_transaksi', 'laporan_id', string="Detail Transaksi Terkait")
+
+class DetailTransaksi(models.Model):
+    _name = 'pos.detail_transaksi'
+    _description = 'Entitas Detail Transaksi'
+    _rec_name = 'id_detail'
+
+    id_detail = fields.Char(string="ID Detail", required=True, copy=False)
+    
+    # FK Relasi "Terdiri dari"
+    id_transaksi = fields.Many2one('pos.transaksi', string="Transaksi POS", required=True, ondelete='cascade')
+    
+    # FK Relasi "Mencakup"
+    id_produk = fields.Many2one('pos.produk', string="Produk", required=True)
+    
+    # FK Relasi "Tercatat di"
+    laporan_id = fields.Many2one('pos.laporan', string="Tercatat di Laporan")
+
+    jumlah_penjualan = fields.Integer(string="Jumlah Penjualan", default=1, required=True)
+    harga_satuan = fields.Integer(string="Harga Satuan", required=True)
+
+    @api.onchange('id_produk')
+    def _onchange_produk(self):
+        # Otomatis mengisi harga satuan berdasarkan harga dasar produk yang dipilih
+        if self.id_produk:
+            self.harga_satuan = self.id_produk.harga_dasar
