@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Ensure model registry entries exist with known external ids -->
+    <record id="model_pos_pengguna" model="ir.model">
+        <field name="model">pos.pengguna</field>
+        <field name="name">pos.pengguna</field>
+    </record>
+
+    <record id="model_pos_produk" model="ir.model">
+        <field name="model">pos.produk</field>
+        <field name="name">pos.produk</field>
+    </record>
+
+    <record id="model_pos_promo" model="ir.model">
+        <field name="model">pos.promo</field>
+        <field name="name">pos.promo</field>
+    </record>
+
+    <record id="model_pos_transaksi" model="ir.model">
+        <field name="model">pos.transaksi</field>
+        <field name="name">pos.transaksi</field>
+    </record>
+
+    <record id="model_pos_detail_transaksi" model="ir.model">
+        <field name="model">pos.detail_transaksi</field>
+        <field name="name">pos.detail_transaksi</field>
+    </record>
+
+    <record id="model_pos_laporan" model="ir.model">
+        <field name="model">pos.laporan</field>
+        <field name="name">pos.laporan</field>
+    </record>
+
+    <record id="model_pos_rekap" model="ir.model">
+        <field name="model">pos.rekap</field>
+        <field name="name">pos.rekap</field>
+    </record>
+</odoo>

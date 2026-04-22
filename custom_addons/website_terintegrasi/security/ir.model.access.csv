@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pos_pengguna,pos.pengguna,model_pos_pengguna,,1,1,1,1
+access_pos_produk,pos.produk,model_pos_produk,,1,1,1,1
+access_pos_promo,pos.promo,model_pos_promo,,1,1,1,1
+access_pos_transaksi,pos.transaksi,model_pos_transaksi,,1,1,1,1
+access_pos_detail,pos.detail_transaksi,model_pos_detail_transaksi,,1,1,1,1
+access_pos_laporan,pos.laporan,model_pos_laporan,,1,1,1,1
+access_pos_rekap,pos.rekap,model_pos_rekap,,1,1,1,1
