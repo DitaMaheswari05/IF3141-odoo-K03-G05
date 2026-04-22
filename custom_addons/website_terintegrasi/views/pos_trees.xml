@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_laporan_tree" model="ir.ui.view">
+        <field name="name">pos.laporan.tree</field>
+        <field name="model">pos.laporan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id_laporan"/>
+                <field name="tanggal"/>
+                <field name="id_pengguna"/>
+                <field name="id_rekap"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_transaksi_tree" model="ir.ui.view">
+        <field name="name">pos.transaksi.tree</field>
+        <field name="model">pos.transaksi</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id_transaksi"/>
+                <field name="waktu_transaksi"/>
+                <field name="total_transaksi"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

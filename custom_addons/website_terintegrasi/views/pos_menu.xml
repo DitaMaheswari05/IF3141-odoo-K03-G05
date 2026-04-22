@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_laporan" model="ir.actions.act_window">
+        <field name="name">Laporan Operasional</field>
+        <field name="res_model">pos.laporan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_transaksi" model="ir.actions.act_window">
+        <field name="name">Data Transaksi POS</field>
+        <field name="res_model">pos.transaksi</field>
+        <field name="view_mode">tree,form,graph</field>
+    </record>
+
+    <record id="action_detail_transaksi" model="ir.actions.act_window">
+        <field name="name">Analisis Produk &amp; Promo</field>
+        <field name="res_model">pos.detail_transaksi</field>
+        <field name="view_mode">graph,pivot,tree</field>
+    </record>
+
+    <record id="action_rekap" model="ir.actions.act_window">
+        <field name="name">Rekap Keuangan</field>
+        <field name="res_model">pos.rekap</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="pos_root_menu" name="Sistem POS" sequence="1"/>
+    
+    <menuitem id="pos_laporan_menu" name="Laporan Harian" parent="pos_root_menu" action="action_laporan" sequence="10"/>
+    <menuitem id="pos_transaksi_menu" name="Transaksi POS" parent="pos_root_menu" action="action_transaksi" sequence="20"/>
+    <menuitem id="pos_analisis_menu" name="Dashboard &amp; Analisis" parent="pos_root_menu" action="action_detail_transaksi" sequence="30"/>
+    <menuitem id="pos_rekap_menu" name="Validasi &amp; Rekap" parent="pos_root_menu" action="action_rekap" sequence="40"/>
+</odoo>

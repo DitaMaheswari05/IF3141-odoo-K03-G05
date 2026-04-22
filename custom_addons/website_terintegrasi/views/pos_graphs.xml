@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_transaksi_graph" model="ir.ui.view">
+        <field name="name">pos.transaksi.graph</field>
+        <field name="model">pos.transaksi</field>
+        <field name="arch" type="xml">
+            <graph string="Performa Bisnis Harian" type="line">
+                <field name="waktu_transaksi" type="row" interval="day"/>
+                <field name="total_transaksi" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_detail_transaksi_graph" model="ir.ui.view">
+        <field name="name">pos.detail_transaksi.graph</field>
+        <field name="model">pos.detail_transaksi</field>
+        <field name="arch" type="xml">
+            <graph string="Analisis Produk" type="bar">
+                <field name="id_produk" type="row"/>
+                <field name="jumlah_penjualan" type="measure"/>
+            </graph>
+        </field>
+    </record>
+</odoo>
