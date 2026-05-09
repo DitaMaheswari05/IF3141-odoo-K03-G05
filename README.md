@@ -129,7 +129,7 @@ Lalu tekan `Ctrl+C` untuk keluar dari log.
    | Country | Indonesia |
    | Demo data | **JANGAN dicentang** |
 
-3. Klik **"Create Database"** dan tunggu hingga proses selesai (1–3 menit).
+3. Klik **"Create Database"** dan tunggu hingga proses selesai (1-3 menit).
 
 ### Langkah 4 — Aktifkan Developer Mode
 
