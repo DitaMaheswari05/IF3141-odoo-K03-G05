@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="module_category_plumeria" model="ir.module.category">
+            <field name="name">Plumeria Cafe</field>
+            <field name="description">Grup akses sistem operasional Plumeria Cafe</field>
+            <field name="sequence">100</field>
+        </record>
+
+        <!-- JB-01: Head of Operations / Owner -->
+        <record id="group_head_operations" model="res.groups">
+            <field name="name">Head of Operations</field>
+            <field name="category_id" ref="module_category_plumeria"/>
+            <field name="comment">Validasi laporan, monitoring dashboard, akses penuh semua data</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+
+        <!-- JB-02: Finance -->
+        <record id="group_finance" model="res.groups">
+            <field name="name">Finance</field>
+            <field name="category_id" ref="module_category_plumeria"/>
+            <field name="comment">Input rekap keuangan harian, terima laporan tervalidasi</field>
+        </record>
+
+        <!-- JB-03: Operational Coordinator -->
+        <record id="group_operational_coordinator" model="res.groups">
+            <field name="name">Operational Coordinator</field>
+            <field name="category_id" ref="module_category_plumeria"/>
+            <field name="comment">Validasi laporan operasional, monitoring dashboard</field>
+        </record>
+
+        <!-- JB-04: Marketing -->
+        <record id="group_marketing" model="res.groups">
+            <field name="name">Marketing</field>
+            <field name="category_id" ref="module_category_plumeria"/>
+            <field name="comment">Input dan analisis produk dan promo</field>
+        </record>
+
+        <!-- JB-11: Head Kitchen -->
+        <record id="group_head_kitchen" model="res.groups">
+            <field name="name">Head Kitchen</field>
+            <field name="category_id" ref="module_category_plumeria"/>
+            <field name="comment">Input laporan operasional harian divisi Kitchen</field>
+        </record>
+
+        <!-- JB-06: Head Bar -->
+        <record id="group_head_bar" model="res.groups">
+            <field name="name">Head Bar</field>
+            <field name="category_id" ref="module_category_plumeria"/>
+            <field name="comment">Input laporan operasional harian divisi Bar</field>
+        </record>
+    </data>
+</odoo>
