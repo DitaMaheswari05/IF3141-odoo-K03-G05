@@ -1,202 +1,181 @@
-# Plumeria Cafe & Creative Space — Sistem Informasi Operasional
-**IF3141 Sistem Informasi | Kelompok 05 Kelas K03**
+# Plumeria Cafe & Creative Space — Operational Information System
+**IF3141 Information Systems | Group 05 Class K03**
 
-> Anggota: Attara Majesta Ayub · Dita Maheswari · Jovandra Otniel P.S. · M. Abizzar Gamadrian · Anas Ghazi Al Gifari
+> Members: Attara Majesta Ayub · Dita Maheswari · Jovandra Otniel P.S. · M. Abizzar Gamadrian · Anas Ghazi Al Gifari
 
 ---
 
-## Daftar Isi
+## Table of Contents
 
-1. [Tentang Proyek](#tentang-proyek)
-2. [Prasyarat](#prasyarat)
-3. [Struktur Direktori](#struktur-direktori)
-4. [Instalasi Pertama Kali](#instalasi-pertama-kali)
-5. [Menjalankan Setelah Instalasi](#menjalankan-setelah-instalasi)
-6. [Update Modul Setelah Perubahan Kode](#update-modul-setelah-perubahan-kode)
-7. [Membuat Akun Demo per Role](#membuat-akun-demo-per-role)
-8. [Migrasi Database (Export / Import)](#migrasi-database-export--import)
+1. [About](#about)
+2. [Prerequisites](#prerequisites)
+3. [Directory Structure](#directory-structure)
+4. [First-Time Installation](#first-time-installation)
+5. [Running After Installation](#running-after-installation)
+6. [Updating the Module After Code Changes](#updating-the-module-after-code-changes)
+7. [Creating Demo Accounts per Role](#creating-demo-accounts-per-role)
+8. [Database Migration (Export / Import)](#database-migration-export--import)
 9. [Troubleshooting](#troubleshooting)
 
 ---
 
-## Tentang Proyek
+## About
 
-Modul custom Odoo 17 untuk sistem informasi operasional **Plumeria Cafe & Creative Space**, Jl. Cikuda No. 37, Jatinangor. Sistem ini mencakup:
+A custom Odoo 17 module for the operational information system of **Plumeria Cafe & Creative Space**, Jl. Cikuda No. 37, Jatinangor. The system covers:
 
-| Fitur | Functional Requirement |
+| Feature | Functional Requirement |
 |---|---|
-| Login & autentikasi berbasis peran (RBAC) | FR-06 |
-| Input laporan operasional harian + workflow validasi | FR-01, FR-05 |
-| Import & input data transaksi POS | FR-02 |
-| Dashboard performa bisnis (QWeb custom) | FR-03 |
-| Analisis produk unggulan & promo | FR-04 |
-| Rekap keuangan & rekonsiliasi harian | FR-05, FR-06 |
+| Login & role-based authentication (RBAC) | FR-06 |
+| Daily operational report input + validation workflow | FR-01, FR-05 |
+| POS transaction import & input | FR-02 |
+| Business performance dashboard (custom QWeb) | FR-03 |
+| Top product & promo analysis | FR-04 |
+| Daily financial recap & reconciliation | FR-05, FR-06 |
 
 ---
 
-## Prasyarat
+## Prerequisites
 
-Pastikan software berikut sudah terpasang sebelum memulai:
+Make sure the following software is installed before starting:
 
-| Software | Keterangan | Link |
+| Software | Notes | Link |
 |---|---|---|
-| **Docker Desktop** | Wajib — menjalankan Odoo & PostgreSQL | https://www.docker.com/products/docker-desktop/ |
-| **Git** | Untuk clone & kolaborasi repo | https://git-scm.com/ |
-| **Python 3.11** | Opsional — untuk virtual environment lokal | https://www.python.org/downloads/ |
+| **Docker Desktop** | Required — runs Odoo & PostgreSQL | https://www.docker.com/products/docker-desktop/ |
+| **Git** | For cloning & team collaboration | https://git-scm.com/ |
 
-> **Catatan:** Pastikan Docker Desktop sudah **berjalan** (ikon Docker muncul di system tray) sebelum menjalankan perintah apapun.
+> **Note:** Make sure Docker Desktop is **running** (Docker icon visible in the system tray) before executing any commands.
 
 ---
 
-## Struktur Direktori
+## Directory Structure
 
 ```
 IF3141-odoo-K03-G05/
-├── config/                  # Konfigurasi Odoo (odoo.conf)
+├── config/                  # Odoo configuration (odoo.conf)
 ├── custom_addons/
-│   └── plumeria_cafe/       # Modul custom utama
-│       ├── models/          # Model data (Python)
-│       ├── views/           # Tampilan (XML + QWeb)
-│       ├── security/        # RBAC: grup & access control
+│   └── plumeria_cafe/       # Main custom module
+│       ├── models/          # Data models (Python)
+│       ├── views/           # Views (XML + QWeb)
+│       ├── security/        # RBAC: groups & access control
 │       ├── data/            # Sequence & demo data
-│       └── controllers/     # Controller HTTP (dashboard)
-├── dump/                    # Hasil export database (.sql)
-├── scripts/                 # Script export & import database
+│       ├── controllers/     # HTTP controller (dashboard)
+│       └── static/          # Static assets (JS, CSS, lib)
+├── dump/                    # Database dump files (.sql)
+├── scripts/                 # Export & import database scripts
 │   ├── export_db.sh / .cmd
 │   └── import_db.sh / .cmd
-└── docker-compose.yml       # Orchestration Docker
+└── docker-compose.yml       # Docker orchestration
 ```
 
 ---
 
-## Instalasi Pertama Kali
+## First-Time Installation
 
-> Ikuti section ini **hanya jika belum pernah menjalankan** proyek ini sama sekali di komputer kamu.
+> Follow this section **only if you have never run this project** on your machine before.
 
-### Langkah 1 — Clone Repository
+### Step 1 — Clone the Repository
 
 ```bash
-git clone <url-repo>
+git clone <repo-url>
 cd IF3141-odoo-K03-G05
 ```
 
-### Langkah 2 — Jalankan Docker
+### Step 2 — Start Docker
 
 ```bash
 docker compose up -d
 ```
 
-Perintah ini akan mengunduh image Odoo 17 dan PostgreSQL lalu menjalankannya di background. Proses download membutuhkan waktu beberapa menit pada percobaan pertama.
+This will download the Odoo 17 and PostgreSQL images and run them in the background. The download may take a few minutes on the first run.
 
-**Cek apakah container sudah berjalan:**
+**Check that containers are running:**
 
 ```bash
 docker compose ps
 ```
 
-Output yang diharapkan — kolom `Status` menunjukkan `running`:
+Make sure the `Status` column shows `running` for both containers (web and db).
 
-```
-NAME        STATUS
-odoo-web    running
-odoo-db     running
-```
-
-**Pantau log jika ingin melihat progress startup:**
+**Monitor startup logs:**
 
 ```bash
 docker compose logs -f web
 ```
 
-Tunggu hingga muncul baris seperti:
+Wait until you see a line like:
 ```
 INFO odoo odoo.service.server: HTTP service (werkzeug) running on 0.0.0.0:8069
 ```
-Lalu tekan `Ctrl+C` untuk keluar dari log.
+Then press `Ctrl+C` to exit the log.
 
-### Langkah 3 — Buat Database Odoo
+### Step 3 — Create the Odoo Database
 
-1. Buka browser dan akses: **http://localhost:8069**
-2. Kamu akan melihat halaman **"Create Database"**. Isi sebagai berikut:
+1. Open your browser and go to: **http://localhost:8069**
+2. You will see a **"Create Database"** page. Fill in as follows:
 
-   | Field | Nilai |
+   | Field | Value |
    |---|---|
-   | Master Password | *(kosongkan)* |
+   | Master Password | `admin` |
    | Database Name | `plumeria_db` |
-   | Email | `admin@plumeria.com` |
+   | Email | `admin` |
    | Password | `admin` |
-   | Language | English atau Bahasa Indonesia |
+   | Language | English |
    | Country | Indonesia |
-   | Demo data | **JANGAN dicentang** |
+   | Demo data | **DO NOT check** |
 
-3. Klik **"Create Database"** dan tunggu hingga proses selesai (1-3 menit).
+3. Click **"Create Database"** and wait for the process to finish (1-3 minutes).
 
-### Langkah 4 — Aktifkan Developer Mode
+### Step 4 — Activate Developer Mode
 
-1. Login dengan email `admin@plumeria.com` dan password `admin`
-2. Buka **Settings** (menu kiri)
-3. Scroll ke bawah → klik **"Activate the developer mode"**
-4. Halaman akan reload secara otomatis
+1. Log in with **Email:** `admin` and **Password:** `admin`
+2. Open **Settings**
+3. Scroll down, click **"Activate the developer mode"**
+4. The page will reload automatically
 
-### Langkah 5 — Update Daftar Aplikasi
+### Step 5 — Update the App List
 
-1. Klik menu **Apps** di navbar atas
-2. Klik **"Update Apps List"** (ada di bagian atas halaman)
-3. Klik **"Update"** pada dialog konfirmasi
+1. Click the **Apps** menu in the top navbar
+2. Click **"Update Apps List"**
+3. Click **"Update"** on the confirmation dialog
 
-### Langkah 6 — Install Modul Plumeria Cafe
+### Step 6 — Install the Plumeria Cafe Module
 
-1. Di halaman **Apps**, hapus filter "Apps" yang aktif
-2. Cari: `Plumeria`
-3. Temukan **"Plumeria Cafe & Creative Space"**, klik **"Install"**
-4. Tunggu proses instalasi selesai (~1 menit)
+1. On the **Apps** page, remove the active "Apps" filter
+2. Search: `Plumeria`
+3. Find **"Plumeria Cafe & Creative Space"**, click **"Install"**
+4. Wait for the installation to finish (~1 minute)
 
-Setelah install, menu **"Plumeria Cafe"** akan muncul di navbar. Demo data (produk, transaksi 5 hari, laporan) sudah otomatis ter-load.
-
-### Langkah 7 (Opsional) — Setup Virtual Environment Lokal
-
-Hanya diperlukan jika IDE kamu perlu mengenali package Odoo untuk autocomplete:
-
-```bash
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-source .venv/bin/activate
-
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+After installation, the **"Plumeria Cafe"** menu will appear in the navbar. Demo data (12 products, 34 transactions over 5 days, 10 reports) will be loaded automatically.
 
 ---
 
-## Menjalankan Setelah Instalasi
+## Running After Installation
 
-> Gunakan section ini untuk **penggunaan sehari-hari** setelah instalasi pertama selesai.
+> Use this section for **day-to-day usage** after the first-time installation is complete.
 
-### Menjalankan Odoo
+### Start Odoo
 
 ```bash
 docker compose up -d
 ```
 
-Lalu buka **http://localhost:8069** dan login.
+Then open **http://localhost:8069** and log in with `admin` / `admin`.
 
-### Menghentikan Odoo
+### Stop Odoo
 
 ```bash
 docker compose down
 ```
 
-> Selalu jalankan perintah ini sebelum mematikan komputer agar database tidak corrupt.
+> Always run this before shutting down your computer to prevent database corruption.
 
-### Melihat Log (jika ada error)
+### View Logs (if there are errors)
 
 ```bash
 docker compose logs -f web
 ```
 
-### Restart Odoo (jika hang atau perlu refresh)
+### Restart Odoo (if it hangs or needs a refresh)
 
 ```bash
 docker compose restart web
@@ -204,19 +183,19 @@ docker compose restart web
 
 ---
 
-## Update Modul Setelah Perubahan Kode
+## Updating the Module After Code Changes
 
-Setiap kali ada perubahan pada file Python (models) atau XML (views, security), modul perlu di-upgrade agar perubahan terapply ke database.
+Every time there is a change to Python or XML files, the module must be upgraded for the changes to apply to the database.
 
-### Cara 1 — Via Odoo UI (Direkomendasikan)
+### Via Odoo UI (Recommended)
 
-1. Pastikan Docker sudah berjalan
-2. Buka **http://localhost:8069** → login sebagai admin
-3. Buka menu **Apps**
-4. Hapus filter "Apps", cari `Plumeria`
-5. Klik tombol **"Upgrade"** (bukan Install)
+1. Make sure Docker is running
+2. Open **http://localhost:8069** and log in as admin
+3. Open the **Apps** menu
+4. Remove the "Apps" filter, search `Plumeria`
+5. Click the **"Upgrade"** button
 
-### Cara 2 — Via Command Line
+### Via Command Line
 
 ```bash
 docker compose exec web odoo -u plumeria_cafe -d plumeria_db \
@@ -224,56 +203,51 @@ docker compose exec web odoo -u plumeria_cafe -d plumeria_db \
   --stop-after-init
 ```
 
-Setelah selesai, jalankan kembali:
+Then restart:
 
 ```bash
 docker compose restart web
 ```
 
-> **Kapan perlu upgrade?**
-> - Menambah/mengubah field pada model (`.py`)
-> - Mengubah file `security/groups.xml` atau `ir.model.access.csv`
-> - Menambah/mengubah data di folder `data/`
+> **All code changes — both Python and XML — require a module upgrade** for them to be saved to the database. After upgrading, restart Odoo.
 >
-> **Tidak perlu upgrade:**
-> - Mengubah tampilan views (`.xml`) — cukup restart Odoo
-> - Mengubah controller Python — cukup restart Odoo
+> Exception: changes to `controllers/` (Python controller files) only require a restart, no upgrade needed.
 
 ---
 
-## Membuat Akun Demo per Role
+## Creating Demo Accounts per Role
 
-Setelah modul terinstall, buat user Odoo untuk setiap role agar bisa demo RBAC. Lakukan di **Settings → Users & Companies → Users**.
+After the module is installed, create Odoo users for each role to demo RBAC. Go to **Settings -> Users & Companies -> Users**.
 
-| Nama | Email Login | Password | Grup Plumeria |
-|---|---|---|---|
-| Irad (Op. Coordinator) | `opcoord@plumeria.com` | `plumeria123` | Operational Coordinator |
-| Finance Staff | `finance@plumeria.com` | `plumeria123` | Finance |
-| Head Kitchen | `hkitchen@plumeria.com` | `plumeria123` | Head Kitchen |
-| Head Bar | `hbar@plumeria.com` | `plumeria123` | Head Bar |
-| Marketing Staff | `marketing@plumeria.com` | `plumeria123` | Marketing |
+| Login | Password | Plumeria Group |
+|---|---|---|
+| `opcoord` | `plumeria123` | Operational Coordinator |
+| `finance` | `plumeria123` | Finance |
+| `hkitchen` | `plumeria123` | Head Kitchen |
+| `hbar` | `plumeria123` | Head Bar |
+| `marketing` | `plumeria123` | Marketing |
 
-> **Catatan:** User `admin` sudah otomatis masuk grup **Head of Operations** saat modul diinstall.
+> The `admin` user already has full access to all features automatically.
 
-**Cara assign grup:**
-1. Buka user yang baru dibuat
-2. Scroll ke bagian **"Plumeria Cafe"**
-3. Pilih role yang sesuai dari dropdown
-4. Klik **"Save"**
+**How to assign a group:**
+1. Open the newly created user
+2. Scroll to the **"Plumeria Cafe"** section
+3. Select the appropriate role
+4. Click **"Save"**
 
 ---
 
-## Migrasi Database (Export / Import)
+## Database Migration (Export / Import)
 
-Database Odoo bersifat lokal. Gunakan script ini untuk berbagi state database antar anggota tim.
+The Odoo database is local. Use these scripts to share database state between team members.
 
-> **WAJIB:** Matikan Odoo dulu sebelum export/import.
+> **REQUIRED:** Stop Odoo before exporting or importing.
 
 ```bash
 docker compose down
 ```
 
-### Export Database (sebelum push ke repo)
+### Export Database (before pushing to repo)
 
 - **Windows:**
   ```bat
@@ -284,9 +258,9 @@ docker compose down
   ./scripts/export_db.sh
   ```
 
-File hasil export akan tersimpan di folder `dump/`.
+The exported file is saved in the `dump/` folder.
 
-### Import Database (setelah pull dari repo)
+### Import Database (after pulling from repo)
 
 - **Windows:**
   ```bat
@@ -297,7 +271,7 @@ File hasil export akan tersimpan di folder `dump/`.
   ./scripts/import_db.sh
   ```
 
-Setelah import selesai, jalankan kembali:
+After the import is complete, start Odoo again:
 
 ```bash
 docker compose up -d
@@ -307,48 +281,46 @@ docker compose up -d
 
 ## Troubleshooting
 
-### Odoo tidak bisa diakses di localhost:8069
+### Odoo is not accessible at localhost:8069
 
 ```bash
-# Cek apakah container berjalan
 docker compose ps
-
-# Lihat log error
 docker compose logs web --tail=50
 ```
 
-Jika container tidak berjalan, coba:
+If the container is not running:
+
 ```bash
 docker compose down
 docker compose up -d
 ```
 
-### Error "modul tidak ditemukan" saat install
+### "Module not found" error during installation
 
-Pastikan path di `docker-compose.yml` sudah benar:
+Make sure the volume in `docker-compose.yml` is correct:
+
 ```yaml
 volumes:
   - ./custom_addons:/mnt/extras-addons
 ```
-Lalu restart dan update apps list ulang.
 
-### Perubahan kode tidak terapply
+Then restart and update the app list again.
 
-Coba sequence berikut:
-```bash
-docker compose restart web
-```
-Jika masih belum, lakukan **Upgrade** modul via Odoo UI.
+### Code changes are not applied
 
-### Database corrupt / error setelah force-shutdown
+Run a module upgrade via Odoo UI or command line, then restart.
 
-Restore dari backup terakhir di folder `dump/` menggunakan script import.
+### Database corrupt / error after force-shutdown
 
-### Port 8069 sudah dipakai proses lain
+Restore from the latest backup in the `dump/` folder using the import script.
 
-Edit `docker-compose.yml`, ubah mapping port:
+### Port 8069 is already in use by another process
+
+Edit `docker-compose.yml` and change the port mapping:
+
 ```yaml
 ports:
-  - "8070:8069"   # ganti 8070 dengan port lain
+  - "8070:8069"
 ```
-Lalu akses via **http://localhost:8070**.
+
+Then access via **http://localhost:8070**.
