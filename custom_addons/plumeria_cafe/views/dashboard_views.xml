@@ -1,249 +1,582 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <!-- QWeb template untuk Dashboard Performa Bisnis (FR-03) -->
+    <!-- QWeb template: Dashboard Performa Bisnis (FR-03) -->
     <template id="dashboard_template" name="Plumeria Dashboard">
         <html>
             <head>
                 <meta charset="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <title>Dashboard Performa - Plumeria Cafe</title>
-                <link rel="stylesheet"
-                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-                <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"/>
+                <title>Dashboard — Plumeria Cafe</title>
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"/>
+                <script src="/plumeria_cafe/static/src/lib/chart.min.js"></script>
                 <style>
+                    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
                     :root {
-                        --plumeria-green: #2E7D32;
-                        --plumeria-light: #4CAF50;
-                        --plumeria-bg: #F1F8E9;
+                        /* Blue palette */
+                        --green-900: #0D2B5E;
+                        --green-800: #1E4FA0;
+                        --green-600: #3B82F6;
+                        --green-100: #EFF6FF;
+                        --blue-700:  #0E7490;
+                        --blue-100:  #ECFEFF;
+                        --orange-700: #3730A3;
+                        --orange-100: #EEF2FF;
+                        --gray-50:  #F8FAFF;
+                        --gray-100: #F0F4FF;
+                        --gray-200: #DBEAFE;
+                        --gray-500: #6B7280;
+                        --gray-700: #1E293B;
+                        --shadow-sm: 0 1px 4px rgba(30,79,160,0.08);
+                        --shadow-md: 0 4px 16px rgba(30,79,160,0.12);
+                        --shadow-lg: 0 8px 32px rgba(30,79,160,0.16);
+                        --radius: 14px;
+                        --radius-sm: 8px;
                     }
-                    body { background-color: #f4f6f9; font-family: 'Segoe UI', sans-serif; }
-                    .navbar-brand img { height: 36px; }
-                    .plumeria-navbar {
-                        background: var(--plumeria-green);
-                        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+                    html, body {
+                        height: 100%;
+                        background: var(--gray-100);
+                        font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+                        color: var(--gray-700);
+                        font-size: 14px;
+                        line-height: 1.5;
                     }
+
+                    /* ── TOP HEADER ─────────────────────────────── */
+                    .dash-header {
+                        background: linear-gradient(135deg, #0D2B5E 0%, #1E4FA0 55%, #2563EB 100%);
+                        padding: 16px 28px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        box-shadow: 0 2px 12px rgba(13,43,94,0.4);
+                        position: sticky;
+                        top: 0;
+                        z-index: 100;
+                    }
+
+                    .dash-header .brand {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        color: #FFFFFF;
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        letter-spacing: 0.2px;
+                    }
+
+                    .dash-header .brand .dot {
+                        width: 10px; height: 10px;
+                        background: #93C5FD;
+                        border-radius: 50%;
+                        display: inline-block;
+                    }
+
+                    .dash-header .subtitle {
+                        color: rgba(255,255,255,0.65);
+                        font-size: 0.78rem;
+                        font-weight: 400;
+                        margin-top: 1px;
+                    }
+
+                    /* ── FILTER BAR ─────────────────────────────── */
+                    .filter-bar {
+                        background: white;
+                        border-bottom: 1px solid var(--gray-200);
+                        padding: 10px 28px;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    }
+
+                    .filter-bar .label {
+                        font-size: 0.75rem;
+                        color: var(--gray-500);
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        margin-right: 4px;
+                    }
+
+                    .filter-btn {
+                        padding: 5px 16px;
+                        border-radius: 20px;
+                        border: 1.5px solid var(--gray-200);
+                        background: white;
+                        color: var(--gray-500);
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        cursor: pointer;
+                        text-decoration: none;
+                        transition: all 0.18s;
+                        font-family: inherit;
+                    }
+
+                    .filter-btn:hover {
+                        border-color: #2563EB;
+                        color: #2563EB;
+                    }
+
+                    .filter-btn.active {
+                        background: linear-gradient(135deg, #1E4FA0, #2563EB);
+                        border-color: #2563EB;
+                        color: white;
+                        box-shadow: 0 2px 8px rgba(37,99,235,0.35);
+                    }
+
+                    .filter-bar .date-info {
+                        margin-left: auto;
+                        font-size: 0.75rem;
+                        color: var(--gray-500);
+                    }
+
+                    .filter-bar .date-info strong {
+                        color: var(--gray-700);
+                    }
+
+                    /* ── MAIN CONTENT ───────────────────────────── */
+                    .dash-body {
+                        padding: 24px 28px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+
+                    /* ── KPI CARDS ──────────────────────────────── */
+                    .kpi-row {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 16px;
+                    }
+
                     .kpi-card {
-                        border-radius: 12px;
-                        padding: 1.5rem;
-                        background: white;
-                        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-                        border-left: 5px solid var(--plumeria-green);
-                        transition: transform 0.2s;
+                        border-radius: var(--radius);
+                        padding: 22px 24px;
+                        position: relative;
+                        overflow: hidden;
+                        transition: box-shadow 0.2s, transform 0.2s;
+                        color: white;
+                        border: none;
                     }
-                    .kpi-card:hover { transform: translateY(-2px); }
-                    .kpi-card .kpi-label { font-size: 0.82rem; color: #777; text-transform: uppercase; letter-spacing: 0.5px; }
-                    .kpi-card .kpi-value { font-size: 1.8rem; font-weight: 700; color: var(--plumeria-green); }
-                    .kpi-card.bar-accent { border-left-color: #1565C0; }
-                    .kpi-card.bar-accent .kpi-value { color: #1565C0; }
-                    .kpi-card.avg-accent { border-left-color: #E65100; }
-                    .kpi-card.avg-accent .kpi-value { color: #E65100; }
-                    .section-title { font-size: 1rem; font-weight: 600; color: #444; margin-bottom: 1rem; }
-                    .chart-card {
-                        background: white;
-                        border-radius: 12px;
-                        padding: 1.5rem;
-                        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+                    .kpi-card:hover {
+                        box-shadow: var(--shadow-lg);
+                        transform: translateY(-2px);
                     }
-                    .filter-btn { border-radius: 20px; font-size: 0.85rem; }
-                    .filter-btn.active { background: var(--plumeria-green); color: white; border-color: var(--plumeria-green); }
-                    .badge-state-draft { background: #9E9E9E; color: white; }
-                    .badge-state-submitted { background: #FB8C00; color: white; }
-                    .badge-state-approved { background: #388E3C; color: white; }
-                    .badge-state-revised_draft { background: #E53935; color: white; }
-                    .badge-state-archived { background: #78909C; color: white; }
-                    .table-sm td, .table-sm th { padding: 0.4rem 0.6rem; font-size: 0.85rem; }
-                    .back-link { color: white; text-decoration: none; font-size: 0.9rem; }
-                    .back-link:hover { color: #c8e6c9; }
+
+                    /* Gradient cards */
+                    .kpi-card.green {
+                        background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+                        box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+                    }
+                    .kpi-card.blue {
+                        background: linear-gradient(135deg, #0E4F8A 0%, #0EA5E9 100%);
+                        box-shadow: 0 4px 20px rgba(14,165,233,0.35);
+                    }
+                    .kpi-card.orange {
+                        background: linear-gradient(135deg, #312E81 0%, #6366F1 100%);
+                        box-shadow: 0 4px 20px rgba(99,102,241,0.35);
+                    }
+
+                    /* Dekoratif lingkaran di pojok kanan */
+                    .kpi-card::after {
+                        content: '';
+                        position: absolute;
+                        top: -24px; right: -24px;
+                        width: 90px; height: 90px;
+                        background: rgba(255,255,255,0.08);
+                        border-radius: 50%;
+                    }
+
+                    .kpi-card::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -32px; right: 24px;
+                        width: 60px; height: 60px;
+                        background: rgba(255,255,255,0.05);
+                        border-radius: 50%;
+                    }
+
+                    .kpi-label {
+                        font-size: 0.7rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 0.7px;
+                        color: rgba(255,255,255,0.75);
+                        margin-bottom: 8px;
+                    }
+
+                    .kpi-value {
+                        font-size: 1.75rem;
+                        font-weight: 700;
+                        line-height: 1.2;
+                        color: white;
+                    }
+
+                    .kpi-sub {
+                        font-size: 0.72rem;
+                        color: rgba(255,255,255,0.65);
+                        margin-top: 4px;
+                    }
+
+                    .kpi-icon {
+                        position: absolute;
+                        top: 18px; right: 20px;
+                        font-size: 2rem;
+                        opacity: 0.22;
+                        z-index: 1;
+                    }
+
+                    /* ── CHART ROW ──────────────────────────────── */
+                    .chart-row {
+                        display: grid;
+                        grid-template-columns: 2fr 1fr;
+                        gap: 16px;
+                    }
+
+                    .card {
+                        background: white;
+                        border-radius: var(--radius);
+                        padding: 20px 22px;
+                        box-shadow: var(--shadow-sm);
+                        border: 1px solid var(--gray-200);
+                    }
+
+                    .card-title {
+                        font-size: 0.78rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 0.6px;
+                        color: var(--gray-700);
+                        margin-bottom: 16px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                    }
+
+                    .card-title::before {
+                        content: '';
+                        display: inline-block;
+                        width: 3px;
+                        height: 14px;
+                        background: #2563EB;
+                        border-radius: 2px;
+                    }
+
+                    /* ── METODE PEMBAYARAN ──────────────────────── */
+                    .metode-list {
+                        margin-top: 12px;
+                    }
+
+                    .metode-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--gray-100);
+                        font-size: 0.82rem;
+                    }
+
+                    .metode-item:last-child { border-bottom: none; }
+
+                    .metode-dot {
+                        width: 8px; height: 8px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        margin-right: 8px;
+                    }
+
+                    .metode-count {
+                        font-weight: 600;
+                        color: var(--gray-700);
+                        font-size: 0.85rem;
+                    }
+
+                    /* ── TABLE ROW ──────────────────────────────── */
+                    .table-row {
+                        display: grid;
+                        grid-template-columns: 1fr 1.4fr;
+                        gap: 16px;
+                    }
+
+                    /* ── TABLES ─────────────────────────────────── */
+                    .dash-table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        font-size: 0.82rem;
+                    }
+
+                    .dash-table thead th {
+                        background: var(--gray-100);
+                        color: var(--gray-500);
+                        font-weight: 600;
+                        font-size: 0.7rem;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        padding: 9px 12px;
+                        text-align: left;
+                        border-bottom: 1px solid var(--gray-200);
+                    }
+
+                    .dash-table thead th:last-child { text-align: right; }
+
+                    .dash-table tbody td {
+                        padding: 9px 12px;
+                        border-bottom: 1px solid var(--gray-100);
+                        vertical-align: middle;
+                    }
+
+                    .dash-table tbody tr:last-child td { border-bottom: none; }
+
+                    .dash-table tbody tr:hover td {
+                        background: var(--gray-50);
+                    }
+
+                    .dash-table .num { text-align: right; font-weight: 600; }
+                    .dash-table .rank {
+                        width: 24px; height: 24px;
+                        background: var(--green-100);
+                        color: var(--green-800);
+                        border-radius: 50%;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.72rem;
+                        font-weight: 700;
+                    }
+
+                    .dash-table .rank.gold   { background: #FEF5D8; color: #A0750A; }
+                    .dash-table .rank.silver { background: #EEF0F2; color: #5C6E7A; }
+                    .dash-table .rank.bronze { background: #FAEEE6; color: #8B4513; }
+
+                    /* ── STATUS BADGES ──────────────────────────── */
+                    .s-badge {
+                        display: inline-block;
+                        padding: 3px 10px;
+                        border-radius: 20px;
+                        font-size: 0.68rem;
+                        font-weight: 600;
+                        letter-spacing: 0.3px;
+                        white-space: nowrap;
+                    }
+
+                    .s-draft     { background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; }
+                    .s-submitted { background: #FEF9C3; color: #854D0E; border: 1px solid #FDE047; }
+                    .s-approved  { background: #DCFCE7; color: #166534; border: 1px solid #86EFAC; }
+                    .s-revised   { background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
+                    .s-archived  { background: #F1F5F9; color: #64748B; border: 1px solid #CBD5E1; }
+
+                    .div-badge {
+                        display: inline-block;
+                        padding: 2px 9px;
+                        border-radius: 6px;
+                        font-size: 0.65rem;
+                        font-weight: 700;
+                        letter-spacing: 0.5px;
+                        text-transform: uppercase;
+                    }
+
+                    .div-bar     { background: #DBEAFE; color: #1D4ED8; }
+                    .div-kitchen { background: #E0F2FE; color: #0369A1; }
+
+                    /* ── EMPTY STATE ────────────────────────────── */
+                    .empty-state {
+                        text-align: center;
+                        padding: 28px 16px;
+                        color: var(--gray-500);
+                        font-size: 0.82rem;
+                    }
+
+                    /* ── CURRENCY FORMAT ────────────────────────── */
+                    .currency { color: #1D4ED8; font-weight: 600; }
                 </style>
             </head>
             <body>
-                <!-- Navbar -->
-                <nav class="navbar plumeria-navbar py-2 px-4">
-                    <div class="container-fluid">
-                        <span class="navbar-brand text-white fw-bold fs-5">
-                            &#127803; Plumeria Cafe &amp; Creative Space
-                        </span>
-                        <div class="d-flex align-items-center gap-3">
-                            <span class="text-white-50 small">Dashboard Performa Bisnis</span>
-                            <a href="/web" class="back-link">&#8592; Kembali ke Odoo</a>
+
+                <!-- Header -->
+                <div class="dash-header">
+                    <div>
+                        <div class="brand">
+                            <span class="dot"></span>
+                            Plumeria Cafe &amp; Creative Space
                         </div>
+                        <div class="subtitle">Dashboard Performa Bisnis</div>
                     </div>
-                </nav>
+                </div>
 
-                <div class="container-fluid py-4 px-4">
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <span class="label">Periode</span>
+                    <a t-attf-href="/plumeria/dashboard?periode=hari_ini"
+                        t-attf-class="filter-btn #{periode == 'hari_ini' and 'active' or ''}">
+                        Hari Ini
+                    </a>
+                    <a t-attf-href="/plumeria/dashboard?periode=7_hari"
+                        t-attf-class="filter-btn #{periode == '7_hari' and 'active' or ''}">
+                        7 Hari Terakhir
+                    </a>
+                    <a t-attf-href="/plumeria/dashboard?periode=bulan_ini"
+                        t-attf-class="filter-btn #{periode == 'bulan_ini' and 'active' or ''}">
+                        Bulan Ini
+                    </a>
+                    <span class="date-info">
+                        Dari <strong t-esc="date_from"/>
+                    </span>
+                </div>
 
-                    <!-- Filter Periode -->
-                    <div class="d-flex align-items-center gap-2 mb-4">
-                        <span class="text-muted small me-2">Periode:</span>
-                        <a t-attf-href="/plumeria/dashboard?periode=hari_ini"
-                            t-attf-class="btn btn-outline-success filter-btn #{periode == 'hari_ini' and 'active' or ''}">
-                            Hari Ini
-                        </a>
-                        <a t-attf-href="/plumeria/dashboard?periode=7_hari"
-                            t-attf-class="btn btn-outline-success filter-btn #{periode == '7_hari' and 'active' or ''}">
-                            7 Hari Terakhir
-                        </a>
-                        <a t-attf-href="/plumeria/dashboard?periode=bulan_ini"
-                            t-attf-class="btn btn-outline-success filter-btn #{periode == 'bulan_ini' and 'active' or ''}">
-                            Bulan Ini
-                        </a>
-                        <span class="ms-3 text-muted small">
-                            Data dari: <strong t-esc="date_from"/>
-                        </span>
-                        <a t-attf-href="/plumeria/dashboard?periode=#{periode}"
-                            class="btn btn-sm btn-outline-secondary ms-auto">
-                            &#x21BB; Refresh
-                        </a>
-                    </div>
+                <!-- Body -->
+                <div class="dash-body">
 
                     <!-- KPI Cards -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-md-4">
-                            <div class="kpi-card">
+                    <div class="kpi-row">
+                        <div class="kpi-card green">
                                 <div class="kpi-label">Total Penjualan</div>
-                                <div class="kpi-value">
-                                    Rp <t t-esc="'{:,.0f}'.format(total_penjualan)"/>
-                                </div>
-                                <div class="text-muted small mt-1">Periode terpilih</div>
-                            </div>
+                            <div class="kpi-value">Rp <t t-esc="'{:,.0f}'.format(total_penjualan)"/></div>
+                            <div class="kpi-sub">Periode terpilih</div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="kpi-card bar-accent">
+                        <div class="kpi-card blue">
                                 <div class="kpi-label">Jumlah Transaksi</div>
-                                <div class="kpi-value" t-esc="jumlah_transaksi"/>
-                                <div class="text-muted small mt-1">Total transaksi POS</div>
-                            </div>
+                            <div class="kpi-value" t-esc="jumlah_transaksi"/>
+                            <div class="kpi-sub">Total transaksi POS</div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="kpi-card avg-accent">
-                                <div class="kpi-label">Rata-rata per Transaksi</div>
-                                <div class="kpi-value">
-                                    Rp <t t-esc="'{:,.0f}'.format(rata_rata)"/>
-                                </div>
-                                <div class="text-muted small mt-1">Nilai transaksi rata-rata</div>
+                        <div class="kpi-card orange">
+                                <div class="kpi-label">Rata-rata / Transaksi</div>
+                            <div class="kpi-value">Rp <t t-esc="'{:,.0f}'.format(rata_rata)"/></div>
+                            <div class="kpi-sub">Nilai rata-rata transaksi</div>
+                        </div>
+                    </div>
+
+                    <!-- Charts -->
+                    <div class="chart-row">
+                        <div class="card">
+                            <div class="card-title">Tren Penjualan Harian per Divisi (7 Hari Terakhir)</div>
+                            <canvas id="trendChart" height="75"></canvas>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Distribusi Metode Pembayaran</div>
+                            <canvas id="metodeChart" height="75"></canvas>
+                            <div class="metode-list">
+                                <t t-foreach="metode_items" t-as="item">
+                                    <div class="metode-item">
+                                        <span>
+                                            <span class="metode-dot"
+                                                t-attf-style="background: #{item_index == 0 and '#2E7D32' or item_index == 1 and '#1565C0' or '#E65100'};"/>
+                                            <t t-esc="item[0]"/>
+                                        </span>
+                                        <span class="metode-count" t-esc="item[1]"/> transaksi
+                                    </div>
+                                </t>
+                                <t t-if="not metode_items">
+                                    <div class="empty-state">Belum ada data</div>
+                                </t>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Charts Row -->
-                    <div class="row g-3 mb-4">
-                        <!-- Bar Chart: Tren Harian per Divisi -->
-                        <div class="col-md-8">
-                            <div class="chart-card">
-                                <div class="section-title">Tren Penjualan Harian per Divisi (7 Hari Terakhir)</div>
-                                <canvas id="trendChart" height="110"/>
-                            </div>
-                        </div>
-                        <!-- Doughnut Chart: Distribusi Metode Pembayaran -->
-                        <div class="col-md-4">
-                            <div class="chart-card">
-                                <div class="section-title">Distribusi Metode Pembayaran</div>
-                                <canvas id="metodeChart" height="200"/>
-                                <div class="mt-2">
-                                    <t t-foreach="metode_items" t-as="item">
-                                        <div class="d-flex justify-content-between small py-1">
-                                            <span t-esc="item[0].upper()"/>
-                                            <strong t-esc="item[1]"/> transaksi
-                                        </div>
-                                    </t>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tables Row -->
-                    <div class="row g-3">
-                        <!-- Top 5 Produk -->
-                        <div class="col-md-5">
-                            <div class="chart-card">
-                                <div class="section-title">&#127942; Top Produk Terlaris</div>
-                                <table class="table table-sm table-hover">
-                                    <thead class="table-light">
+                    <!-- Tables -->
+                    <div class="table-row">
+                        <!-- Top Produk -->
+                        <div class="card">
+                            <div class="card-title">Top Produk Terlaris</div>
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:36px">#</th>
+                                        <th>Produk</th>
+                                        <th class="num">Qty</th>
+                                        <th class="num">Revenue</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="top_produk" t-as="item">
                                         <tr>
-                                            <th>#</th>
-                                            <th>Produk</th>
-                                            <th class="text-end">Qty</th>
-                                            <th class="text-end">Revenue</th>
+                                            <td>
+                                                <span t-attf-class="rank #{item_index == 0 and 'gold' or item_index == 1 and 'silver' or item_index == 2 and 'bronze' or ''}">
+                                                    <t t-esc="item_index + 1"/>
+                                                </span>
+                                            </td>
+                                            <td t-esc="item[0]"/>
+                                            <td class="num" t-esc="item[1]['jumlah']"/>
+                                            <td class="num currency">
+                                                Rp <t t-esc="'{:,.0f}'.format(item[1]['revenue'])"/>
+                                            </td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        <t t-foreach="top_produk" t-as="item">
-                                            <tr>
-                                                <td class="text-muted" t-esc="item_index + 1"/>
-                                                <td t-esc="item[0]"/>
-                                                <td class="text-end fw-bold" t-esc="item[1]['jumlah']"/>
-                                                <td class="text-end text-success">
-                                                    Rp <t t-esc="'{:,.0f}'.format(item[1]['revenue'])"/>
-                                                </td>
-                                            </tr>
-                                        </t>
-                                        <t t-if="not top_produk">
-                                            <tr>
-                                                <td colspan="4" class="text-center text-muted py-3">
-                                                    Belum ada data transaksi pada periode ini
-                                                </td>
-                                            </tr>
-                                        </t>
-                                    </tbody>
-                                </table>
-                            </div>
+                                    </t>
+                                    <t t-if="not top_produk">
+                                        <tr>
+                                            <td colspan="4" class="empty-state">
+                                                Belum ada data transaksi pada periode ini
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
                         </div>
 
                         <!-- Laporan Terkini -->
-                        <div class="col-md-7">
-                            <div class="chart-card">
-                                <div class="section-title">&#128203; Laporan Operasional Terkini</div>
-                                <table class="table table-sm table-hover">
-                                    <thead class="table-light">
+                        <div class="card">
+                            <div class="card-title">Laporan Operasional Terkini</div>
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>No. Ref</th>
+                                        <th>Tgl</th>
+                                        <th>Divisi</th>
+                                        <th class="num">Pendapatan</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="laporan_terkini" t-as="lap">
                                         <tr>
-                                            <th>No. Referensi</th>
-                                            <th>Tanggal</th>
-                                            <th>Divisi</th>
-                                            <th class="text-end">Pendapatan</th>
-                                            <th>Status</th>
+                                            <td style="font-size:0.72rem; color:#78909C;" t-esc="lap.nomor_referensi"/>
+                                            <td style="white-space:nowrap; font-size:0.75rem;" t-esc="str(lap.tanggal)"/>
+                                            <td>
+                                                <span t-attf-class="div-badge #{lap.divisi == 'bar' and 'div-bar' or 'div-kitchen'}">
+                                                    <t t-esc="lap.divisi.upper()"/>
+                                                </span>
+                                            </td>
+                                            <td class="num currency">
+                                                Rp <t t-esc="'{:,.0f}'.format(lap.total_pendapatan)"/>
+                                            </td>
+                                            <td>
+                                                <span t-attf-class="s-badge #{lap.state == 'approved' and 's-approved' or lap.state == 'submitted' and 's-submitted' or lap.state == 'revised_draft' and 's-revised' or lap.state == 'archived' and 's-archived' or 's-draft'}">
+                                                    <t t-esc="dict(lap._fields['state'].selection)[lap.state]"/>
+                                                </span>
+                                            </td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        <t t-foreach="laporan_terkini" t-as="lap">
-                                            <tr>
-                                                <td><small t-esc="lap.nomor_referensi"/></td>
-                                                <td><small t-esc="lap.tanggal"/></td>
-                                                <td>
-                                                    <span t-attf-class="badge #{lap.divisi == 'bar' and 'bg-info' or 'bg-warning text-dark'}">
-                                                        <t t-esc="lap.divisi.upper()"/>
-                                                    </span>
-                                                </td>
-                                                <td class="text-end">
-                                                    <small>Rp <t t-esc="'{:,.0f}'.format(lap.total_pendapatan)"/></small>
-                                                </td>
-                                                <td>
-                                                    <span t-attf-class="badge badge-state-#{lap.state}">
-                                                        <t t-esc="dict(lap._fields['state'].selection)[lap.state]"/>
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                        </t>
-                                        <t t-if="not laporan_terkini">
-                                            <tr>
-                                                <td colspan="5" class="text-center text-muted py-3">
-                                                    Belum ada laporan operasional
-                                                </td>
-                                            </tr>
-                                        </t>
-                                    </tbody>
-                                </table>
-                            </div>
+                                    </t>
+                                    <t t-if="not laporan_terkini">
+                                        <tr>
+                                            <td colspan="5" class="empty-state">
+                                                Belum ada laporan operasional
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                </div><!-- end container -->
+                </div><!-- end dash-body -->
 
-                <!-- Chart.js Scripts -->
+                <!-- Chart.js initialization -->
                 <script>
-                    // Tren Chart
-                    const trendCtx = document.getElementById('trendChart').getContext('2d');
-                    new Chart(trendCtx, {
+                    const COLORS = {
+                        green: { bg: 'rgba(37,99,235,0.70)', border: '#2563EB' },
+                        blue:  { bg: 'rgba(14,165,233,0.70)', border: '#0EA5E9' },
+                        orange:{ bg: 'rgba(99,102,241,0.75)', border: '#6366F1' },
+                    };
+
+                    Chart.defaults.font.family = "'Inter', 'Segoe UI', system-ui, sans-serif";
+                    Chart.defaults.font.size = 11;
+                    Chart.defaults.color = '#78909C';
+
+                    // Tren Harian
+                    new Chart(document.getElementById('trendChart'), {
                         type: 'bar',
                         data: {
                             labels: <t t-out="tren_labels"/>,
@@ -251,48 +584,71 @@
                                 {
                                     label: 'Bar',
                                     data: <t t-out="tren_bar"/>,
-                                    backgroundColor: 'rgba(21, 101, 192, 0.7)',
-                                    borderColor: '#1565C0',
-                                    borderWidth: 1
+                                    backgroundColor: COLORS.blue.bg,
+                                    borderColor: COLORS.blue.border,
+                                    borderWidth: 1.5,
+                                    borderRadius: 6,
+                                    borderSkipped: false,
                                 },
                                 {
                                     label: 'Kitchen',
                                     data: <t t-out="tren_kitchen"/>,
-                                    backgroundColor: 'rgba(46, 125, 50, 0.7)',
-                                    borderColor: '#2E7D32',
-                                    borderWidth: 1
+                                    backgroundColor: COLORS.green.bg,
+                                    borderColor: COLORS.green.border,
+                                    borderWidth: 1.5,
+                                    borderRadius: 6,
+                                    borderSkipped: false,
                                 }
                             ]
                         },
                         options: {
                             responsive: true,
-                            plugins: { legend: { position: 'top' } },
+                            plugins: {
+                                legend: { position: 'top', labels: { padding: 16, usePointStyle: true } },
+                                tooltip: {
+                                    callbacks: {
+                                        label: ctx => ' Rp ' + ctx.raw.toLocaleString('id-ID')
+                                    }
+                                }
+                            },
                             scales: {
+                                x: { grid: { display: false }, border: { display: false } },
                                 y: {
                                     beginAtZero: true,
+                                    grid: { color: '#F4F7F4' },
+                                    border: { display: false },
                                     ticks: {
-                                        callback: (v) => 'Rp ' + v.toLocaleString('id-ID')
+                                        callback: v => 'Rp ' + (v >= 1000000 ? (v/1000000).toFixed(1)+'jt' : v >= 1000 ? (v/1000).toFixed(0)+'rb' : v)
                                     }
                                 }
                             }
                         }
                     });
 
-                    // Metode Pembayaran Chart
-                    const metodeCtx = document.getElementById('metodeChart').getContext('2d');
-                    new Chart(metodeCtx, {
+                    // Metode Pembayaran Doughnut
+                    new Chart(document.getElementById('metodeChart'), {
                         type: 'doughnut',
                         data: {
                             labels: <t t-out="metode_labels"/>,
                             datasets: [{
                                 data: <t t-out="metode_data"/>,
-                                backgroundColor: ['#2E7D32','#1565C0','#E65100','#6A1B9A'],
-                                borderWidth: 2
+                                backgroundColor: ['#2563EB','#0EA5E9','#6366F1','#14B8A6'],
+                                borderWidth: 2,
+                                borderColor: '#ffffff',
+                                hoverOffset: 6,
                             }]
                         },
                         options: {
                             responsive: true,
-                            plugins: { legend: { position: 'bottom' } }
+                            cutout: '68%',
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: {
+                                    callbacks: {
+                                        label: ctx => ' ' + ctx.label + ': ' + ctx.raw + ' transaksi'
+                                    }
+                                }
+                            }
                         }
                     });
                 </script>
@@ -301,11 +657,10 @@
         </html>
     </template>
 
-    <!-- Action URL untuk membuka dashboard -->
-    <record id="action_dashboard" model="ir.actions.act_url">
+    <!-- Client action: embed dashboard di dalam Odoo backend -->
+    <record id="action_dashboard" model="ir.actions.client">
         <field name="name">Dashboard Performa</field>
-        <field name="url">/plumeria/dashboard</field>
-        <field name="target">self</field>
+        <field name="tag">plumeria_cafe.dashboard_action</field>
     </record>
 
 </odoo>

@@ -15,7 +15,7 @@
         name="Dashboard Performa"
         parent="menu_plumeria_root"
         action="action_dashboard"
-        sequence="10"
+        sequence="99"
         groups="plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
 
     <!-- ============================================================

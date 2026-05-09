@@ -1,0 +1,178 @@
+/* ================================================================
+   PLUMERIA CAFE — Custom Backend Styling (Odoo 17)
+   ================================================================ */
+
+/* ── MAIN NAVBAR ───────────────────────────────────────────────── */
+.o_main_navbar,
+.o_main_navbar .o_menu_sections,
+.o_main_navbar .o_menu_sections > .o_nav_entry,
+.o_web_client .o_main_navbar {
+    background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18) !important;
+}
+
+.o_main_navbar .o_menu_brand {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Menu items teks */
+.o_main_navbar .o_menu_sections .o_nav_entry > a,
+.o_main_navbar .o_menu_sections > li > a,
+.o_main_navbar .o_nav_entry,
+.o_main_navbar a {
+    color: rgba(255,255,255,0.88) !important;
+}
+
+/* Menu item hover & active */
+.o_main_navbar .o_menu_sections .o_nav_entry:hover > a,
+.o_main_navbar .o_menu_sections > li:hover > a,
+.o_main_navbar .o_menu_sections .o_nav_entry.active > a,
+.o_main_navbar .o_menu_sections > li.active > a {
+    color: #ffffff !important;
+    background: rgba(255,255,255,0.15) !important;
+    border-radius: 6px !important;
+}
+
+/* ── CONTROL PANEL ─────────────────────────────────────────────── */
+.o_control_panel {
+    background: #f7faf7 !important;
+    border-bottom: 1px solid #e8f5e9 !important;
+}
+
+.o_control_panel .breadcrumb-item > a {
+    color: #2E7D32 !important;
+    font-weight: 500 !important;
+}
+
+/* ── BUTTONS ────────────────────────────────────────────────────── */
+.btn-primary {
+    background-color: #2E7D32 !important;
+    border-color: #2E7D32 !important;
+    border-radius: 7px !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #1B5E20 !important;
+    border-color: #1B5E20 !important;
+}
+
+.btn-success {
+    background-color: #388E3C !important;
+    border-color: #388E3C !important;
+    border-radius: 7px !important;
+}
+
+.btn-secondary {
+    border-radius: 7px !important;
+}
+
+.btn-warning {
+    border-radius: 7px !important;
+}
+
+/* ── FORM VIEW ──────────────────────────────────────────────────── */
+.o_form_view .o_form_sheet {
+    border-radius: 12px !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+    border: 1px solid #e8f0e8 !important;
+}
+
+.o_form_view .o_horizontal_separator {
+    color: #2E7D32 !important;
+    border-color: #e8f5e9 !important;
+    font-weight: 600 !important;
+    font-size: 0.78rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+}
+
+/* ── STATUS BAR ─────────────────────────────────────────────────── */
+.o_statusbar_status .o_arrow_button.btn-primary {
+    background-color: #2E7D32 !important;
+    border-color: #2E7D32 !important;
+}
+
+/* ── LIST VIEW ──────────────────────────────────────────────────── */
+.o_list_view .o_list_table thead th {
+    background-color: #F1F8E9 !important;
+    color: #37474F !important;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 2px solid #C8E6C9 !important;
+}
+
+.o_list_view .o_data_row:hover td {
+    background-color: #F9FBF9 !important;
+}
+
+/* ── BADGES ─────────────────────────────────────────────────────── */
+.badge {
+    border-radius: 20px !important;
+    padding: 3px 10px !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+}
+
+.badge.text-bg-success {
+    background-color: #E8F5E9 !important;
+    color: #2E7D32 !important;
+    border: 1px solid #A5D6A7 !important;
+}
+
+.badge.text-bg-warning {
+    background-color: #FFF8E1 !important;
+    color: #E65100 !important;
+    border: 1px solid #FFE082 !important;
+}
+
+.badge.text-bg-danger {
+    background-color: #FFEBEE !important;
+    color: #C62828 !important;
+    border: 1px solid #EF9A9A !important;
+}
+
+.badge.text-bg-secondary {
+    background-color: #ECEFF1 !important;
+    color: #546E7A !important;
+    border: 1px solid #CFD8DC !important;
+}
+
+.badge.text-bg-info {
+    background-color: #E3F2FD !important;
+    color: #1565C0 !important;
+    border: 1px solid #90CAF9 !important;
+}
+
+/* ── NOTEBOOK TABS ──────────────────────────────────────────────── */
+.o_notebook .nav-tabs .nav-link.active {
+    color: #2E7D32 !important;
+    border-bottom-color: #2E7D32 !important;
+    font-weight: 600 !important;
+}
+
+/* ── ALERTS ─────────────────────────────────────────────────────── */
+.o_form_view .alert {
+    border-radius: 10px !important;
+}
+
+.o_form_view .alert-success {
+    background-color: #E8F5E9 !important;
+    border-color: #A5D6A7 !important;
+    color: #2E7D32 !important;
+}
+
+.o_form_view .alert-danger {
+    background-color: #FFEBEE !important;
+    border-color: #EF9A9A !important;
+    color: #C62828 !important;
+}
+
+.o_form_view .alert-warning {
+    background-color: #FFF8E1 !important;
+    border-color: #FFE082 !important;
+    color: #795548 !important;
+}

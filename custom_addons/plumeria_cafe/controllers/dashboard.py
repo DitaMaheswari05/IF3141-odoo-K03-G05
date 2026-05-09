@@ -2,6 +2,7 @@
 from odoo import http
 from odoo.http import request
 from datetime import date, timedelta
+from markupsafe import Markup
 import json
 
 
@@ -89,12 +90,12 @@ class PlumeriaDashboardController(http.Controller):
             'total_penjualan': total_penjualan,
             'jumlah_transaksi': jumlah_transaksi,
             'rata_rata': rata_rata,
-            # JSON untuk Chart.js
-            'tren_labels': json.dumps([d['tanggal'] for d in tren_data]),
-            'tren_bar': json.dumps([d['bar'] for d in tren_data]),
-            'tren_kitchen': json.dumps([d['kitchen'] for d in tren_data]),
-            'metode_labels': json.dumps(list(metode_counts.keys())),
-            'metode_data': json.dumps(list(metode_counts.values())),
+            # JSON untuk Chart.js — Markup() agar QWeb tidak HTML-escape tanda kutip
+            'tren_labels': Markup(json.dumps([d['tanggal'] for d in tren_data])),
+            'tren_bar': Markup(json.dumps([d['bar'] for d in tren_data])),
+            'tren_kitchen': Markup(json.dumps([d['kitchen'] for d in tren_data])),
+            'metode_labels': Markup(json.dumps(list(metode_counts.keys()))),
+            'metode_data': Markup(json.dumps(list(metode_counts.values()))),
             'metode_items': list(metode_counts.items()),
             # Data tabel
             'top_produk': top_produk,

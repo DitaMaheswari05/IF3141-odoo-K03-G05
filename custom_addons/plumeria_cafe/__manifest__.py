@@ -18,6 +18,11 @@
         'views/menus.xml',
         'data/demo_data.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'plumeria_cafe/static/src/js/dashboard_action.js',
+        ],
+    },
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
