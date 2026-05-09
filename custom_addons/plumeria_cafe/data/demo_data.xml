@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================
+             MASTER PRODUK - DIVISI BAR
+        ============================================================ -->
+        <record id="produk_kopi_susu" model="plumeria.produk">
+            <field name="nama_produk">Kopi Susu Plumeria</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">28000</field>
+            <field name="hpp">11000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_matcha_latte" model="plumeria.produk">
+            <field name="nama_produk">Matcha Latte</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">32000</field>
+            <field name="hpp">14000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_es_teh" model="plumeria.produk">
+            <field name="nama_produk">Es Teh Plumeria</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">15000</field>
+            <field name="hpp">4000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_jus_alpukat" model="plumeria.produk">
+            <field name="nama_produk">Jus Alpukat</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">25000</field>
+            <field name="hpp">10000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_lemon_tea" model="plumeria.produk">
+            <field name="nama_produk">Lemon Tea Segar</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">18000</field>
+            <field name="hpp">5000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_cokelat_panas" model="plumeria.produk">
+            <field name="nama_produk">Cokelat Panas</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">22000</field>
+            <field name="hpp">8000</field>
+            <field name="status_aktif">True</field>
+        </record>
+
+        <!-- ============================================================
+             MASTER PRODUK - DIVISI KITCHEN
+        ============================================================ -->
+        <record id="produk_nasi_goreng" model="plumeria.produk">
+            <field name="nama_produk">Nasi Goreng Plumeria</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">35000</field>
+            <field name="hpp">16000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_pasta_carbonara" model="plumeria.produk">
+            <field name="nama_produk">Pasta Carbonara</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">45000</field>
+            <field name="hpp">20000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_roti_bakar" model="plumeria.produk">
+            <field name="nama_produk">Roti Bakar Keju</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">20000</field>
+            <field name="hpp">7000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_salad_buah" model="plumeria.produk">
+            <field name="nama_produk">Salad Buah Segar</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">28000</field>
+            <field name="hpp">12000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_sandwich_tuna" model="plumeria.produk">
+            <field name="nama_produk">Sandwich Tuna</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">30000</field>
+            <field name="hpp">13000</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_kentang_goreng" model="plumeria.produk">
+            <field name="nama_produk">Kentang Goreng Crispy</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">18000</field>
+            <field name="hpp">6000</field>
+            <field name="status_aktif">True</field>
+        </record>
+
+        <!-- ============================================================
+             KAMPANYE PROMO
+        ============================================================ -->
+        <record id="promo_weekend_bar" model="plumeria.promo">
+            <field name="nama_promo">Weekend Special Bar</field>
+            <field name="kode_promo">WEEKEND20</field>
+            <field name="periode_mulai">2026-05-01</field>
+            <field name="periode_selesai">2026-05-31</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">20</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_kopi_susu')), (4, ref('produk_matcha_latte')), (4, ref('produk_jus_alpukat'))]"/>
+        </record>
+        <record id="promo_plumeria10" model="plumeria.promo">
+            <field name="nama_promo">Plumeria Hemat Kitchen</field>
+            <field name="kode_promo">PLUMERIA10</field>
+            <field name="periode_mulai">2026-05-01</field>
+            <field name="periode_selesai">2026-05-15</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">10</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_nasi_goreng')), (4, ref('produk_pasta_carbonara')), (4, ref('produk_sandwich_tuna'))]"/>
+        </record>
+
+        <!-- ============================================================
+             TRANSAKSI POS - 5 HARI (5-9 Mei 2026)
+             Setiap hari: 4 transaksi Bar + 4 transaksi Kitchen
+        ============================================================ -->
+
+        <!-- === HARI 1: 5 Mei 2026 === -->
+        <record id="trx_bar_d1_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260505-001</field>
+            <field name="waktu_transaksi">2026-05-05 08:30:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_bar_d1_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d1_001"/>
+            <field name="produk_id" ref="produk_kopi_susu"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+        <record id="det_bar_d1_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d1_001"/>
+            <field name="produk_id" ref="produk_es_teh"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+
+        <record id="trx_bar_d1_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260505-002</field>
+            <field name="waktu_transaksi">2026-05-05 10:15:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_bar_d1_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d1_002"/>
+            <field name="produk_id" ref="produk_matcha_latte"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">32000</field>
+        </record>
+        <record id="det_bar_d1_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d1_002"/>
+            <field name="produk_id" ref="produk_lemon_tea"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+
+        <record id="trx_bar_d1_003" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260505-003</field>
+            <field name="waktu_transaksi">2026-05-05 14:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_bar_d1_003_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d1_003"/>
+            <field name="produk_id" ref="produk_jus_alpukat"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">25000</field>
+        </record>
+
+        <record id="trx_bar_d1_004" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260505-004</field>
+            <field name="waktu_transaksi">2026-05-05 18:30:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_bar_d1_004_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d1_004"/>
+            <field name="produk_id" ref="produk_kopi_susu"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+        <record id="det_bar_d1_004_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d1_004"/>
+            <field name="produk_id" ref="produk_cokelat_panas"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+
+        <record id="trx_kitchen_d1_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260505-001</field>
+            <field name="waktu_transaksi">2026-05-05 11:30:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_kit_d1_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d1_001"/>
+            <field name="produk_id" ref="produk_nasi_goreng"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="det_kit_d1_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d1_001"/>
+            <field name="produk_id" ref="produk_kentang_goreng"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+
+        <record id="trx_kitchen_d1_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260505-002</field>
+            <field name="waktu_transaksi">2026-05-05 12:45:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_kit_d1_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d1_002"/>
+            <field name="produk_id" ref="produk_pasta_carbonara"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+        <record id="det_kit_d1_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d1_002"/>
+            <field name="produk_id" ref="produk_salad_buah"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+
+        <record id="trx_kitchen_d1_003" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260505-003</field>
+            <field name="waktu_transaksi">2026-05-05 13:30:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_kit_d1_003_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d1_003"/>
+            <field name="produk_id" ref="produk_sandwich_tuna"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+
+        <record id="trx_kitchen_d1_004" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260505-004</field>
+            <field name="waktu_transaksi">2026-05-05 19:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_kit_d1_004_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d1_004"/>
+            <field name="produk_id" ref="produk_roti_bakar"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+        <record id="det_kit_d1_004_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d1_004"/>
+            <field name="produk_id" ref="produk_nasi_goreng"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+
+        <!-- === HARI 2: 6 Mei 2026 === -->
+        <record id="trx_bar_d2_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260506-001</field>
+            <field name="waktu_transaksi">2026-05-06 09:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_bar_d2_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d2_001"/>
+            <field name="produk_id" ref="produk_kopi_susu"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+
+        <record id="trx_bar_d2_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260506-002</field>
+            <field name="waktu_transaksi">2026-05-06 11:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_bar_d2_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d2_002"/>
+            <field name="produk_id" ref="produk_matcha_latte"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">32000</field>
+        </record>
+        <record id="det_bar_d2_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d2_002"/>
+            <field name="produk_id" ref="produk_es_teh"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+
+        <record id="trx_bar_d2_003" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260506-003</field>
+            <field name="waktu_transaksi">2026-05-06 15:30:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_bar_d2_003_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d2_003"/>
+            <field name="produk_id" ref="produk_jus_alpukat"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">25000</field>
+        </record>
+        <record id="det_bar_d2_003_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d2_003"/>
+            <field name="produk_id" ref="produk_lemon_tea"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+
+        <record id="trx_bar_d2_004" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260506-004</field>
+            <field name="waktu_transaksi">2026-05-06 19:45:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_bar_d2_004_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d2_004"/>
+            <field name="produk_id" ref="produk_cokelat_panas"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+
+        <record id="trx_kitchen_d2_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260506-001</field>
+            <field name="waktu_transaksi">2026-05-06 12:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_kit_d2_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d2_001"/>
+            <field name="produk_id" ref="produk_nasi_goreng"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="det_kit_d2_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d2_001"/>
+            <field name="produk_id" ref="produk_salad_buah"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+
+        <record id="trx_kitchen_d2_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260506-002</field>
+            <field name="waktu_transaksi">2026-05-06 13:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_kit_d2_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d2_002"/>
+            <field name="produk_id" ref="produk_pasta_carbonara"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+
+        <record id="trx_kitchen_d2_003" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260506-003</field>
+            <field name="waktu_transaksi">2026-05-06 14:30:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_kit_d2_003_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d2_003"/>
+            <field name="produk_id" ref="produk_sandwich_tuna"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+        <record id="det_kit_d2_003_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d2_003"/>
+            <field name="produk_id" ref="produk_roti_bakar"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+
+        <record id="trx_kitchen_d2_004" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260506-004</field>
+            <field name="waktu_transaksi">2026-05-06 20:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_kit_d2_004_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d2_004"/>
+            <field name="produk_id" ref="produk_nasi_goreng"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="det_kit_d2_004_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d2_004"/>
+            <field name="produk_id" ref="produk_kentang_goreng"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+
+        <!-- === HARI 3: 7 Mei 2026 === -->
+        <record id="trx_bar_d3_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260507-001</field>
+            <field name="waktu_transaksi">2026-05-07 08:45:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_bar_d3_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d3_001"/>
+            <field name="produk_id" ref="produk_kopi_susu"/>
+            <field name="jumlah">5</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+        <record id="det_bar_d3_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d3_001"/>
+            <field name="produk_id" ref="produk_matcha_latte"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">32000</field>
+        </record>
+
+        <record id="trx_bar_d3_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260507-002</field>
+            <field name="waktu_transaksi">2026-05-07 13:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_bar_d3_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d3_002"/>
+            <field name="produk_id" ref="produk_es_teh"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+        <record id="det_bar_d3_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d3_002"/>
+            <field name="produk_id" ref="produk_lemon_tea"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+
+        <record id="trx_bar_d3_003" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260507-003</field>
+            <field name="waktu_transaksi">2026-05-07 17:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_bar_d3_003_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d3_003"/>
+            <field name="produk_id" ref="produk_jus_alpukat"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">25000</field>
+        </record>
+
+        <record id="trx_kitchen_d3_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260507-001</field>
+            <field name="waktu_transaksi">2026-05-07 12:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_kit_d3_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d3_001"/>
+            <field name="produk_id" ref="produk_nasi_goreng"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="det_kit_d3_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d3_001"/>
+            <field name="produk_id" ref="produk_roti_bakar"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+
+        <record id="trx_kitchen_d3_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260507-002</field>
+            <field name="waktu_transaksi">2026-05-07 13:30:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_kit_d3_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d3_002"/>
+            <field name="produk_id" ref="produk_pasta_carbonara"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+        <record id="det_kit_d3_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d3_002"/>
+            <field name="produk_id" ref="produk_salad_buah"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+
+        <record id="trx_kitchen_d3_003" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260507-003</field>
+            <field name="waktu_transaksi">2026-05-07 18:30:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_kit_d3_003_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d3_003"/>
+            <field name="produk_id" ref="produk_sandwich_tuna"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+        <record id="det_kit_d3_003_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d3_003"/>
+            <field name="produk_id" ref="produk_kentang_goreng"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+
+        <!-- === HARI 4: 8 Mei 2026 === -->
+        <record id="trx_bar_d4_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260508-001</field>
+            <field name="waktu_transaksi">2026-05-08 09:30:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_bar_d4_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d4_001"/>
+            <field name="produk_id" ref="produk_kopi_susu"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+        <record id="det_bar_d4_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d4_001"/>
+            <field name="produk_id" ref="produk_cokelat_panas"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+
+        <record id="trx_bar_d4_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260508-002</field>
+            <field name="waktu_transaksi">2026-05-08 15:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_bar_d4_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d4_002"/>
+            <field name="produk_id" ref="produk_matcha_latte"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">32000</field>
+        </record>
+        <record id="det_bar_d4_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d4_002"/>
+            <field name="produk_id" ref="produk_es_teh"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+
+        <record id="trx_kitchen_d4_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260508-001</field>
+            <field name="waktu_transaksi">2026-05-08 12:30:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_kit_d4_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d4_001"/>
+            <field name="produk_id" ref="produk_nasi_goreng"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="det_kit_d4_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d4_001"/>
+            <field name="produk_id" ref="produk_pasta_carbonara"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+
+        <record id="trx_kitchen_d4_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260508-002</field>
+            <field name="waktu_transaksi">2026-05-08 19:30:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_kit_d4_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d4_002"/>
+            <field name="produk_id" ref="produk_roti_bakar"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+        <record id="det_kit_d4_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d4_002"/>
+            <field name="produk_id" ref="produk_salad_buah"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+
+        <!-- === HARI 5: 9 Mei 2026 (Hari Ini) === -->
+        <record id="trx_bar_d5_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260509-001</field>
+            <field name="waktu_transaksi">2026-05-09 08:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_bar_d5_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d5_001"/>
+            <field name="produk_id" ref="produk_kopi_susu"/>
+            <field name="jumlah">6</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+        <record id="det_bar_d5_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d5_001"/>
+            <field name="produk_id" ref="produk_es_teh"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+
+        <record id="trx_bar_d5_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-BAR-20260509-002</field>
+            <field name="waktu_transaksi">2026-05-09 10:30:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_bar_d5_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d5_002"/>
+            <field name="produk_id" ref="produk_matcha_latte"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">32000</field>
+        </record>
+        <record id="det_bar_d5_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_bar_d5_002"/>
+            <field name="produk_id" ref="produk_lemon_tea"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+
+        <record id="trx_kitchen_d5_001" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260509-001</field>
+            <field name="waktu_transaksi">2026-05-09 11:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_kit_d5_001_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d5_001"/>
+            <field name="produk_id" ref="produk_nasi_goreng"/>
+            <field name="jumlah">5</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="det_kit_d5_001_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d5_001"/>
+            <field name="produk_id" ref="produk_kentang_goreng"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+
+        <record id="trx_kitchen_d5_002" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-KIT-20260509-002</field>
+            <field name="waktu_transaksi">2026-05-09 13:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_kit_d5_002_a" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d5_002"/>
+            <field name="produk_id" ref="produk_pasta_carbonara"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+        <record id="det_kit_d5_002_b" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_kitchen_d5_002"/>
+            <field name="produk_id" ref="produk_sandwich_tuna"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+
+        <!-- ============================================================
+             LAPORAN OPERASIONAL HARIAN
+             5 hari × 2 divisi, dengan berbagai status
+        ============================================================ -->
+
+        <!-- Hari 1 (5 Mei) - Approved -->
+        <record id="lap_bar_d1" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0001</field>
+            <field name="tanggal">2026-05-05</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">457000</field>
+            <field name="jumlah_transaksi">4</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">132000</field>
+            <field name="beban_operasional">45000</field>
+            <field name="catatan_kendala">Operasional berjalan normal. Stok sirup hampir habis.</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_kitchen_d1" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0002</field>
+            <field name="tanggal">2026-05-05</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">471000</field>
+            <field name="jumlah_transaksi">4</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">196000</field>
+            <field name="beban_operasional">55000</field>
+            <field name="catatan_kendala">Kompor gas no.2 perlu pengecekan.</field>
+            <field name="state">approved</field>
+        </record>
+
+        <!-- Hari 2 (6 Mei) - Approved -->
+        <record id="lap_bar_d2" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0003</field>
+            <field name="tanggal">2026-05-06</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">436000</field>
+            <field name="jumlah_transaksi">4</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">128000</field>
+            <field name="beban_operasional">42000</field>
+            <field name="catatan_kendala">Tidak ada kendala signifikan.</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_kitchen_d2" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0004</field>
+            <field name="tanggal">2026-05-06</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">519000</field>
+            <field name="jumlah_transaksi">4</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">210000</field>
+            <field name="beban_operasional">58000</field>
+            <field name="catatan_kendala">Stok pasta hampir habis, perlu restock besok.</field>
+            <field name="state">approved</field>
+        </record>
+
+        <!-- Hari 3 (7 Mei) - Submitted -->
+        <record id="lap_bar_d3" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0005</field>
+            <field name="tanggal">2026-05-07</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">453000</field>
+            <field name="jumlah_transaksi">3</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">140000</field>
+            <field name="beban_operasional">48000</field>
+            <field name="catatan_kendala">Blender utama rusak sementara, menggunakan blender cadangan.</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_kitchen_d3" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0006</field>
+            <field name="tanggal">2026-05-07</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">548000</field>
+            <field name="jumlah_transaksi">3</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">215000</field>
+            <field name="beban_operasional">62000</field>
+            <field name="catatan_kendala">Pesanan online meningkat signifikan.</field>
+            <field name="state">submitted</field>
+        </record>
+
+        <!-- Hari 4 (8 Mei) - Draft -->
+        <record id="lap_bar_d4" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0007</field>
+            <field name="tanggal">2026-05-08</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">322000</field>
+            <field name="jumlah_transaksi">2</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">96000</field>
+            <field name="beban_operasional">38000</field>
+            <field name="catatan_kendala">Hari lebih sepi dari biasanya.</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_kitchen_d4" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0008</field>
+            <field name="tanggal">2026-05-08</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">381000</field>
+            <field name="jumlah_transaksi">2</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">144000</field>
+            <field name="beban_operasional">40000</field>
+            <field name="catatan_kendala">Supplier telat kirim bahan baku.</field>
+            <field name="state">draft</field>
+        </record>
+
+        <!-- Hari 5 (9 Mei) - Draft (hari ini, belum diajukan) -->
+        <record id="lap_bar_d5" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0009</field>
+            <field name="tanggal">2026-05-09</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">239000</field>
+            <field name="jumlah_transaksi">2</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">74000</field>
+            <field name="beban_operasional">30000</field>
+            <field name="catatan_kendala">Masih berjalan, laporan belum final.</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_kitchen_d5" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/2026/05/0010</field>
+            <field name="tanggal">2026-05-09</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">355000</field>
+            <field name="jumlah_transaksi">2</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">130000</field>
+            <field name="beban_operasional">42000</field>
+            <field name="catatan_kendala">Operasional normal hingga siang.</field>
+            <field name="state">draft</field>
+        </record>
+
+        <!-- ============================================================
+             REKAP KEUANGAN (untuk Hari 1 dan 2 yang sudah Approved)
+        ============================================================ -->
+        <record id="rekap_bar_d1" model="plumeria.rekap.keuangan">
+            <field name="tanggal">2026-05-05</field>
+            <field name="divisi">bar</field>
+            <field name="total_kas">457000</field>
+            <field name="total_pos">457000</field>
+            <field name="catatan">Rekonsiliasi selesai. Cocok dengan data POS.</field>
+            <field name="laporan_ids" eval="[(4, ref('lap_bar_d1'))]"/>
+        </record>
+        <record id="rekap_kitchen_d1" model="plumeria.rekap.keuangan">
+            <field name="tanggal">2026-05-05</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_kas">471000</field>
+            <field name="total_pos">471000</field>
+            <field name="catatan">Rekonsiliasi selesai. Cocok dengan data POS.</field>
+            <field name="laporan_ids" eval="[(4, ref('lap_kitchen_d1'))]"/>
+        </record>
+        <record id="rekap_bar_d2" model="plumeria.rekap.keuangan">
+            <field name="tanggal">2026-05-06</field>
+            <field name="divisi">bar</field>
+            <field name="total_kas">436000</field>
+            <field name="total_pos">436000</field>
+            <field name="catatan">Sesuai. Tidak ada selisih.</field>
+            <field name="laporan_ids" eval="[(4, ref('lap_bar_d2'))]"/>
+        </record>
+        <record id="rekap_kitchen_d2" model="plumeria.rekap.keuangan">
+            <field name="tanggal">2026-05-06</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_kas">485000</field>
+            <field name="total_pos">519000</field>
+            <field name="catatan">Ada selisih Rp34.000 - perlu investigasi.</field>
+            <field name="laporan_ids" eval="[(4, ref('lap_kitchen_d2'))]"/>
+        </record>
+
+    </data>
+</odoo>
