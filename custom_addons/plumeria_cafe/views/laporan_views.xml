@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- ============================================================
+         LAPORAN OPERASIONAL - FORM VIEW
+    ============================================================ -->
+    <record id="view_laporan_form" model="ir.ui.view">
+        <field name="name">plumeria.laporan.operasional.form</field>
+        <field name="model">plumeria.laporan.operasional</field>
+        <field name="arch" type="xml">
+            <form string="Laporan Operasional Harian">
+                <header>
+                    <!-- Tombol Ajukan: hanya untuk Head Kitchen/Bar, saat Draft atau Perlu Revisi -->
+                    <button name="action_submit" type="object" string="Ajukan"
+                        class="btn-primary"
+                        invisible="state not in ['draft', 'revised_draft']"
+                        groups="plumeria_cafe.group_head_kitchen,plumeria_cafe.group_head_bar"/>
+
+                    <!-- Tombol Setujui: hanya untuk Head Ops dan Op.Coordinator, saat Diajukan -->
+                    <button name="action_approve" type="object" string="Setujui"
+                        class="btn-success"
+                        invisible="state != 'submitted'"
+                        groups="plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+                    <!-- Tombol Minta Revisi: hanya untuk Head Ops dan Op.Coordinator, saat Diajukan -->
+                    <button name="action_request_revision" type="object" string="Minta Revisi"
+                        class="btn-warning"
+                        invisible="state != 'submitted'"
+                        groups="plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+                    <!-- Tombol Reset ke Draft: saat Perlu Revisi -->
+                    <button name="action_reset_draft" type="object" string="Reset ke Draft"
+                        invisible="state != 'revised_draft'"
+                        groups="plumeria_cafe.group_head_kitchen,plumeria_cafe.group_head_bar"/>
+
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,submitted,approved,archived"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="nomor_referensi" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <!-- Alasan revisi: tampil jika state revised_draft -->
+                    <div class="alert alert-warning" role="alert"
+                        invisible="state != 'revised_draft'">
+                        <strong>Alasan Revisi: </strong>
+                        <field name="alasan_revisi" readonly="1"/>
+                    </div>
+
+                    <group>
+                        <group string="Informasi Dasar">
+                            <field name="tanggal"
+                                readonly="state in ['approved', 'archived']"/>
+                            <field name="divisi"
+                                readonly="state in ['submitted', 'approved', 'archived']"/>
+                            <field name="rekap_id" readonly="1"/>
+                        </group>
+                        <group string="Data Keuangan">
+                            <field name="total_pendapatan"
+                                readonly="state in ['approved', 'archived']"/>
+                            <field name="jumlah_transaksi"
+                                readonly="state in ['approved', 'archived']"/>
+                            <field name="metode_pembayaran"
+                                readonly="state in ['approved', 'archived']"/>
+                            <field name="hpp"
+                                readonly="state in ['approved', 'archived']"/>
+                            <field name="beban_operasional"
+                                readonly="state in ['approved', 'archived']"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Catatan Kendala Operasional" name="kendala">
+                            <field name="catatan_kendala"
+                                placeholder="Deskripsikan kendala operasional hari ini..."
+                                readonly="state in ['approved', 'archived']"/>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <!-- Chatter (F-08) -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         LAPORAN OPERASIONAL - TREE VIEW
+    ============================================================ -->
+    <record id="view_laporan_tree" model="ir.ui.view">
+        <field name="name">plumeria.laporan.operasional.tree</field>
+        <field name="model">plumeria.laporan.operasional</field>
+        <field name="arch" type="xml">
+            <tree string="Daftar Laporan Operasional"
+                decoration-success="state == 'approved'"
+                decoration-warning="state == 'submitted'"
+                decoration-danger="state == 'revised_draft'"
+                decoration-muted="state == 'archived'">
+                <field name="nomor_referensi"/>
+                <field name="tanggal"/>
+                <field name="divisi"/>
+                <field name="total_pendapatan" widget="monetary" options="{'currency_field': false}"/>
+                <field name="jumlah_transaksi"/>
+                <field name="metode_pembayaran"/>
+                <field name="state"
+                    decoration-success="state == 'approved'"
+                    decoration-warning="state == 'submitted'"
+                    decoration-danger="state == 'revised_draft'"
+                    decoration-muted="state == 'archived'"
+                    widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         LAPORAN OPERASIONAL - SEARCH VIEW
+    ============================================================ -->
+    <record id="view_laporan_search" model="ir.ui.view">
+        <field name="name">plumeria.laporan.operasional.search</field>
+        <field name="model">plumeria.laporan.operasional</field>
+        <field name="arch" type="xml">
+            <search string="Cari Laporan">
+                <field name="nomor_referensi"/>
+                <field name="tanggal"/>
+                <filter string="Draft" name="filter_draft" domain="[('state','=','draft')]"/>
+                <filter string="Diajukan" name="filter_submitted" domain="[('state','=','submitted')]"/>
+                <filter string="Disetujui" name="filter_approved" domain="[('state','=','approved')]"/>
+                <filter string="Perlu Revisi" name="filter_revised" domain="[('state','=','revised_draft')]"/>
+                <separator/>
+                <filter string="Bar" name="filter_bar" domain="[('divisi','=','bar')]"/>
+                <filter string="Kitchen" name="filter_kitchen" domain="[('divisi','=','kitchen')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Divisi" name="group_divisi" context="{'group_by': 'divisi'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Tanggal" name="group_tanggal" context="{'group_by': 'tanggal'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         ACTIONS
+    ============================================================ -->
+    <record id="action_laporan_operasional" model="ir.actions.act_window">
+        <field name="name">Laporan Operasional</field>
+        <field name="res_model">plumeria.laporan.operasional</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_laporan_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Buat laporan operasional harian pertama!
+            </p>
+        </field>
+    </record>
+
+    <!-- Action khusus untuk validasi (Submitted only) -->
+    <record id="action_validasi_laporan" model="ir.actions.act_window">
+        <field name="name">Validasi Laporan</field>
+        <field name="res_model">plumeria.laporan.operasional</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('state', 'in', ['submitted', 'revised_draft'])]</field>
+        <field name="search_view_id" ref="view_laporan_search"/>
+        <field name="context">{'default_state': 'submitted'}</field>
+    </record>
+
+</odoo>

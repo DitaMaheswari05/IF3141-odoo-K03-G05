@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- ============================================================
+         PRODUK - FORM VIEW
+    ============================================================ -->
+    <record id="view_produk_form" model="ir.ui.view">
+        <field name="name">plumeria.produk.form</field>
+        <field name="model">plumeria.produk</field>
+        <field name="arch" type="xml">
+            <form string="Produk / Menu">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="nama_produk"/></h1>
+                    </div>
+                    <group>
+                        <group string="Informasi Produk">
+                            <field name="divisi"/>
+                            <field name="status_aktif" widget="boolean_toggle"/>
+                        </group>
+                        <group string="Harga &amp; Margin">
+                            <field name="harga_jual" widget="monetary"
+                                options="{'currency_field': false}"/>
+                            <field name="hpp" widget="monetary"
+                                options="{'currency_field': false}"/>
+                            <field name="margin" widget="percentage"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Promo Terkait" name="promo">
+                            <field name="promo_ids">
+                                <tree>
+                                    <field name="nama_promo"/>
+                                    <field name="kode_promo"/>
+                                    <field name="periode_mulai"/>
+                                    <field name="periode_selesai"/>
+                                    <field name="jenis_diskon"/>
+                                    <field name="nilai_diskon"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         PRODUK - TREE VIEW
+    ============================================================ -->
+    <record id="view_produk_tree" model="ir.ui.view">
+        <field name="name">plumeria.produk.tree</field>
+        <field name="model">plumeria.produk</field>
+        <field name="arch" type="xml">
+            <tree string="Daftar Produk / Menu"
+                decoration-muted="not status_aktif">
+                <field name="nama_produk"/>
+                <field name="divisi"/>
+                <field name="harga_jual" widget="monetary"
+                    options="{'currency_field': false}"/>
+                <field name="hpp" widget="monetary"
+                    options="{'currency_field': false}"/>
+                <field name="margin" widget="percentage"/>
+                <field name="status_aktif" widget="boolean"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         PRODUK - SEARCH VIEW
+    ============================================================ -->
+    <record id="view_produk_search" model="ir.ui.view">
+        <field name="name">plumeria.produk.search</field>
+        <field name="model">plumeria.produk</field>
+        <field name="arch" type="xml">
+            <search string="Cari Produk">
+                <field name="nama_produk"/>
+                <filter string="Aktif" name="filter_aktif" domain="[('status_aktif','=',True)]"/>
+                <filter string="Tidak Aktif" name="filter_nonaktif" domain="[('status_aktif','=',False)]"/>
+                <separator/>
+                <filter string="Bar" name="filter_bar" domain="[('divisi','=','bar')]"/>
+                <filter string="Kitchen" name="filter_kitchen" domain="[('divisi','=','kitchen')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Divisi" name="group_divisi" context="{'group_by': 'divisi'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         PROMO - FORM VIEW
+    ============================================================ -->
+    <record id="view_promo_form" model="ir.ui.view">
+        <field name="name">plumeria.promo.form</field>
+        <field name="model">plumeria.promo</field>
+        <field name="arch" type="xml">
+            <form string="Kampanye Promo">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="nama_promo"/></h1>
+                        <h2><field name="kode_promo"/></h2>
+                    </div>
+                    <group>
+                        <group string="Detail Diskon">
+                            <field name="jenis_diskon"/>
+                            <field name="nilai_diskon"/>
+                            <field name="aktif" widget="boolean_toggle"/>
+                        </group>
+                        <group string="Periode">
+                            <field name="periode_mulai"/>
+                            <field name="periode_selesai"/>
+                            <field name="total_penggunaan"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Produk Berlaku" name="produk">
+                            <field name="produk_ids">
+                                <tree>
+                                    <field name="nama_produk"/>
+                                    <field name="divisi"/>
+                                    <field name="harga_jual" widget="monetary"
+                                        options="{'currency_field': false}"/>
+                                    <field name="status_aktif" widget="boolean"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         PROMO - TREE VIEW
+    ============================================================ -->
+    <record id="view_promo_tree" model="ir.ui.view">
+        <field name="name">plumeria.promo.tree</field>
+        <field name="model">plumeria.promo</field>
+        <field name="arch" type="xml">
+            <tree string="Kampanye Promo" decoration-muted="not aktif">
+                <field name="nama_promo"/>
+                <field name="kode_promo"/>
+                <field name="periode_mulai"/>
+                <field name="periode_selesai"/>
+                <field name="jenis_diskon"/>
+                <field name="nilai_diskon"/>
+                <field name="total_penggunaan"/>
+                <field name="aktif" widget="boolean"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         ACTIONS
+    ============================================================ -->
+    <record id="action_produk" model="ir.actions.act_window">
+        <field name="name">Produk &amp; Menu</field>
+        <field name="res_model">plumeria.produk</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_produk_search"/>
+    </record>
+
+    <record id="action_promo" model="ir.actions.act_window">
+        <field name="name">Kampanye Promo</field>
+        <field name="res_model">plumeria.promo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

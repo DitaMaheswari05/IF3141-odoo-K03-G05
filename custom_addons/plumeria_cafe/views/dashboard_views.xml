@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- QWeb template untuk Dashboard Performa Bisnis (FR-03) -->
+    <template id="dashboard_template" name="Plumeria Dashboard">
+        <html>
+            <head>
+                <meta charset="UTF-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <title>Dashboard Performa - Plumeria Cafe</title>
+                <link rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"/>
+                <style>
+                    :root {
+                        --plumeria-green: #2E7D32;
+                        --plumeria-light: #4CAF50;
+                        --plumeria-bg: #F1F8E9;
+                    }
+                    body { background-color: #f4f6f9; font-family: 'Segoe UI', sans-serif; }
+                    .navbar-brand img { height: 36px; }
+                    .plumeria-navbar {
+                        background: var(--plumeria-green);
+                        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                    }
+                    .kpi-card {
+                        border-radius: 12px;
+                        padding: 1.5rem;
+                        background: white;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                        border-left: 5px solid var(--plumeria-green);
+                        transition: transform 0.2s;
+                    }
+                    .kpi-card:hover { transform: translateY(-2px); }
+                    .kpi-card .kpi-label { font-size: 0.82rem; color: #777; text-transform: uppercase; letter-spacing: 0.5px; }
+                    .kpi-card .kpi-value { font-size: 1.8rem; font-weight: 700; color: var(--plumeria-green); }
+                    .kpi-card.bar-accent { border-left-color: #1565C0; }
+                    .kpi-card.bar-accent .kpi-value { color: #1565C0; }
+                    .kpi-card.avg-accent { border-left-color: #E65100; }
+                    .kpi-card.avg-accent .kpi-value { color: #E65100; }
+                    .section-title { font-size: 1rem; font-weight: 600; color: #444; margin-bottom: 1rem; }
+                    .chart-card {
+                        background: white;
+                        border-radius: 12px;
+                        padding: 1.5rem;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                    }
+                    .filter-btn { border-radius: 20px; font-size: 0.85rem; }
+                    .filter-btn.active { background: var(--plumeria-green); color: white; border-color: var(--plumeria-green); }
+                    .badge-state-draft { background: #9E9E9E; color: white; }
+                    .badge-state-submitted { background: #FB8C00; color: white; }
+                    .badge-state-approved { background: #388E3C; color: white; }
+                    .badge-state-revised_draft { background: #E53935; color: white; }
+                    .badge-state-archived { background: #78909C; color: white; }
+                    .table-sm td, .table-sm th { padding: 0.4rem 0.6rem; font-size: 0.85rem; }
+                    .back-link { color: white; text-decoration: none; font-size: 0.9rem; }
+                    .back-link:hover { color: #c8e6c9; }
+                </style>
+            </head>
+            <body>
+                <!-- Navbar -->
+                <nav class="navbar plumeria-navbar py-2 px-4">
+                    <div class="container-fluid">
+                        <span class="navbar-brand text-white fw-bold fs-5">
+                            &#127803; Plumeria Cafe &amp; Creative Space
+                        </span>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-white-50 small">Dashboard Performa Bisnis</span>
+                            <a href="/web" class="back-link">&#8592; Kembali ke Odoo</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="container-fluid py-4 px-4">
+
+                    <!-- Filter Periode -->
+                    <div class="d-flex align-items-center gap-2 mb-4">
+                        <span class="text-muted small me-2">Periode:</span>
+                        <a t-attf-href="/plumeria/dashboard?periode=hari_ini"
+                            t-attf-class="btn btn-outline-success filter-btn #{periode == 'hari_ini' and 'active' or ''}">
+                            Hari Ini
+                        </a>
+                        <a t-attf-href="/plumeria/dashboard?periode=7_hari"
+                            t-attf-class="btn btn-outline-success filter-btn #{periode == '7_hari' and 'active' or ''}">
+                            7 Hari Terakhir
+                        </a>
+                        <a t-attf-href="/plumeria/dashboard?periode=bulan_ini"
+                            t-attf-class="btn btn-outline-success filter-btn #{periode == 'bulan_ini' and 'active' or ''}">
+                            Bulan Ini
+                        </a>
+                        <span class="ms-3 text-muted small">
+                            Data dari: <strong t-esc="date_from"/>
+                        </span>
+                        <a t-attf-href="/plumeria/dashboard?periode=#{periode}"
+                            class="btn btn-sm btn-outline-secondary ms-auto">
+                            &#x21BB; Refresh
+                        </a>
+                    </div>
+
+                    <!-- KPI Cards -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="kpi-card">
+                                <div class="kpi-label">Total Penjualan</div>
+                                <div class="kpi-value">
+                                    Rp <t t-esc="'{:,.0f}'.format(total_penjualan)"/>
+                                </div>
+                                <div class="text-muted small mt-1">Periode terpilih</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="kpi-card bar-accent">
+                                <div class="kpi-label">Jumlah Transaksi</div>
+                                <div class="kpi-value" t-esc="jumlah_transaksi"/>
+                                <div class="text-muted small mt-1">Total transaksi POS</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="kpi-card avg-accent">
+                                <div class="kpi-label">Rata-rata per Transaksi</div>
+                                <div class="kpi-value">
+                                    Rp <t t-esc="'{:,.0f}'.format(rata_rata)"/>
+                                </div>
+                                <div class="text-muted small mt-1">Nilai transaksi rata-rata</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="row g-3 mb-4">
+                        <!-- Bar Chart: Tren Harian per Divisi -->
+                        <div class="col-md-8">
+                            <div class="chart-card">
+                                <div class="section-title">Tren Penjualan Harian per Divisi (7 Hari Terakhir)</div>
+                                <canvas id="trendChart" height="110"/>
+                            </div>
+                        </div>
+                        <!-- Doughnut Chart: Distribusi Metode Pembayaran -->
+                        <div class="col-md-4">
+                            <div class="chart-card">
+                                <div class="section-title">Distribusi Metode Pembayaran</div>
+                                <canvas id="metodeChart" height="200"/>
+                                <div class="mt-2">
+                                    <t t-foreach="metode_items" t-as="item">
+                                        <div class="d-flex justify-content-between small py-1">
+                                            <span t-esc="item[0].upper()"/>
+                                            <strong t-esc="item[1]"/> transaksi
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tables Row -->
+                    <div class="row g-3">
+                        <!-- Top 5 Produk -->
+                        <div class="col-md-5">
+                            <div class="chart-card">
+                                <div class="section-title">&#127942; Top Produk Terlaris</div>
+                                <table class="table table-sm table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Produk</th>
+                                            <th class="text-end">Qty</th>
+                                            <th class="text-end">Revenue</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="top_produk" t-as="item">
+                                            <tr>
+                                                <td class="text-muted" t-esc="item_index + 1"/>
+                                                <td t-esc="item[0]"/>
+                                                <td class="text-end fw-bold" t-esc="item[1]['jumlah']"/>
+                                                <td class="text-end text-success">
+                                                    Rp <t t-esc="'{:,.0f}'.format(item[1]['revenue'])"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <t t-if="not top_produk">
+                                            <tr>
+                                                <td colspan="4" class="text-center text-muted py-3">
+                                                    Belum ada data transaksi pada periode ini
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Laporan Terkini -->
+                        <div class="col-md-7">
+                            <div class="chart-card">
+                                <div class="section-title">&#128203; Laporan Operasional Terkini</div>
+                                <table class="table table-sm table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>No. Referensi</th>
+                                            <th>Tanggal</th>
+                                            <th>Divisi</th>
+                                            <th class="text-end">Pendapatan</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="laporan_terkini" t-as="lap">
+                                            <tr>
+                                                <td><small t-esc="lap.nomor_referensi"/></td>
+                                                <td><small t-esc="lap.tanggal"/></td>
+                                                <td>
+                                                    <span t-attf-class="badge #{lap.divisi == 'bar' and 'bg-info' or 'bg-warning text-dark'}">
+                                                        <t t-esc="lap.divisi.upper()"/>
+                                                    </span>
+                                                </td>
+                                                <td class="text-end">
+                                                    <small>Rp <t t-esc="'{:,.0f}'.format(lap.total_pendapatan)"/></small>
+                                                </td>
+                                                <td>
+                                                    <span t-attf-class="badge badge-state-#{lap.state}">
+                                                        <t t-esc="dict(lap._fields['state'].selection)[lap.state]"/>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <t t-if="not laporan_terkini">
+                                            <tr>
+                                                <td colspan="5" class="text-center text-muted py-3">
+                                                    Belum ada laporan operasional
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end container -->
+
+                <!-- Chart.js Scripts -->
+                <script>
+                    // Tren Chart
+                    const trendCtx = document.getElementById('trendChart').getContext('2d');
+                    new Chart(trendCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: <t t-out="tren_labels"/>,
+                            datasets: [
+                                {
+                                    label: 'Bar',
+                                    data: <t t-out="tren_bar"/>,
+                                    backgroundColor: 'rgba(21, 101, 192, 0.7)',
+                                    borderColor: '#1565C0',
+                                    borderWidth: 1
+                                },
+                                {
+                                    label: 'Kitchen',
+                                    data: <t t-out="tren_kitchen"/>,
+                                    backgroundColor: 'rgba(46, 125, 50, 0.7)',
+                                    borderColor: '#2E7D32',
+                                    borderWidth: 1
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: { legend: { position: 'top' } },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    ticks: {
+                                        callback: (v) => 'Rp ' + v.toLocaleString('id-ID')
+                                    }
+                                }
+                            }
+                        }
+                    });
+
+                    // Metode Pembayaran Chart
+                    const metodeCtx = document.getElementById('metodeChart').getContext('2d');
+                    new Chart(metodeCtx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: <t t-out="metode_labels"/>,
+                            datasets: [{
+                                data: <t t-out="metode_data"/>,
+                                backgroundColor: ['#2E7D32','#1565C0','#E65100','#6A1B9A'],
+                                borderWidth: 2
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: { legend: { position: 'bottom' } }
+                        }
+                    });
+                </script>
+
+            </body>
+        </html>
+    </template>
+
+    <!-- Action URL untuk membuka dashboard -->
+    <record id="action_dashboard" model="ir.actions.act_url">
+        <field name="name">Dashboard Performa</field>
+        <field name="url">/plumeria/dashboard</field>
+        <field name="target">self</field>
+    </record>
+
+</odoo>
