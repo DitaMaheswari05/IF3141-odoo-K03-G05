@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- ============================================================
+         ROOT MENU
+    ============================================================ -->
+    <menuitem id="menu_plumeria_root"
+        name="Plumeria Cafe"
+        sequence="10"/>
+
+    <!-- ============================================================
+         DASHBOARD - Hanya Head Ops dan Operational Coordinator
+    ============================================================ -->
+    <menuitem id="menu_dashboard"
+        name="Dashboard Performa"
+        parent="menu_plumeria_root"
+        action="action_dashboard"
+        sequence="10"
+        groups="plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+    <!-- ============================================================
+         LAPORAN OPERASIONAL
+    ============================================================ -->
+    <menuitem id="menu_laporan_parent"
+        name="Laporan Operasional"
+        parent="menu_plumeria_root"
+        sequence="20"/>
+
+    <!-- Input Laporan: untuk Head Kitchen, Head Bar, dan manajemen -->
+    <menuitem id="menu_laporan_harian"
+        name="Laporan Harian"
+        parent="menu_laporan_parent"
+        action="action_laporan_operasional"
+        sequence="10"
+        groups="plumeria_cafe.group_head_kitchen,plumeria_cafe.group_head_bar,plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator,plumeria_cafe.group_finance"/>
+
+    <!-- Validasi Laporan: hanya untuk manajemen -->
+    <menuitem id="menu_validasi_laporan"
+        name="Validasi Laporan"
+        parent="menu_laporan_parent"
+        action="action_validasi_laporan"
+        sequence="20"
+        groups="plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+    <!-- ============================================================
+         TRANSAKSI POS
+    ============================================================ -->
+    <menuitem id="menu_transaksi_parent"
+        name="Transaksi POS"
+        parent="menu_plumeria_root"
+        sequence="30"
+        groups="plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator,plumeria_cafe.group_finance,plumeria_cafe.group_marketing,plumeria_cafe.group_head_kitchen,plumeria_cafe.group_head_bar"/>
+
+    <menuitem id="menu_transaksi_pos"
+        name="Data Transaksi"
+        parent="menu_transaksi_parent"
+        action="action_transaksi_pos"
+        sequence="10"
+        groups="plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator,plumeria_cafe.group_finance,plumeria_cafe.group_marketing,plumeria_cafe.group_head_kitchen,plumeria_cafe.group_head_bar"/>
+
+    <!-- ============================================================
+         PRODUK DAN PROMO - Hanya Marketing dan manajemen
+    ============================================================ -->
+    <menuitem id="menu_analisis_parent"
+        name="Produk &amp; Promo"
+        parent="menu_plumeria_root"
+        sequence="40"
+        groups="plumeria_cafe.group_marketing,plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+    <menuitem id="menu_produk"
+        name="Master Produk / Menu"
+        parent="menu_analisis_parent"
+        action="action_produk"
+        sequence="10"
+        groups="plumeria_cafe.group_marketing,plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+    <menuitem id="menu_promo"
+        name="Kampanye Promo"
+        parent="menu_analisis_parent"
+        action="action_promo"
+        sequence="20"
+        groups="plumeria_cafe.group_marketing,plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+    <!-- ============================================================
+         REKAP DAN REKONSILIASI - Finance dan manajemen
+    ============================================================ -->
+    <menuitem id="menu_rekap_parent"
+        name="Rekap Keuangan"
+        parent="menu_plumeria_root"
+        sequence="50"
+        groups="plumeria_cafe.group_finance,plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+    <menuitem id="menu_rekap_keuangan"
+        name="Rekap &amp; Rekonsiliasi"
+        parent="menu_rekap_parent"
+        action="action_rekap_keuangan"
+        sequence="10"
+        groups="plumeria_cafe.group_finance,plumeria_cafe.group_head_operations,plumeria_cafe.group_operational_coordinator"/>
+
+</odoo>
