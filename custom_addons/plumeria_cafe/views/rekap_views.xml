@@ -76,8 +76,7 @@
                                     <field name="nomor_referensi"/>
                                     <field name="tanggal"/>
                                     <field name="divisi"/>
-                                    <field name="total_pendapatan" widget="monetary"
-                                        options="{'currency_field': false}"/>
+                                    <field name="total_pendapatan"/>
                                     <field name="state" widget="badge"
                                         decoration-success="state == 'approved'"
                                         decoration-warning="state == 'submitted'"
@@ -105,9 +104,9 @@
                 <field name="name"/>
                 <field name="tanggal"/>
                 <field name="divisi"/>
-                <field name="total_kas" widget="monetary" options="{'currency_field': false}"/>
-                <field name="total_pos" widget="monetary" options="{'currency_field': false}"/>
-                <field name="delta" widget="monetary" options="{'currency_field': false}"/>
+                <field name="total_kas"/>
+                <field name="total_pos"/>
+                <field name="delta"/>
                 <field name="status_rekonsiliasi" widget="badge"
                     decoration-success="status_rekonsiliasi == 'cocok'"
                     decoration-danger="status_rekonsiliasi == 'selisih'"

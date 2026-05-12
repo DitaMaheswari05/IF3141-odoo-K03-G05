@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <record id="lap_demo_1" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0001</field>
+            <field name="tanggal">2026-01-01</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1065000</field>
+            <field name="jumlah_transaksi">41</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">388972</field>
+            <field name="beban_operasional">85000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 1)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_2" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0002</field>
+            <field name="tanggal">2026-01-02</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1249000</field>
+            <field name="jumlah_transaksi">36</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">453217</field>
+            <field name="beban_operasional">49000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 2)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_3" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0003</field>
+            <field name="tanggal">2026-01-02</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1275000</field>
+            <field name="jumlah_transaksi">47</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">439356</field>
+            <field name="beban_operasional">73000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 3)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_4" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0004</field>
+            <field name="tanggal">2026-01-03</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">300000</field>
+            <field name="jumlah_transaksi">23</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">101865</field>
+            <field name="beban_operasional">45000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 4)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_5" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0005</field>
+            <field name="tanggal">2026-01-03</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1045000</field>
+            <field name="jumlah_transaksi">29</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">344308</field>
+            <field name="beban_operasional">47000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 5)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_6" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0006</field>
+            <field name="tanggal">2026-01-04</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">769000</field>
+            <field name="jumlah_transaksi">35</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">250283</field>
+            <field name="beban_operasional">47000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 6)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_7" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0007</field>
+            <field name="tanggal">2026-01-04</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">729000</field>
+            <field name="jumlah_transaksi">43</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">290720</field>
+            <field name="beban_operasional">30000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 7)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_8" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0008</field>
+            <field name="tanggal">2026-01-05</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">639000</field>
+            <field name="jumlah_transaksi">47</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">240742</field>
+            <field name="beban_operasional">76000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 8)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_9" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0009</field>
+            <field name="tanggal">2026-01-05</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1446000</field>
+            <field name="jumlah_transaksi">19</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">440377</field>
+            <field name="beban_operasional">41000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 9)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_10" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0010</field>
+            <field name="tanggal">2026-01-06</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1350000</field>
+            <field name="jumlah_transaksi">33</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">470225</field>
+            <field name="beban_operasional">65000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 10)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_11" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0011</field>
+            <field name="tanggal">2026-01-06</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">371000</field>
+            <field name="jumlah_transaksi">31</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">125597</field>
+            <field name="beban_operasional">51000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 11)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_12" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0012</field>
+            <field name="tanggal">2026-01-07</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1017000</field>
+            <field name="jumlah_transaksi">12</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">312607</field>
+            <field name="beban_operasional">60000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 12)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_13" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0013</field>
+            <field name="tanggal">2026-01-07</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">511000</field>
+            <field name="jumlah_transaksi">35</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">167949</field>
+            <field name="beban_operasional">93000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 13)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_14" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0014</field>
+            <field name="tanggal">2026-01-08</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">320000</field>
+            <field name="jumlah_transaksi">26</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">97544</field>
+            <field name="beban_operasional">40000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 14)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_15" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0015</field>
+            <field name="tanggal">2026-01-08</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1400000</field>
+            <field name="jumlah_transaksi">39</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">487018</field>
+            <field name="beban_operasional">74000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 15)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_16" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0016</field>
+            <field name="tanggal">2026-01-09</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">791000</field>
+            <field name="jumlah_transaksi">35</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">260841</field>
+            <field name="beban_operasional">60000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 16)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_17" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0017</field>
+            <field name="tanggal">2026-01-09</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">317000</field>
+            <field name="jumlah_transaksi">34</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">121049</field>
+            <field name="beban_operasional">55000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 17)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_18" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0018</field>
+            <field name="tanggal">2026-01-10</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1399000</field>
+            <field name="jumlah_transaksi">29</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">510545</field>
+            <field name="beban_operasional">37000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 18)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_19" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0019</field>
+            <field name="tanggal">2026-01-10</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1112000</field>
+            <field name="jumlah_transaksi">39</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">354403</field>
+            <field name="beban_operasional">81000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 19)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_20" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0020</field>
+            <field name="tanggal">2026-01-11</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">413000</field>
+            <field name="jumlah_transaksi">46</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">128805</field>
+            <field name="beban_operasional">66000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 20)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_21" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0021</field>
+            <field name="tanggal">2026-01-11</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">312000</field>
+            <field name="jumlah_transaksi">25</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">111600</field>
+            <field name="beban_operasional">88000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 21)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_22" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0022</field>
+            <field name="tanggal">2026-01-12</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1327000</field>
+            <field name="jumlah_transaksi">29</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">513417</field>
+            <field name="beban_operasional">67000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 22)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_23" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0023</field>
+            <field name="tanggal">2026-01-12</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">951000</field>
+            <field name="jumlah_transaksi">39</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">372480</field>
+            <field name="beban_operasional">39000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 23)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_24" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0024</field>
+            <field name="tanggal">2026-01-13</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">831000</field>
+            <field name="jumlah_transaksi">13</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">257383</field>
+            <field name="beban_operasional">64000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 24)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_25" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0025</field>
+            <field name="tanggal">2026-01-13</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1179000</field>
+            <field name="jumlah_transaksi">44</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">439633</field>
+            <field name="beban_operasional">39000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 25)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_26" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0026</field>
+            <field name="tanggal">2026-01-14</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">901000</field>
+            <field name="jumlah_transaksi">39</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">331136</field>
+            <field name="beban_operasional">85000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 26)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_27" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0027</field>
+            <field name="tanggal">2026-01-14</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1361000</field>
+            <field name="jumlah_transaksi">44</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">522463</field>
+            <field name="beban_operasional">51000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 27)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_28" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0028</field>
+            <field name="tanggal">2026-01-15</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1346000</field>
+            <field name="jumlah_transaksi">39</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">435546</field>
+            <field name="beban_operasional">48000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 28)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_29" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0029</field>
+            <field name="tanggal">2026-01-15</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1103000</field>
+            <field name="jumlah_transaksi">47</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">335455</field>
+            <field name="beban_operasional">82000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 29)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_30" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0030</field>
+            <field name="tanggal">2026-01-16</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">550000</field>
+            <field name="jumlah_transaksi">49</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">204463</field>
+            <field name="beban_operasional">60000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 30)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_31" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0031</field>
+            <field name="tanggal">2026-01-16</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">405000</field>
+            <field name="jumlah_transaksi">26</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">150596</field>
+            <field name="beban_operasional">58000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 31)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_32" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0032</field>
+            <field name="tanggal">2026-01-17</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">612000</field>
+            <field name="jumlah_transaksi">20</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">235059</field>
+            <field name="beban_operasional">56000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 32)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_33" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0033</field>
+            <field name="tanggal">2026-01-17</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1036000</field>
+            <field name="jumlah_transaksi">45</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">388613</field>
+            <field name="beban_operasional">79000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 33)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_34" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0034</field>
+            <field name="tanggal">2026-01-18</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">718000</field>
+            <field name="jumlah_transaksi">49</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">246947</field>
+            <field name="beban_operasional">86000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 34)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_35" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0035</field>
+            <field name="tanggal">2026-01-18</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">957000</field>
+            <field name="jumlah_transaksi">37</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">358310</field>
+            <field name="beban_operasional">95000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 35)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_36" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0036</field>
+            <field name="tanggal">2026-01-19</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">534000</field>
+            <field name="jumlah_transaksi">22</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">196830</field>
+            <field name="beban_operasional">77000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 36)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_37" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0037</field>
+            <field name="tanggal">2026-01-19</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">939000</field>
+            <field name="jumlah_transaksi">10</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">360739</field>
+            <field name="beban_operasional">91000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 37)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_38" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0038</field>
+            <field name="tanggal">2026-01-20</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">849000</field>
+            <field name="jumlah_transaksi">27</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">301243</field>
+            <field name="beban_operasional">34000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 38)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_39" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0039</field>
+            <field name="tanggal">2026-01-20</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1053000</field>
+            <field name="jumlah_transaksi">30</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">348614</field>
+            <field name="beban_operasional">88000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 39)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_40" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0040</field>
+            <field name="tanggal">2026-01-21</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">578000</field>
+            <field name="jumlah_transaksi">28</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">197341</field>
+            <field name="beban_operasional">74000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 40)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_41" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0041</field>
+            <field name="tanggal">2026-01-21</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1338000</field>
+            <field name="jumlah_transaksi">46</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">529921</field>
+            <field name="beban_operasional">90000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 41)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_42" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0042</field>
+            <field name="tanggal">2026-01-22</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1016000</field>
+            <field name="jumlah_transaksi">42</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">378327</field>
+            <field name="beban_operasional">35000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 42)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_43" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0043</field>
+            <field name="tanggal">2026-01-22</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">598000</field>
+            <field name="jumlah_transaksi">10</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">180968</field>
+            <field name="beban_operasional">59000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 43)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_44" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0044</field>
+            <field name="tanggal">2026-01-23</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1348000</field>
+            <field name="jumlah_transaksi">35</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">498967</field>
+            <field name="beban_operasional">84000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 44)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_45" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0045</field>
+            <field name="tanggal">2026-01-23</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">497000</field>
+            <field name="jumlah_transaksi">22</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">177809</field>
+            <field name="beban_operasional">93000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 45)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_46" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0046</field>
+            <field name="tanggal">2026-01-24</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1341000</field>
+            <field name="jumlah_transaksi">41</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">438769</field>
+            <field name="beban_operasional">30000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 46)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_47" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0047</field>
+            <field name="tanggal">2026-01-24</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">395000</field>
+            <field name="jumlah_transaksi">50</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">129218</field>
+            <field name="beban_operasional">97000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 47)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_48" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0048</field>
+            <field name="tanggal">2026-01-25</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1406000</field>
+            <field name="jumlah_transaksi">31</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">427781</field>
+            <field name="beban_operasional">74000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 48)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_49" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0049</field>
+            <field name="tanggal">2026-01-25</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">618000</field>
+            <field name="jumlah_transaksi">44</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">206778</field>
+            <field name="beban_operasional">33000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 49)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_50" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0050</field>
+            <field name="tanggal">2026-01-26</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1406000</field>
+            <field name="jumlah_transaksi">21</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">460406</field>
+            <field name="beban_operasional">45000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 50)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_51" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0051</field>
+            <field name="tanggal">2026-01-26</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">749000</field>
+            <field name="jumlah_transaksi">27</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">286782</field>
+            <field name="beban_operasional">83000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 51)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_52" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0052</field>
+            <field name="tanggal">2026-01-27</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">588000</field>
+            <field name="jumlah_transaksi">47</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">209150</field>
+            <field name="beban_operasional">92000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 52)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_53" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0053</field>
+            <field name="tanggal">2026-01-27</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">661000</field>
+            <field name="jumlah_transaksi">18</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">220696</field>
+            <field name="beban_operasional">95000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 53)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_54" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0054</field>
+            <field name="tanggal">2026-01-28</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">398000</field>
+            <field name="jumlah_transaksi">37</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">130465</field>
+            <field name="beban_operasional">42000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 54)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_55" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0055</field>
+            <field name="tanggal">2026-01-28</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1148000</field>
+            <field name="jumlah_transaksi">43</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">373553</field>
+            <field name="beban_operasional">99000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 55)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_56" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0056</field>
+            <field name="tanggal">2026-01-29</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">881000</field>
+            <field name="jumlah_transaksi">49</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">351268</field>
+            <field name="beban_operasional">76000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 56)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_57" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0057</field>
+            <field name="tanggal">2026-01-29</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">530000</field>
+            <field name="jumlah_transaksi">27</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">187413</field>
+            <field name="beban_operasional">45000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 57)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_58" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0058</field>
+            <field name="tanggal">2026-01-30</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">513000</field>
+            <field name="jumlah_transaksi">47</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">174154</field>
+            <field name="beban_operasional">67000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 58)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_59" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0059</field>
+            <field name="tanggal">2026-01-30</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">856000</field>
+            <field name="jumlah_transaksi">19</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">289138</field>
+            <field name="beban_operasional">47000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 59)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_60" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0060</field>
+            <field name="tanggal">2026-01-31</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">417000</field>
+            <field name="jumlah_transaksi">26</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">161426</field>
+            <field name="beban_operasional">41000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 60)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_61" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0061</field>
+            <field name="tanggal">2026-01-31</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">820000</field>
+            <field name="jumlah_transaksi">36</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">324163</field>
+            <field name="beban_operasional">98000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 61)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_62" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0062</field>
+            <field name="tanggal">2026-02-01</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">516000</field>
+            <field name="jumlah_transaksi">12</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">166388</field>
+            <field name="beban_operasional">57000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 62)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_63" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0063</field>
+            <field name="tanggal">2026-02-01</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1010000</field>
+            <field name="jumlah_transaksi">33</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">343594</field>
+            <field name="beban_operasional">80000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 63)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_64" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0064</field>
+            <field name="tanggal">2026-02-02</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1160000</field>
+            <field name="jumlah_transaksi">27</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">447190</field>
+            <field name="beban_operasional">39000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 64)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_65" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0065</field>
+            <field name="tanggal">2026-02-02</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">852000</field>
+            <field name="jumlah_transaksi">28</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">263862</field>
+            <field name="beban_operasional">45000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 65)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_66" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0066</field>
+            <field name="tanggal">2026-02-03</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">798000</field>
+            <field name="jumlah_transaksi">19</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">253896</field>
+            <field name="beban_operasional">61000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 66)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_67" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0067</field>
+            <field name="tanggal">2026-02-03</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">908000</field>
+            <field name="jumlah_transaksi">10</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">283642</field>
+            <field name="beban_operasional">59000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 67)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_68" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0068</field>
+            <field name="tanggal">2026-02-04</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1222000</field>
+            <field name="jumlah_transaksi">10</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">406905</field>
+            <field name="beban_operasional">72000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 68)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_69" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0069</field>
+            <field name="tanggal">2026-02-04</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">655000</field>
+            <field name="jumlah_transaksi">47</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">260203</field>
+            <field name="beban_operasional">95000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 69)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_70" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0070</field>
+            <field name="tanggal">2026-02-05</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">884000</field>
+            <field name="jumlah_transaksi">21</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">267520</field>
+            <field name="beban_operasional">42000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 70)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_71" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0071</field>
+            <field name="tanggal">2026-02-05</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">546000</field>
+            <field name="jumlah_transaksi">45</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">182419</field>
+            <field name="beban_operasional">70000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 71)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_72" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0072</field>
+            <field name="tanggal">2026-02-06</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">707000</field>
+            <field name="jumlah_transaksi">38</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">213328</field>
+            <field name="beban_operasional">95000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 72)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_73" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0073</field>
+            <field name="tanggal">2026-02-06</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1264000</field>
+            <field name="jumlah_transaksi">15</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">480138</field>
+            <field name="beban_operasional">68000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 73)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_74" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0074</field>
+            <field name="tanggal">2026-02-07</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1433000</field>
+            <field name="jumlah_transaksi">29</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">545982</field>
+            <field name="beban_operasional">90000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 74)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_75" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0075</field>
+            <field name="tanggal">2026-02-07</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">713000</field>
+            <field name="jumlah_transaksi">40</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">235989</field>
+            <field name="beban_operasional">83000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 75)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_76" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0076</field>
+            <field name="tanggal">2026-02-08</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">336000</field>
+            <field name="jumlah_transaksi">11</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">105913</field>
+            <field name="beban_operasional">85000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 76)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_77" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0077</field>
+            <field name="tanggal">2026-02-08</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">362000</field>
+            <field name="jumlah_transaksi">16</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">138829</field>
+            <field name="beban_operasional">72000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 77)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_78" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0078</field>
+            <field name="tanggal">2026-02-09</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">395000</field>
+            <field name="jumlah_transaksi">28</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">145885</field>
+            <field name="beban_operasional">81000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 78)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_79" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0079</field>
+            <field name="tanggal">2026-02-09</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">870000</field>
+            <field name="jumlah_transaksi">39</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">263768</field>
+            <field name="beban_operasional">95000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 79)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_80" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0080</field>
+            <field name="tanggal">2026-02-10</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1498000</field>
+            <field name="jumlah_transaksi">46</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">472613</field>
+            <field name="beban_operasional">80000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 80)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_81" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0081</field>
+            <field name="tanggal">2026-02-10</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">906000</field>
+            <field name="jumlah_transaksi">27</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">312479</field>
+            <field name="beban_operasional">63000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 81)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_82" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0082</field>
+            <field name="tanggal">2026-02-11</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">579000</field>
+            <field name="jumlah_transaksi">12</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">210110</field>
+            <field name="beban_operasional">71000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 82)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_83" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0083</field>
+            <field name="tanggal">2026-02-11</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1043000</field>
+            <field name="jumlah_transaksi">11</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">406183</field>
+            <field name="beban_operasional">97000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 83)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_84" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0084</field>
+            <field name="tanggal">2026-02-12</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1362000</field>
+            <field name="jumlah_transaksi">14</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">505301</field>
+            <field name="beban_operasional">59000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 84)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_85" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0085</field>
+            <field name="tanggal">2026-02-12</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1141000</field>
+            <field name="jumlah_transaksi">17</field>
+            <field name="metode_pembayaran">tunai</field>
+            <field name="hpp">355424</field>
+            <field name="beban_operasional">73000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 85)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_86" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0086</field>
+            <field name="tanggal">2026-02-13</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">442000</field>
+            <field name="jumlah_transaksi">12</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">136825</field>
+            <field name="beban_operasional">34000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 86)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_87" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0087</field>
+            <field name="tanggal">2026-02-13</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1214000</field>
+            <field name="jumlah_transaksi">43</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">459287</field>
+            <field name="beban_operasional">100000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 87)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_88" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0088</field>
+            <field name="tanggal">2026-02-14</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1310000</field>
+            <field name="jumlah_transaksi">47</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">487331</field>
+            <field name="beban_operasional">97000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 88)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_89" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0089</field>
+            <field name="tanggal">2026-02-14</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1119000</field>
+            <field name="jumlah_transaksi">47</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">411106</field>
+            <field name="beban_operasional">61000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 89)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_90" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0090</field>
+            <field name="tanggal">2026-02-15</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">827000</field>
+            <field name="jumlah_transaksi">11</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">273367</field>
+            <field name="beban_operasional">78000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 90)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_91" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0091</field>
+            <field name="tanggal">2026-02-15</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1292000</field>
+            <field name="jumlah_transaksi">45</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">407079</field>
+            <field name="beban_operasional">83000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 91)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_92" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0092</field>
+            <field name="tanggal">2026-02-16</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1173000</field>
+            <field name="jumlah_transaksi">35</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">389964</field>
+            <field name="beban_operasional">33000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 92)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_93" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0093</field>
+            <field name="tanggal">2026-02-16</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">705000</field>
+            <field name="jumlah_transaksi">41</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">271870</field>
+            <field name="beban_operasional">37000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 93)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_94" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0094</field>
+            <field name="tanggal">2026-02-17</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">1151000</field>
+            <field name="jumlah_transaksi">10</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">443839</field>
+            <field name="beban_operasional">88000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 94)</field>
+            <field name="state">submitted</field>
+        </record>
+        <record id="lap_demo_95" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0095</field>
+            <field name="tanggal">2026-02-17</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">311000</field>
+            <field name="jumlah_transaksi">29</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">95101</field>
+            <field name="beban_operasional">82000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 95)</field>
+            <field name="state">approved</field>
+        </record>
+        <record id="lap_demo_96" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0096</field>
+            <field name="tanggal">2026-02-18</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">355000</field>
+            <field name="jumlah_transaksi">43</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">108690</field>
+            <field name="beban_operasional">63000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 96)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_97" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0097</field>
+            <field name="tanggal">2026-02-18</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1488000</field>
+            <field name="jumlah_transaksi">10</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">584617</field>
+            <field name="beban_operasional">77000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 97)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_98" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0098</field>
+            <field name="tanggal">2026-02-19</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">996000</field>
+            <field name="jumlah_transaksi">30</field>
+            <field name="metode_pembayaran">qris</field>
+            <field name="hpp">326628</field>
+            <field name="beban_operasional">69000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 98)</field>
+            <field name="state">draft</field>
+        </record>
+        <record id="lap_demo_99" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0099</field>
+            <field name="tanggal">2026-02-19</field>
+            <field name="divisi">kitchen</field>
+            <field name="total_pendapatan">1052000</field>
+            <field name="jumlah_transaksi">27</field>
+            <field name="metode_pembayaran">campuran</field>
+            <field name="hpp">398951</field>
+            <field name="beban_operasional">68000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 99)</field>
+            <field name="state">archived</field>
+        </record>
+        <record id="lap_demo_100" model="plumeria.laporan.operasional">
+            <field name="nomor_referensi">LAP/DEMO/0100</field>
+            <field name="tanggal">2026-02-20</field>
+            <field name="divisi">bar</field>
+            <field name="total_pendapatan">777000</field>
+            <field name="jumlah_transaksi">17</field>
+            <field name="metode_pembayaran">debit</field>
+            <field name="hpp">292463</field>
+            <field name="beban_operasional">88000</field>
+            <field name="catatan_kendala">Operasional berjalan lancar (Seeder 100)</field>
+            <field name="state">draft</field>
+        </record>
+    </data>
+</odoo>

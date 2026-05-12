@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <record id="promo_demo_1" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 1</field>
+            <field name="kode_promo">PROMO001</field>
+            <field name="periode_mulai">2026-01-23</field>
+            <field name="periode_selesai">2026-02-10</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">27</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_54')), (4, ref('produk_demo_61')), (4, ref('produk_demo_84'))]"/>
+        </record>
+        <record id="promo_demo_2" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 2</field>
+            <field name="kode_promo">PROMO002</field>
+            <field name="periode_mulai">2026-02-05</field>
+            <field name="periode_selesai">2026-02-25</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">20</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_19')), (4, ref('produk_demo_82')), (4, ref('produk_demo_47'))]"/>
+        </record>
+        <record id="promo_demo_3" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 3</field>
+            <field name="kode_promo">PROMO003</field>
+            <field name="periode_mulai">2026-01-14</field>
+            <field name="periode_selesai">2026-02-13</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">7000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_55')), (4, ref('produk_demo_44')), (4, ref('produk_demo_86'))]"/>
+        </record>
+        <record id="promo_demo_4" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 4</field>
+            <field name="kode_promo">PROMO004</field>
+            <field name="periode_mulai">2026-04-08</field>
+            <field name="periode_selesai">2026-04-22</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">6</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_61')), (4, ref('produk_demo_91')), (4, ref('produk_demo_42'))]"/>
+        </record>
+        <record id="promo_demo_5" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 5</field>
+            <field name="kode_promo">PROMO005</field>
+            <field name="periode_mulai">2026-01-12</field>
+            <field name="periode_selesai">2026-02-02</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">16</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_57')), (4, ref('produk_demo_11')), (4, ref('produk_demo_34'))]"/>
+        </record>
+        <record id="promo_demo_6" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 6</field>
+            <field name="kode_promo">PROMO006</field>
+            <field name="periode_mulai">2026-01-18</field>
+            <field name="periode_selesai">2026-02-17</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">19000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_97')), (4, ref('produk_demo_31')), (4, ref('produk_demo_46'))]"/>
+        </record>
+        <record id="promo_demo_7" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 7</field>
+            <field name="kode_promo">PROMO007</field>
+            <field name="periode_mulai">2026-03-26</field>
+            <field name="periode_selesai">2026-04-24</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">16000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_26')), (4, ref('produk_demo_41')), (4, ref('produk_demo_70'))]"/>
+        </record>
+        <record id="promo_demo_8" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 8</field>
+            <field name="kode_promo">PROMO008</field>
+            <field name="periode_mulai">2026-01-03</field>
+            <field name="periode_selesai">2026-02-01</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">8</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_55')), (4, ref('produk_demo_57')), (4, ref('produk_demo_67'))]"/>
+        </record>
+        <record id="promo_demo_9" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 9</field>
+            <field name="kode_promo">PROMO009</field>
+            <field name="periode_mulai">2026-02-26</field>
+            <field name="periode_selesai">2026-03-12</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">27</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_92')), (4, ref('produk_demo_31')), (4, ref('produk_demo_93'))]"/>
+        </record>
+        <record id="promo_demo_10" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 10</field>
+            <field name="kode_promo">PROMO010</field>
+            <field name="periode_mulai">2026-03-07</field>
+            <field name="periode_selesai">2026-03-21</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">10000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_74')), (4, ref('produk_demo_100')), (4, ref('produk_demo_39'))]"/>
+        </record>
+        <record id="promo_demo_11" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 11</field>
+            <field name="kode_promo">PROMO011</field>
+            <field name="periode_mulai">2026-02-08</field>
+            <field name="periode_selesai">2026-02-15</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">5000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_98')), (4, ref('produk_demo_65')), (4, ref('produk_demo_76'))]"/>
+        </record>
+        <record id="promo_demo_12" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 12</field>
+            <field name="kode_promo">PROMO012</field>
+            <field name="periode_mulai">2026-03-13</field>
+            <field name="periode_selesai">2026-03-19</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">7000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_66')), (4, ref('produk_demo_57')), (4, ref('produk_demo_91'))]"/>
+        </record>
+        <record id="promo_demo_13" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 13</field>
+            <field name="kode_promo">PROMO013</field>
+            <field name="periode_mulai">2026-01-31</field>
+            <field name="periode_selesai">2026-03-02</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">14</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_97')), (4, ref('produk_demo_35')), (4, ref('produk_demo_96'))]"/>
+        </record>
+        <record id="promo_demo_14" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 14</field>
+            <field name="kode_promo">PROMO014</field>
+            <field name="periode_mulai">2026-03-01</field>
+            <field name="periode_selesai">2026-03-21</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">17</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_42')), (4, ref('produk_demo_65')), (4, ref('produk_demo_61'))]"/>
+        </record>
+        <record id="promo_demo_15" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 15</field>
+            <field name="kode_promo">PROMO015</field>
+            <field name="periode_mulai">2026-01-28</field>
+            <field name="periode_selesai">2026-02-08</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">5</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_85')), (4, ref('produk_demo_73')), (4, ref('produk_demo_26'))]"/>
+        </record>
+        <record id="promo_demo_16" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 16</field>
+            <field name="kode_promo">PROMO016</field>
+            <field name="periode_mulai">2026-01-15</field>
+            <field name="periode_selesai">2026-01-20</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">28</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_11')), (4, ref('produk_demo_26')), (4, ref('produk_demo_72'))]"/>
+        </record>
+        <record id="promo_demo_17" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 17</field>
+            <field name="kode_promo">PROMO017</field>
+            <field name="periode_mulai">2026-03-20</field>
+            <field name="periode_selesai">2026-04-07</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">6000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_81')), (4, ref('produk_demo_23')), (4, ref('produk_demo_84'))]"/>
+        </record>
+        <record id="promo_demo_18" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 18</field>
+            <field name="kode_promo">PROMO018</field>
+            <field name="periode_mulai">2026-02-15</field>
+            <field name="periode_selesai">2026-03-01</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">13000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_11')), (4, ref('produk_demo_65')), (4, ref('produk_demo_57'))]"/>
+        </record>
+        <record id="promo_demo_19" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 19</field>
+            <field name="kode_promo">PROMO019</field>
+            <field name="periode_mulai">2026-03-06</field>
+            <field name="periode_selesai">2026-04-05</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">17000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_83')), (4, ref('produk_demo_26')), (4, ref('produk_demo_16'))]"/>
+        </record>
+        <record id="promo_demo_20" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 20</field>
+            <field name="kode_promo">PROMO020</field>
+            <field name="periode_mulai">2026-02-05</field>
+            <field name="periode_selesai">2026-02-15</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">12000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_69')), (4, ref('produk_demo_29')), (4, ref('produk_demo_70'))]"/>
+        </record>
+        <record id="promo_demo_21" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 21</field>
+            <field name="kode_promo">PROMO021</field>
+            <field name="periode_mulai">2026-03-13</field>
+            <field name="periode_selesai">2026-03-21</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">16000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_58')), (4, ref('produk_demo_62')), (4, ref('produk_demo_21'))]"/>
+        </record>
+        <record id="promo_demo_22" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 22</field>
+            <field name="kode_promo">PROMO022</field>
+            <field name="periode_mulai">2026-04-05</field>
+            <field name="periode_selesai">2026-04-16</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">16</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_93')), (4, ref('produk_demo_21')), (4, ref('produk_demo_47'))]"/>
+        </record>
+        <record id="promo_demo_23" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 23</field>
+            <field name="kode_promo">PROMO023</field>
+            <field name="periode_mulai">2026-03-16</field>
+            <field name="periode_selesai">2026-04-11</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">7</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_60')), (4, ref('produk_demo_86')), (4, ref('produk_demo_22'))]"/>
+        </record>
+        <record id="promo_demo_24" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 24</field>
+            <field name="kode_promo">PROMO024</field>
+            <field name="periode_mulai">2026-01-09</field>
+            <field name="periode_selesai">2026-01-14</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">7</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_47')), (4, ref('produk_demo_51')), (4, ref('produk_demo_48'))]"/>
+        </record>
+        <record id="promo_demo_25" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 25</field>
+            <field name="kode_promo">PROMO025</field>
+            <field name="periode_mulai">2026-02-11</field>
+            <field name="periode_selesai">2026-03-04</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">8000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_55')), (4, ref('produk_demo_39')), (4, ref('produk_demo_36'))]"/>
+        </record>
+        <record id="promo_demo_26" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 26</field>
+            <field name="kode_promo">PROMO026</field>
+            <field name="periode_mulai">2026-03-31</field>
+            <field name="periode_selesai">2026-04-21</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">14000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_47')), (4, ref('produk_demo_26')), (4, ref('produk_demo_78'))]"/>
+        </record>
+        <record id="promo_demo_27" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 27</field>
+            <field name="kode_promo">PROMO027</field>
+            <field name="periode_mulai">2026-01-27</field>
+            <field name="periode_selesai">2026-02-24</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">10000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_56')), (4, ref('produk_demo_44')), (4, ref('produk_demo_68'))]"/>
+        </record>
+        <record id="promo_demo_28" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 28</field>
+            <field name="kode_promo">PROMO028</field>
+            <field name="periode_mulai">2026-01-31</field>
+            <field name="periode_selesai">2026-02-21</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">16</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_56')), (4, ref('produk_demo_59')), (4, ref('produk_demo_85'))]"/>
+        </record>
+        <record id="promo_demo_29" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 29</field>
+            <field name="kode_promo">PROMO029</field>
+            <field name="periode_mulai">2026-03-14</field>
+            <field name="periode_selesai">2026-03-20</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">19000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_43')), (4, ref('produk_demo_33')), (4, ref('produk_demo_85'))]"/>
+        </record>
+        <record id="promo_demo_30" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 30</field>
+            <field name="kode_promo">PROMO030</field>
+            <field name="periode_mulai">2026-04-03</field>
+            <field name="periode_selesai">2026-04-24</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">16</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_44')), (4, ref('produk_demo_26')), (4, ref('produk_demo_40'))]"/>
+        </record>
+        <record id="promo_demo_31" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 31</field>
+            <field name="kode_promo">PROMO031</field>
+            <field name="periode_mulai">2026-02-12</field>
+            <field name="periode_selesai">2026-02-21</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">6</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_39')), (4, ref('produk_demo_16')), (4, ref('produk_demo_43'))]"/>
+        </record>
+        <record id="promo_demo_32" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 32</field>
+            <field name="kode_promo">PROMO032</field>
+            <field name="periode_mulai">2026-03-04</field>
+            <field name="periode_selesai">2026-03-15</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">19000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_24')), (4, ref('produk_demo_32')), (4, ref('produk_demo_22'))]"/>
+        </record>
+        <record id="promo_demo_33" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 33</field>
+            <field name="kode_promo">PROMO033</field>
+            <field name="periode_mulai">2026-03-05</field>
+            <field name="periode_selesai">2026-03-12</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">10</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_73')), (4, ref('produk_demo_3')), (4, ref('produk_demo_77'))]"/>
+        </record>
+        <record id="promo_demo_34" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 34</field>
+            <field name="kode_promo">PROMO034</field>
+            <field name="periode_mulai">2026-02-27</field>
+            <field name="periode_selesai">2026-03-25</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">16000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_59')), (4, ref('produk_demo_65')), (4, ref('produk_demo_2'))]"/>
+        </record>
+        <record id="promo_demo_35" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 35</field>
+            <field name="kode_promo">PROMO035</field>
+            <field name="periode_mulai">2026-02-24</field>
+            <field name="periode_selesai">2026-03-05</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">11</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_45')), (4, ref('produk_demo_20')), (4, ref('produk_demo_14'))]"/>
+        </record>
+        <record id="promo_demo_36" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 36</field>
+            <field name="kode_promo">PROMO036</field>
+            <field name="periode_mulai">2026-02-08</field>
+            <field name="periode_selesai">2026-02-25</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">16000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_60')), (4, ref('produk_demo_36')), (4, ref('produk_demo_42'))]"/>
+        </record>
+        <record id="promo_demo_37" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 37</field>
+            <field name="kode_promo">PROMO037</field>
+            <field name="periode_mulai">2026-01-04</field>
+            <field name="periode_selesai">2026-01-09</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">14000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_67')), (4, ref('produk_demo_9')), (4, ref('produk_demo_66'))]"/>
+        </record>
+        <record id="promo_demo_38" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 38</field>
+            <field name="kode_promo">PROMO038</field>
+            <field name="periode_mulai">2026-02-16</field>
+            <field name="periode_selesai">2026-03-09</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">19</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_47')), (4, ref('produk_demo_97')), (4, ref('produk_demo_77'))]"/>
+        </record>
+        <record id="promo_demo_39" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 39</field>
+            <field name="kode_promo">PROMO039</field>
+            <field name="periode_mulai">2026-04-09</field>
+            <field name="periode_selesai">2026-05-09</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">15000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_40')), (4, ref('produk_demo_55')), (4, ref('produk_demo_49'))]"/>
+        </record>
+        <record id="promo_demo_40" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 40</field>
+            <field name="kode_promo">PROMO040</field>
+            <field name="periode_mulai">2026-03-19</field>
+            <field name="periode_selesai">2026-03-24</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">17</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_24')), (4, ref('produk_demo_47')), (4, ref('produk_demo_46'))]"/>
+        </record>
+        <record id="promo_demo_41" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 41</field>
+            <field name="kode_promo">PROMO041</field>
+            <field name="periode_mulai">2026-03-03</field>
+            <field name="periode_selesai">2026-03-25</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">17000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_80')), (4, ref('produk_demo_71')), (4, ref('produk_demo_75'))]"/>
+        </record>
+        <record id="promo_demo_42" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 42</field>
+            <field name="kode_promo">PROMO042</field>
+            <field name="periode_mulai">2026-01-15</field>
+            <field name="periode_selesai">2026-01-31</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">22</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_54')), (4, ref('produk_demo_33')), (4, ref('produk_demo_81'))]"/>
+        </record>
+        <record id="promo_demo_43" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 43</field>
+            <field name="kode_promo">PROMO043</field>
+            <field name="periode_mulai">2026-03-30</field>
+            <field name="periode_selesai">2026-04-06</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">25</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_94')), (4, ref('produk_demo_41')), (4, ref('produk_demo_8'))]"/>
+        </record>
+        <record id="promo_demo_44" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 44</field>
+            <field name="kode_promo">PROMO044</field>
+            <field name="periode_mulai">2026-03-01</field>
+            <field name="periode_selesai">2026-03-09</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">18000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_74')), (4, ref('produk_demo_51')), (4, ref('produk_demo_92'))]"/>
+        </record>
+        <record id="promo_demo_45" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 45</field>
+            <field name="kode_promo">PROMO045</field>
+            <field name="periode_mulai">2026-02-25</field>
+            <field name="periode_selesai">2026-03-20</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">24</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_42')), (4, ref('produk_demo_46')), (4, ref('produk_demo_1'))]"/>
+        </record>
+        <record id="promo_demo_46" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 46</field>
+            <field name="kode_promo">PROMO046</field>
+            <field name="periode_mulai">2026-03-12</field>
+            <field name="periode_selesai">2026-03-22</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">19</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_94')), (4, ref('produk_demo_78')), (4, ref('produk_demo_54'))]"/>
+        </record>
+        <record id="promo_demo_47" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 47</field>
+            <field name="kode_promo">PROMO047</field>
+            <field name="periode_mulai">2026-03-31</field>
+            <field name="periode_selesai">2026-04-22</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">25</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_34')), (4, ref('produk_demo_2')), (4, ref('produk_demo_75'))]"/>
+        </record>
+        <record id="promo_demo_48" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 48</field>
+            <field name="kode_promo">PROMO048</field>
+            <field name="periode_mulai">2026-01-18</field>
+            <field name="periode_selesai">2026-02-06</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">20000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_40')), (4, ref('produk_demo_78')), (4, ref('produk_demo_9'))]"/>
+        </record>
+        <record id="promo_demo_49" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 49</field>
+            <field name="kode_promo">PROMO049</field>
+            <field name="periode_mulai">2026-01-01</field>
+            <field name="periode_selesai">2026-01-25</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">9000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_76')), (4, ref('produk_demo_29')), (4, ref('produk_demo_71'))]"/>
+        </record>
+        <record id="promo_demo_50" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 50</field>
+            <field name="kode_promo">PROMO050</field>
+            <field name="periode_mulai">2026-03-07</field>
+            <field name="periode_selesai">2026-03-15</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">15000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_71')), (4, ref('produk_demo_34')), (4, ref('produk_demo_21'))]"/>
+        </record>
+        <record id="promo_demo_51" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 51</field>
+            <field name="kode_promo">PROMO051</field>
+            <field name="periode_mulai">2026-01-04</field>
+            <field name="periode_selesai">2026-01-10</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">15</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_17')), (4, ref('produk_demo_45')), (4, ref('produk_demo_71'))]"/>
+        </record>
+        <record id="promo_demo_52" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 52</field>
+            <field name="kode_promo">PROMO052</field>
+            <field name="periode_mulai">2026-02-25</field>
+            <field name="periode_selesai">2026-03-23</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">23</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_80')), (4, ref('produk_demo_60')), (4, ref('produk_demo_39'))]"/>
+        </record>
+        <record id="promo_demo_53" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 53</field>
+            <field name="kode_promo">PROMO053</field>
+            <field name="periode_mulai">2026-03-07</field>
+            <field name="periode_selesai">2026-03-27</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">10000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_69')), (4, ref('produk_demo_53')), (4, ref('produk_demo_19'))]"/>
+        </record>
+        <record id="promo_demo_54" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 54</field>
+            <field name="kode_promo">PROMO054</field>
+            <field name="periode_mulai">2026-03-20</field>
+            <field name="periode_selesai">2026-04-13</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">22</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_31')), (4, ref('produk_demo_83')), (4, ref('produk_demo_38'))]"/>
+        </record>
+        <record id="promo_demo_55" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 55</field>
+            <field name="kode_promo">PROMO055</field>
+            <field name="periode_mulai">2026-01-15</field>
+            <field name="periode_selesai">2026-02-04</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">5000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_90')), (4, ref('produk_demo_72')), (4, ref('produk_demo_27'))]"/>
+        </record>
+        <record id="promo_demo_56" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 56</field>
+            <field name="kode_promo">PROMO056</field>
+            <field name="periode_mulai">2026-04-10</field>
+            <field name="periode_selesai">2026-05-08</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">16000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_71')), (4, ref('produk_demo_9')), (4, ref('produk_demo_26'))]"/>
+        </record>
+        <record id="promo_demo_57" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 57</field>
+            <field name="kode_promo">PROMO057</field>
+            <field name="periode_mulai">2026-03-26</field>
+            <field name="periode_selesai">2026-04-16</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">14000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_42')), (4, ref('produk_demo_89')), (4, ref('produk_demo_49'))]"/>
+        </record>
+        <record id="promo_demo_58" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 58</field>
+            <field name="kode_promo">PROMO058</field>
+            <field name="periode_mulai">2026-04-10</field>
+            <field name="periode_selesai">2026-04-30</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">5000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_41')), (4, ref('produk_demo_34')), (4, ref('produk_demo_77'))]"/>
+        </record>
+        <record id="promo_demo_59" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 59</field>
+            <field name="kode_promo">PROMO059</field>
+            <field name="periode_mulai">2026-04-09</field>
+            <field name="periode_selesai">2026-05-03</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">17</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_71')), (4, ref('produk_demo_46')), (4, ref('produk_demo_82'))]"/>
+        </record>
+        <record id="promo_demo_60" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 60</field>
+            <field name="kode_promo">PROMO060</field>
+            <field name="periode_mulai">2026-03-20</field>
+            <field name="periode_selesai">2026-04-14</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">7</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_78')), (4, ref('produk_demo_24')), (4, ref('produk_demo_30'))]"/>
+        </record>
+        <record id="promo_demo_61" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 61</field>
+            <field name="kode_promo">PROMO061</field>
+            <field name="periode_mulai">2026-02-01</field>
+            <field name="periode_selesai">2026-02-23</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">18000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_41')), (4, ref('produk_demo_66')), (4, ref('produk_demo_21'))]"/>
+        </record>
+        <record id="promo_demo_62" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 62</field>
+            <field name="kode_promo">PROMO062</field>
+            <field name="periode_mulai">2026-04-01</field>
+            <field name="periode_selesai">2026-04-18</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">6</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_53')), (4, ref('produk_demo_56')), (4, ref('produk_demo_62'))]"/>
+        </record>
+        <record id="promo_demo_63" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 63</field>
+            <field name="kode_promo">PROMO063</field>
+            <field name="periode_mulai">2026-01-05</field>
+            <field name="periode_selesai">2026-01-22</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">6000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_79')), (4, ref('produk_demo_90')), (4, ref('produk_demo_44'))]"/>
+        </record>
+        <record id="promo_demo_64" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 64</field>
+            <field name="kode_promo">PROMO064</field>
+            <field name="periode_mulai">2026-01-04</field>
+            <field name="periode_selesai">2026-01-17</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">9</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_49')), (4, ref('produk_demo_75')), (4, ref('produk_demo_18'))]"/>
+        </record>
+        <record id="promo_demo_65" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 65</field>
+            <field name="kode_promo">PROMO065</field>
+            <field name="periode_mulai">2026-01-19</field>
+            <field name="periode_selesai">2026-01-30</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">11000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_84')), (4, ref('produk_demo_50')), (4, ref('produk_demo_87'))]"/>
+        </record>
+        <record id="promo_demo_66" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 66</field>
+            <field name="kode_promo">PROMO066</field>
+            <field name="periode_mulai">2026-03-15</field>
+            <field name="periode_selesai">2026-04-02</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">15000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_91')), (4, ref('produk_demo_76')), (4, ref('produk_demo_18'))]"/>
+        </record>
+        <record id="promo_demo_67" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 67</field>
+            <field name="kode_promo">PROMO067</field>
+            <field name="periode_mulai">2026-03-29</field>
+            <field name="periode_selesai">2026-04-10</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">8</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_74')), (4, ref('produk_demo_33')), (4, ref('produk_demo_46'))]"/>
+        </record>
+        <record id="promo_demo_68" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 68</field>
+            <field name="kode_promo">PROMO068</field>
+            <field name="periode_mulai">2026-01-11</field>
+            <field name="periode_selesai">2026-02-02</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">9000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_11')), (4, ref('produk_demo_7')), (4, ref('produk_demo_42'))]"/>
+        </record>
+        <record id="promo_demo_69" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 69</field>
+            <field name="kode_promo">PROMO069</field>
+            <field name="periode_mulai">2026-02-04</field>
+            <field name="periode_selesai">2026-02-24</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">18000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_76')), (4, ref('produk_demo_12')), (4, ref('produk_demo_82'))]"/>
+        </record>
+        <record id="promo_demo_70" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 70</field>
+            <field name="kode_promo">PROMO070</field>
+            <field name="periode_mulai">2026-03-16</field>
+            <field name="periode_selesai">2026-04-06</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">9000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_59')), (4, ref('produk_demo_73')), (4, ref('produk_demo_98'))]"/>
+        </record>
+        <record id="promo_demo_71" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 71</field>
+            <field name="kode_promo">PROMO071</field>
+            <field name="periode_mulai">2026-03-14</field>
+            <field name="periode_selesai">2026-03-20</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">8000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_98')), (4, ref('produk_demo_95')), (4, ref('produk_demo_24'))]"/>
+        </record>
+        <record id="promo_demo_72" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 72</field>
+            <field name="kode_promo">PROMO072</field>
+            <field name="periode_mulai">2026-02-13</field>
+            <field name="periode_selesai">2026-03-14</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">11000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_26')), (4, ref('produk_demo_12')), (4, ref('produk_demo_22'))]"/>
+        </record>
+        <record id="promo_demo_73" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 73</field>
+            <field name="kode_promo">PROMO073</field>
+            <field name="periode_mulai">2026-01-09</field>
+            <field name="periode_selesai">2026-01-14</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">26</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_64')), (4, ref('produk_demo_40')), (4, ref('produk_demo_49'))]"/>
+        </record>
+        <record id="promo_demo_74" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 74</field>
+            <field name="kode_promo">PROMO074</field>
+            <field name="periode_mulai">2026-01-17</field>
+            <field name="periode_selesai">2026-02-06</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">29</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_90')), (4, ref('produk_demo_66')), (4, ref('produk_demo_34'))]"/>
+        </record>
+        <record id="promo_demo_75" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 75</field>
+            <field name="kode_promo">PROMO075</field>
+            <field name="periode_mulai">2026-04-05</field>
+            <field name="periode_selesai">2026-04-15</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">28</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_81')), (4, ref('produk_demo_17')), (4, ref('produk_demo_70'))]"/>
+        </record>
+        <record id="promo_demo_76" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 76</field>
+            <field name="kode_promo">PROMO076</field>
+            <field name="periode_mulai">2026-01-23</field>
+            <field name="periode_selesai">2026-02-07</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">28</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_70')), (4, ref('produk_demo_65')), (4, ref('produk_demo_38'))]"/>
+        </record>
+        <record id="promo_demo_77" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 77</field>
+            <field name="kode_promo">PROMO077</field>
+            <field name="periode_mulai">2026-03-24</field>
+            <field name="periode_selesai">2026-04-12</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">6000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_93')), (4, ref('produk_demo_83')), (4, ref('produk_demo_69'))]"/>
+        </record>
+        <record id="promo_demo_78" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 78</field>
+            <field name="kode_promo">PROMO078</field>
+            <field name="periode_mulai">2026-03-25</field>
+            <field name="periode_selesai">2026-04-22</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">10000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_18')), (4, ref('produk_demo_65')), (4, ref('produk_demo_2'))]"/>
+        </record>
+        <record id="promo_demo_79" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 79</field>
+            <field name="kode_promo">PROMO079</field>
+            <field name="periode_mulai">2026-01-31</field>
+            <field name="periode_selesai">2026-02-07</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">17</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_68')), (4, ref('produk_demo_57')), (4, ref('produk_demo_67'))]"/>
+        </record>
+        <record id="promo_demo_80" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 80</field>
+            <field name="kode_promo">PROMO080</field>
+            <field name="periode_mulai">2026-02-01</field>
+            <field name="periode_selesai">2026-02-28</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">30</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_97')), (4, ref('produk_demo_51')), (4, ref('produk_demo_54'))]"/>
+        </record>
+        <record id="promo_demo_81" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 81</field>
+            <field name="kode_promo">PROMO081</field>
+            <field name="periode_mulai">2026-03-04</field>
+            <field name="periode_selesai">2026-03-22</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">6000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_90')), (4, ref('produk_demo_27')), (4, ref('produk_demo_36'))]"/>
+        </record>
+        <record id="promo_demo_82" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 82</field>
+            <field name="kode_promo">PROMO082</field>
+            <field name="periode_mulai">2026-01-15</field>
+            <field name="periode_selesai">2026-01-27</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">18000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_1')), (4, ref('produk_demo_82')), (4, ref('produk_demo_89'))]"/>
+        </record>
+        <record id="promo_demo_83" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 83</field>
+            <field name="kode_promo">PROMO083</field>
+            <field name="periode_mulai">2026-01-10</field>
+            <field name="periode_selesai">2026-01-30</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">9000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_10')), (4, ref('produk_demo_3')), (4, ref('produk_demo_29'))]"/>
+        </record>
+        <record id="promo_demo_84" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 84</field>
+            <field name="kode_promo">PROMO084</field>
+            <field name="periode_mulai">2026-01-23</field>
+            <field name="periode_selesai">2026-02-21</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">14000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_32')), (4, ref('produk_demo_88')), (4, ref('produk_demo_49'))]"/>
+        </record>
+        <record id="promo_demo_85" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 85</field>
+            <field name="kode_promo">PROMO085</field>
+            <field name="periode_mulai">2026-03-11</field>
+            <field name="periode_selesai">2026-03-31</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">9000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_11')), (4, ref('produk_demo_45')), (4, ref('produk_demo_36'))]"/>
+        </record>
+        <record id="promo_demo_86" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 86</field>
+            <field name="kode_promo">PROMO086</field>
+            <field name="periode_mulai">2026-02-24</field>
+            <field name="periode_selesai">2026-03-03</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">20000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_92')), (4, ref('produk_demo_90')), (4, ref('produk_demo_40'))]"/>
+        </record>
+        <record id="promo_demo_87" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 87</field>
+            <field name="kode_promo">PROMO087</field>
+            <field name="periode_mulai">2026-04-08</field>
+            <field name="periode_selesai">2026-04-18</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">16</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_14')), (4, ref('produk_demo_54')), (4, ref('produk_demo_10'))]"/>
+        </record>
+        <record id="promo_demo_88" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 88</field>
+            <field name="kode_promo">PROMO088</field>
+            <field name="periode_mulai">2026-02-10</field>
+            <field name="periode_selesai">2026-02-26</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">20</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_64')), (4, ref('produk_demo_53')), (4, ref('produk_demo_78'))]"/>
+        </record>
+        <record id="promo_demo_89" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 89</field>
+            <field name="kode_promo">PROMO089</field>
+            <field name="periode_mulai">2026-02-24</field>
+            <field name="periode_selesai">2026-03-18</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">7000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_88')), (4, ref('produk_demo_37')), (4, ref('produk_demo_3'))]"/>
+        </record>
+        <record id="promo_demo_90" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 90</field>
+            <field name="kode_promo">PROMO090</field>
+            <field name="periode_mulai">2026-01-14</field>
+            <field name="periode_selesai">2026-02-11</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">6</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_70')), (4, ref('produk_demo_77')), (4, ref('produk_demo_7'))]"/>
+        </record>
+        <record id="promo_demo_91" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 91</field>
+            <field name="kode_promo">PROMO091</field>
+            <field name="periode_mulai">2026-02-27</field>
+            <field name="periode_selesai">2026-03-05</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">19000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_46')), (4, ref('produk_demo_5')), (4, ref('produk_demo_98'))]"/>
+        </record>
+        <record id="promo_demo_92" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 92</field>
+            <field name="kode_promo">PROMO092</field>
+            <field name="periode_mulai">2026-02-24</field>
+            <field name="periode_selesai">2026-03-25</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">13000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_50')), (4, ref('produk_demo_17')), (4, ref('produk_demo_34'))]"/>
+        </record>
+        <record id="promo_demo_93" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 93</field>
+            <field name="kode_promo">PROMO093</field>
+            <field name="periode_mulai">2026-04-06</field>
+            <field name="periode_selesai">2026-04-28</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">9</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_90')), (4, ref('produk_demo_14')), (4, ref('produk_demo_72'))]"/>
+        </record>
+        <record id="promo_demo_94" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 94</field>
+            <field name="kode_promo">PROMO094</field>
+            <field name="periode_mulai">2026-01-13</field>
+            <field name="periode_selesai">2026-01-31</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">11000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_30')), (4, ref('produk_demo_43')), (4, ref('produk_demo_62'))]"/>
+        </record>
+        <record id="promo_demo_95" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 95</field>
+            <field name="kode_promo">PROMO095</field>
+            <field name="periode_mulai">2026-03-13</field>
+            <field name="periode_selesai">2026-03-20</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">8000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_56')), (4, ref('produk_demo_17')), (4, ref('produk_demo_54'))]"/>
+        </record>
+        <record id="promo_demo_96" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 96</field>
+            <field name="kode_promo">PROMO096</field>
+            <field name="periode_mulai">2026-02-27</field>
+            <field name="periode_selesai">2026-03-08</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">15000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_44')), (4, ref('produk_demo_29')), (4, ref('produk_demo_64'))]"/>
+        </record>
+        <record id="promo_demo_97" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 97</field>
+            <field name="kode_promo">PROMO097</field>
+            <field name="periode_mulai">2026-01-26</field>
+            <field name="periode_selesai">2026-02-21</field>
+            <field name="jenis_diskon">nominal</field>
+            <field name="nilai_diskon">17000</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_2')), (4, ref('produk_demo_16')), (4, ref('produk_demo_39'))]"/>
+        </record>
+        <record id="promo_demo_98" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 98</field>
+            <field name="kode_promo">PROMO098</field>
+            <field name="periode_mulai">2026-01-13</field>
+            <field name="periode_selesai">2026-01-26</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">17</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_97')), (4, ref('produk_demo_99')), (4, ref('produk_demo_46'))]"/>
+        </record>
+        <record id="promo_demo_99" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 99</field>
+            <field name="kode_promo">PROMO099</field>
+            <field name="periode_mulai">2026-03-06</field>
+            <field name="periode_selesai">2026-03-15</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">10</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_35')), (4, ref('produk_demo_17')), (4, ref('produk_demo_18'))]"/>
+        </record>
+        <record id="promo_demo_100" model="plumeria.promo">
+            <field name="nama_promo">Promo Meriah 100</field>
+            <field name="kode_promo">PROMO100</field>
+            <field name="periode_mulai">2026-04-02</field>
+            <field name="periode_selesai">2026-04-25</field>
+            <field name="jenis_diskon">persentase</field>
+            <field name="nilai_diskon">7</field>
+            <field name="aktif">True</field>
+            <field name="produk_ids" eval="[(4, ref('produk_demo_50')), (4, ref('produk_demo_56')), (4, ref('produk_demo_2'))]"/>
+        </record>
+    </data>
+</odoo>

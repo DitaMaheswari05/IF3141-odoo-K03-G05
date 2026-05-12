@@ -16,7 +16,11 @@
         'views/rekap_views.xml',
         'views/dashboard_views.xml',
         'views/menus.xml',
-        'data/demo_data.xml',
+        'data/demo_produk.xml',
+        'data/demo_promo.xml',
+        'data/demo_transaksi.xml',
+        'data/demo_laporan.xml',
+        'data/demo_rekap.xml',
     ],
     'assets': {
         'web.assets_backend': [

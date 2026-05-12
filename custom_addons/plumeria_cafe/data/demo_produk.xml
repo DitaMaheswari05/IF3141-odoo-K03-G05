@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <record id="produk_demo_1" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 1</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">49000</field>
+            <field name="hpp">23675</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_2" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 2</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">33000</field>
+            <field name="hpp">11515</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_3" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 3</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">24000</field>
+            <field name="hpp">10196</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_4" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 4</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">30000</field>
+            <field name="hpp">10493</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_5" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 5</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">24000</field>
+            <field name="hpp">11841</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_6" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 6</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">15000</field>
+            <field name="hpp">5747</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_7" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 7</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">23000</field>
+            <field name="hpp">11204</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_8" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 8</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">47000</field>
+            <field name="hpp">14899</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_9" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 9</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">60000</field>
+            <field name="hpp">28376</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_10" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 10</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">30000</field>
+            <field name="hpp">9154</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_11" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 11</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">28000</field>
+            <field name="hpp">11062</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_12" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 12</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">38000</field>
+            <field name="hpp">14475</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_13" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 13</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">48000</field>
+            <field name="hpp">21485</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_14" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 14</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">20000</field>
+            <field name="hpp">6076</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_15" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 15</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">49000</field>
+            <field name="hpp">23029</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_16" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 16</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">49000</field>
+            <field name="hpp">19198</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_17" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 17</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">26000</field>
+            <field name="hpp">10741</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_18" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 18</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">39000</field>
+            <field name="hpp">18638</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_19" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 19</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">47000</field>
+            <field name="hpp">16213</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_20" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 20</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">46000</field>
+            <field name="hpp">16790</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_21" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 21</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">32000</field>
+            <field name="hpp">14863</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_22" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 22</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">51000</field>
+            <field name="hpp">18420</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_23" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 23</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">29000</field>
+            <field name="hpp">10285</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_24" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 24</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">23000</field>
+            <field name="hpp">6968</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_25" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 25</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">26000</field>
+            <field name="hpp">9854</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_26" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 26</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">23000</field>
+            <field name="hpp">8693</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_27" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 27</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">29000</field>
+            <field name="hpp">12498</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_28" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 28</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">25000</field>
+            <field name="hpp">11211</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_29" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 29</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">44000</field>
+            <field name="hpp">17278</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_30" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 30</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">24000</field>
+            <field name="hpp">10445</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_31" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 31</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">25000</field>
+            <field name="hpp">8500</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_32" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 32</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">46000</field>
+            <field name="hpp">15522</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_33" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 33</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">34000</field>
+            <field name="hpp">14075</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_34" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 34</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">60000</field>
+            <field name="hpp">25657</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_35" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 35</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">36000</field>
+            <field name="hpp">14011</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_36" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 36</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">41000</field>
+            <field name="hpp">15473</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_37" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 37</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">36000</field>
+            <field name="hpp">16177</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_38" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 38</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">40000</field>
+            <field name="hpp">19719</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_39" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 39</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">26000</field>
+            <field name="hpp">9412</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_40" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 40</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">29000</field>
+            <field name="hpp">11798</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_41" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 41</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">22000</field>
+            <field name="hpp">9499</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_42" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 42</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">17000</field>
+            <field name="hpp">5386</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_43" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 43</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">35000</field>
+            <field name="hpp">13485</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_44" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 44</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">21000</field>
+            <field name="hpp">7712</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_45" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 45</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">25000</field>
+            <field name="hpp">7560</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_46" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 46</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">15000</field>
+            <field name="hpp">4963</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_47" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 47</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">56000</field>
+            <field name="hpp">19722</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_48" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 48</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">41000</field>
+            <field name="hpp">15031</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_49" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 49</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">25000</field>
+            <field name="hpp">9318</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_50" model="plumeria.produk">
+            <field name="nama_produk">Minuman Spesial 50</field>
+            <field name="divisi">bar</field>
+            <field name="harga_jual">57000</field>
+            <field name="hpp">28496</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_51" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 51</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">43000</field>
+            <field name="hpp">14941</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_52" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 52</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">56000</field>
+            <field name="hpp">18672</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_53" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 53</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">16000</field>
+            <field name="hpp">7063</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_54" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 54</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">41000</field>
+            <field name="hpp">14853</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_55" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 55</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">36000</field>
+            <field name="hpp">17230</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_56" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 56</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">39000</field>
+            <field name="hpp">17353</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_57" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 57</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">56000</field>
+            <field name="hpp">26301</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_58" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 58</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">36000</field>
+            <field name="hpp">16065</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_59" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 59</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">59000</field>
+            <field name="hpp">25600</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_60" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 60</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">23000</field>
+            <field name="hpp">8344</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_61" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 61</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">49000</field>
+            <field name="hpp">17574</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_62" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 62</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">53000</field>
+            <field name="hpp">25404</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_63" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 63</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">51000</field>
+            <field name="hpp">18159</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_64" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 64</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">56000</field>
+            <field name="hpp">26668</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_65" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 65</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">40000</field>
+            <field name="hpp">19428</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_66" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 66</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">48000</field>
+            <field name="hpp">21347</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_67" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 67</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">30000</field>
+            <field name="hpp">9331</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_68" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 68</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">34000</field>
+            <field name="hpp">15559</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_69" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 69</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">16000</field>
+            <field name="hpp">6980</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_70" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 70</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">22000</field>
+            <field name="hpp">6779</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_71" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 71</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">29000</field>
+            <field name="hpp">12303</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_72" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 72</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">17000</field>
+            <field name="hpp">6180</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_73" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 73</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">25000</field>
+            <field name="hpp">10961</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_74" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 74</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">29000</field>
+            <field name="hpp">11179</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_75" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 75</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">38000</field>
+            <field name="hpp">18942</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_76" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 76</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">18000</field>
+            <field name="hpp">7773</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_77" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 77</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">31000</field>
+            <field name="hpp">12338</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_78" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 78</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">50000</field>
+            <field name="hpp">17825</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_79" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 79</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">41000</field>
+            <field name="hpp">12802</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_80" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 80</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">33000</field>
+            <field name="hpp">15932</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_81" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 81</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">24000</field>
+            <field name="hpp">8421</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_82" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 82</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">29000</field>
+            <field name="hpp">11808</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_83" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 83</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">19000</field>
+            <field name="hpp">8790</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_84" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 84</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">25000</field>
+            <field name="hpp">12277</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_85" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 85</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">49000</field>
+            <field name="hpp">22858</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_86" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 86</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">58000</field>
+            <field name="hpp">21272</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_87" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 87</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">48000</field>
+            <field name="hpp">23087</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_88" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 88</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">55000</field>
+            <field name="hpp">23894</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_89" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 89</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">57000</field>
+            <field name="hpp">23597</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_90" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 90</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">41000</field>
+            <field name="hpp">17103</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_91" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 91</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">29000</field>
+            <field name="hpp">12856</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_92" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 92</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">27000</field>
+            <field name="hpp">8731</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_93" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 93</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">39000</field>
+            <field name="hpp">12380</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_94" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 94</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">38000</field>
+            <field name="hpp">13572</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_95" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 95</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">36000</field>
+            <field name="hpp">11296</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_96" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 96</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">32000</field>
+            <field name="hpp">14880</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_97" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 97</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">36000</field>
+            <field name="hpp">11340</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_98" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 98</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">16000</field>
+            <field name="hpp">7955</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_99" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 99</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">22000</field>
+            <field name="hpp">7664</field>
+            <field name="status_aktif">True</field>
+        </record>
+        <record id="produk_demo_100" model="plumeria.produk">
+            <field name="nama_produk">Makanan Spesial 100</field>
+            <field name="divisi">kitchen</field>
+            <field name="harga_jual">18000</field>
+            <field name="hpp">8911</field>
+            <field name="status_aktif">True</field>
+        </record>
+    </data>
+</odoo>

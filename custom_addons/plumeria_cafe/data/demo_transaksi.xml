@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <record id="trx_demo_1" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026001</field>
+            <field name="waktu_transaksi">2026-01-02 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_1_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_1"/>
+            <field name="produk_id" ref="produk_demo_10"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">57000</field>
+        </record>
+        <record id="det_trx_1_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_1"/>
+            <field name="produk_id" ref="produk_demo_7"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+        <record id="trx_demo_2" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026002</field>
+            <field name="waktu_transaksi">2026-01-03 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_2_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_2"/>
+            <field name="produk_id" ref="produk_demo_42"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">55000</field>
+        </record>
+        <record id="det_trx_2_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_2"/>
+            <field name="produk_id" ref="produk_demo_48"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">17000</field>
+        </record>
+        <record id="trx_demo_3" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026003</field>
+            <field name="waktu_transaksi">2026-01-04 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_3_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_3"/>
+            <field name="produk_id" ref="produk_demo_70"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">57000</field>
+        </record>
+        <record id="det_trx_3_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_3"/>
+            <field name="produk_id" ref="produk_demo_70"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+        <record id="trx_demo_4" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026004</field>
+            <field name="waktu_transaksi">2026-01-05 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_4_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_4"/>
+            <field name="produk_id" ref="produk_demo_43"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">60000</field>
+        </record>
+        <record id="det_trx_4_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_4"/>
+            <field name="produk_id" ref="produk_demo_49"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+        <record id="trx_demo_5" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026005</field>
+            <field name="waktu_transaksi">2026-01-06 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_5_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_5"/>
+            <field name="produk_id" ref="produk_demo_24"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">58000</field>
+        </record>
+        <record id="det_trx_5_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_5"/>
+            <field name="produk_id" ref="produk_demo_27"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">39000</field>
+        </record>
+        <record id="trx_demo_6" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026006</field>
+            <field name="waktu_transaksi">2026-01-07 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_6_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_6"/>
+            <field name="produk_id" ref="produk_demo_60"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">43000</field>
+        </record>
+        <record id="det_trx_6_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_6"/>
+            <field name="produk_id" ref="produk_demo_91"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">32000</field>
+        </record>
+        <record id="trx_demo_7" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026007</field>
+            <field name="waktu_transaksi">2026-01-08 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_7_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_7"/>
+            <field name="produk_id" ref="produk_demo_100"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">60000</field>
+        </record>
+        <record id="det_trx_7_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_7"/>
+            <field name="produk_id" ref="produk_demo_89"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">33000</field>
+        </record>
+        <record id="trx_demo_8" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026008</field>
+            <field name="waktu_transaksi">2026-01-09 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_8_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_8"/>
+            <field name="produk_id" ref="produk_demo_17"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">36000</field>
+        </record>
+        <record id="det_trx_8_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_8"/>
+            <field name="produk_id" ref="produk_demo_26"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">54000</field>
+        </record>
+        <record id="trx_demo_9" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026009</field>
+            <field name="waktu_transaksi">2026-01-10 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_9_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_9"/>
+            <field name="produk_id" ref="produk_demo_80"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">33000</field>
+        </record>
+        <record id="det_trx_9_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_9"/>
+            <field name="produk_id" ref="produk_demo_90"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">24000</field>
+        </record>
+        <record id="trx_demo_10" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026010</field>
+            <field name="waktu_transaksi">2026-01-11 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_10_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_10"/>
+            <field name="produk_id" ref="produk_demo_62"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">42000</field>
+        </record>
+        <record id="det_trx_10_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_10"/>
+            <field name="produk_id" ref="produk_demo_78"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">54000</field>
+        </record>
+        <record id="trx_demo_11" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026011</field>
+            <field name="waktu_transaksi">2026-01-12 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_11_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_11"/>
+            <field name="produk_id" ref="produk_demo_66"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">21000</field>
+        </record>
+        <record id="det_trx_11_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_11"/>
+            <field name="produk_id" ref="produk_demo_75"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+        <record id="trx_demo_12" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026012</field>
+            <field name="waktu_transaksi">2026-01-13 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_12_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_12"/>
+            <field name="produk_id" ref="produk_demo_82"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+        <record id="det_trx_12_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_12"/>
+            <field name="produk_id" ref="produk_demo_82"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">29000</field>
+        </record>
+        <record id="trx_demo_13" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026013</field>
+            <field name="waktu_transaksi">2026-01-14 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_13_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_13"/>
+            <field name="produk_id" ref="produk_demo_94"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">27000</field>
+        </record>
+        <record id="det_trx_13_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_13"/>
+            <field name="produk_id" ref="produk_demo_95"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="trx_demo_14" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026014</field>
+            <field name="waktu_transaksi">2026-01-15 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_14_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_14"/>
+            <field name="produk_id" ref="produk_demo_19"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">47000</field>
+        </record>
+        <record id="det_trx_14_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_14"/>
+            <field name="produk_id" ref="produk_demo_37"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+        <record id="trx_demo_15" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026015</field>
+            <field name="waktu_transaksi">2026-01-16 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_15_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_15"/>
+            <field name="produk_id" ref="produk_demo_66"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+        <record id="det_trx_15_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_15"/>
+            <field name="produk_id" ref="produk_demo_66"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">38000</field>
+        </record>
+        <record id="trx_demo_16" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026016</field>
+            <field name="waktu_transaksi">2026-01-17 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_16_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_16"/>
+            <field name="produk_id" ref="produk_demo_86"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">43000</field>
+        </record>
+        <record id="det_trx_16_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_16"/>
+            <field name="produk_id" ref="produk_demo_92"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">38000</field>
+        </record>
+        <record id="trx_demo_17" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026017</field>
+            <field name="waktu_transaksi">2026-01-18 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_17_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_17"/>
+            <field name="produk_id" ref="produk_demo_69"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">34000</field>
+        </record>
+        <record id="det_trx_17_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_17"/>
+            <field name="produk_id" ref="produk_demo_65"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">53000</field>
+        </record>
+        <record id="trx_demo_18" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026018</field>
+            <field name="waktu_transaksi">2026-01-19 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_18_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_18"/>
+            <field name="produk_id" ref="produk_demo_53"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">16000</field>
+        </record>
+        <record id="det_trx_18_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_18"/>
+            <field name="produk_id" ref="produk_demo_68"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">16000</field>
+        </record>
+        <record id="trx_demo_19" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026019</field>
+            <field name="waktu_transaksi">2026-01-20 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_19_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_19"/>
+            <field name="produk_id" ref="produk_demo_88"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">33000</field>
+        </record>
+        <record id="det_trx_19_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_19"/>
+            <field name="produk_id" ref="produk_demo_61"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">53000</field>
+        </record>
+        <record id="trx_demo_20" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026020</field>
+            <field name="waktu_transaksi">2026-01-21 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_20_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_20"/>
+            <field name="produk_id" ref="produk_demo_21"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">26000</field>
+        </record>
+        <record id="det_trx_20_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_20"/>
+            <field name="produk_id" ref="produk_demo_22"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">34000</field>
+        </record>
+        <record id="trx_demo_21" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026021</field>
+            <field name="waktu_transaksi">2026-01-22 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_21_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_21"/>
+            <field name="produk_id" ref="produk_demo_51"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+        <record id="det_trx_21_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_21"/>
+            <field name="produk_id" ref="produk_demo_83"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">38000</field>
+        </record>
+        <record id="trx_demo_22" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026022</field>
+            <field name="waktu_transaksi">2026-01-23 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_22_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_22"/>
+            <field name="produk_id" ref="produk_demo_89"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">44000</field>
+        </record>
+        <record id="det_trx_22_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_22"/>
+            <field name="produk_id" ref="produk_demo_85"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">33000</field>
+        </record>
+        <record id="trx_demo_23" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026023</field>
+            <field name="waktu_transaksi">2026-01-24 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_23_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_23"/>
+            <field name="produk_id" ref="produk_demo_92"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">47000</field>
+        </record>
+        <record id="det_trx_23_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_23"/>
+            <field name="produk_id" ref="produk_demo_81"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">53000</field>
+        </record>
+        <record id="trx_demo_24" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026024</field>
+            <field name="waktu_transaksi">2026-01-25 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_24_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_24"/>
+            <field name="produk_id" ref="produk_demo_55"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+        <record id="det_trx_24_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_24"/>
+            <field name="produk_id" ref="produk_demo_67"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">51000</field>
+        </record>
+        <record id="trx_demo_25" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026025</field>
+            <field name="waktu_transaksi">2026-01-26 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_25_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_25"/>
+            <field name="produk_id" ref="produk_demo_64"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">19000</field>
+        </record>
+        <record id="det_trx_25_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_25"/>
+            <field name="produk_id" ref="produk_demo_63"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">33000</field>
+        </record>
+        <record id="trx_demo_26" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026026</field>
+            <field name="waktu_transaksi">2026-01-27 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_26_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_26"/>
+            <field name="produk_id" ref="produk_demo_25"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">52000</field>
+        </record>
+        <record id="det_trx_26_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_26"/>
+            <field name="produk_id" ref="produk_demo_27"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">51000</field>
+        </record>
+        <record id="trx_demo_27" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026027</field>
+            <field name="waktu_transaksi">2026-01-28 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_27_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_27"/>
+            <field name="produk_id" ref="produk_demo_31"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">33000</field>
+        </record>
+        <record id="det_trx_27_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_27"/>
+            <field name="produk_id" ref="produk_demo_45"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">42000</field>
+        </record>
+        <record id="trx_demo_28" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026028</field>
+            <field name="waktu_transaksi">2026-01-29 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_28_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_28"/>
+            <field name="produk_id" ref="produk_demo_23"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">36000</field>
+        </record>
+        <record id="det_trx_28_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_28"/>
+            <field name="produk_id" ref="produk_demo_37"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">34000</field>
+        </record>
+        <record id="trx_demo_29" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026029</field>
+            <field name="waktu_transaksi">2026-01-30 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_29_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_29"/>
+            <field name="produk_id" ref="produk_demo_31"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">51000</field>
+        </record>
+        <record id="det_trx_29_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_29"/>
+            <field name="produk_id" ref="produk_demo_42"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">27000</field>
+        </record>
+        <record id="trx_demo_30" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026030</field>
+            <field name="waktu_transaksi">2026-01-01 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_30_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_30"/>
+            <field name="produk_id" ref="produk_demo_65"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">44000</field>
+        </record>
+        <record id="det_trx_30_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_30"/>
+            <field name="produk_id" ref="produk_demo_56"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">42000</field>
+        </record>
+        <record id="trx_demo_31" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026031</field>
+            <field name="waktu_transaksi">2026-01-02 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_31_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_31"/>
+            <field name="produk_id" ref="produk_demo_54"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+        <record id="det_trx_31_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_31"/>
+            <field name="produk_id" ref="produk_demo_77"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">34000</field>
+        </record>
+        <record id="trx_demo_32" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026032</field>
+            <field name="waktu_transaksi">2026-01-03 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_32_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_32"/>
+            <field name="produk_id" ref="produk_demo_89"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">60000</field>
+        </record>
+        <record id="det_trx_32_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_32"/>
+            <field name="produk_id" ref="produk_demo_84"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+        <record id="trx_demo_33" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026033</field>
+            <field name="waktu_transaksi">2026-01-04 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_33_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_33"/>
+            <field name="produk_id" ref="produk_demo_62"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+        <record id="det_trx_33_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_33"/>
+            <field name="produk_id" ref="produk_demo_96"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+        <record id="trx_demo_34" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026034</field>
+            <field name="waktu_transaksi">2026-01-05 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_34_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_34"/>
+            <field name="produk_id" ref="produk_demo_62"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">36000</field>
+        </record>
+        <record id="det_trx_34_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_34"/>
+            <field name="produk_id" ref="produk_demo_70"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">54000</field>
+        </record>
+        <record id="trx_demo_35" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026035</field>
+            <field name="waktu_transaksi">2026-01-06 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_35_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_35"/>
+            <field name="produk_id" ref="produk_demo_88"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">44000</field>
+        </record>
+        <record id="det_trx_35_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_35"/>
+            <field name="produk_id" ref="produk_demo_92"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">23000</field>
+        </record>
+        <record id="trx_demo_36" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026036</field>
+            <field name="waktu_transaksi">2026-01-07 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_36_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_36"/>
+            <field name="produk_id" ref="produk_demo_19"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">17000</field>
+        </record>
+        <record id="det_trx_36_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_36"/>
+            <field name="produk_id" ref="produk_demo_28"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">57000</field>
+        </record>
+        <record id="trx_demo_37" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026037</field>
+            <field name="waktu_transaksi">2026-01-08 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_37_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_37"/>
+            <field name="produk_id" ref="produk_demo_67"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">59000</field>
+        </record>
+        <record id="det_trx_37_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_37"/>
+            <field name="produk_id" ref="produk_demo_65"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">46000</field>
+        </record>
+        <record id="trx_demo_38" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026038</field>
+            <field name="waktu_transaksi">2026-01-09 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_38_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_38"/>
+            <field name="produk_id" ref="produk_demo_77"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">19000</field>
+        </record>
+        <record id="det_trx_38_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_38"/>
+            <field name="produk_id" ref="produk_demo_92"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">54000</field>
+        </record>
+        <record id="trx_demo_39" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026039</field>
+            <field name="waktu_transaksi">2026-01-10 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_39_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_39"/>
+            <field name="produk_id" ref="produk_demo_14"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">23000</field>
+        </record>
+        <record id="det_trx_39_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_39"/>
+            <field name="produk_id" ref="produk_demo_30"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">43000</field>
+        </record>
+        <record id="trx_demo_40" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026040</field>
+            <field name="waktu_transaksi">2026-01-11 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_40_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_40"/>
+            <field name="produk_id" ref="produk_demo_56"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+        <record id="det_trx_40_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_40"/>
+            <field name="produk_id" ref="produk_demo_81"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">25000</field>
+        </record>
+        <record id="trx_demo_41" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026041</field>
+            <field name="waktu_transaksi">2026-01-12 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_41_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_41"/>
+            <field name="produk_id" ref="produk_demo_2"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">21000</field>
+        </record>
+        <record id="det_trx_41_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_41"/>
+            <field name="produk_id" ref="produk_demo_13"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+        <record id="trx_demo_42" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026042</field>
+            <field name="waktu_transaksi">2026-01-13 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_42_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_42"/>
+            <field name="produk_id" ref="produk_demo_28"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">60000</field>
+        </record>
+        <record id="det_trx_42_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_42"/>
+            <field name="produk_id" ref="produk_demo_1"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">25000</field>
+        </record>
+        <record id="trx_demo_43" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026043</field>
+            <field name="waktu_transaksi">2026-01-14 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_43_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_43"/>
+            <field name="produk_id" ref="produk_demo_30"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">33000</field>
+        </record>
+        <record id="det_trx_43_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_43"/>
+            <field name="produk_id" ref="produk_demo_15"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+        <record id="trx_demo_44" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026044</field>
+            <field name="waktu_transaksi">2026-01-15 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_44_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_44"/>
+            <field name="produk_id" ref="produk_demo_10"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">40000</field>
+        </record>
+        <record id="det_trx_44_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_44"/>
+            <field name="produk_id" ref="produk_demo_46"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="trx_demo_45" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026045</field>
+            <field name="waktu_transaksi">2026-01-16 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_45_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_45"/>
+            <field name="produk_id" ref="produk_demo_57"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+        <record id="det_trx_45_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_45"/>
+            <field name="produk_id" ref="produk_demo_73"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">17000</field>
+        </record>
+        <record id="trx_demo_46" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026046</field>
+            <field name="waktu_transaksi">2026-01-17 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_46_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_46"/>
+            <field name="produk_id" ref="produk_demo_5"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">48000</field>
+        </record>
+        <record id="det_trx_46_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_46"/>
+            <field name="produk_id" ref="produk_demo_48"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">46000</field>
+        </record>
+        <record id="trx_demo_47" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026047</field>
+            <field name="waktu_transaksi">2026-01-18 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_47_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_47"/>
+            <field name="produk_id" ref="produk_demo_69"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">54000</field>
+        </record>
+        <record id="det_trx_47_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_47"/>
+            <field name="produk_id" ref="produk_demo_77"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">16000</field>
+        </record>
+        <record id="trx_demo_48" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026048</field>
+            <field name="waktu_transaksi">2026-01-19 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_48_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_48"/>
+            <field name="produk_id" ref="produk_demo_8"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">46000</field>
+        </record>
+        <record id="det_trx_48_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_48"/>
+            <field name="produk_id" ref="produk_demo_27"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">40000</field>
+        </record>
+        <record id="trx_demo_49" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026049</field>
+            <field name="waktu_transaksi">2026-01-20 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_49_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_49"/>
+            <field name="produk_id" ref="produk_demo_22"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">32000</field>
+        </record>
+        <record id="det_trx_49_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_49"/>
+            <field name="produk_id" ref="produk_demo_36"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">59000</field>
+        </record>
+        <record id="trx_demo_50" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026050</field>
+            <field name="waktu_transaksi">2026-01-21 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_50_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_50"/>
+            <field name="produk_id" ref="produk_demo_38"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">29000</field>
+        </record>
+        <record id="det_trx_50_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_50"/>
+            <field name="produk_id" ref="produk_demo_13"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">34000</field>
+        </record>
+        <record id="trx_demo_51" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026051</field>
+            <field name="waktu_transaksi">2026-01-22 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_51_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_51"/>
+            <field name="produk_id" ref="produk_demo_92"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+        <record id="det_trx_51_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_51"/>
+            <field name="produk_id" ref="produk_demo_71"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">21000</field>
+        </record>
+        <record id="trx_demo_52" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026052</field>
+            <field name="waktu_transaksi">2026-01-23 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_52_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_52"/>
+            <field name="produk_id" ref="produk_demo_18"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+        <record id="det_trx_52_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_52"/>
+            <field name="produk_id" ref="produk_demo_19"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">43000</field>
+        </record>
+        <record id="trx_demo_53" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026053</field>
+            <field name="waktu_transaksi">2026-01-24 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_53_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_53"/>
+            <field name="produk_id" ref="produk_demo_22"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">39000</field>
+        </record>
+        <record id="det_trx_53_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_53"/>
+            <field name="produk_id" ref="produk_demo_33"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">39000</field>
+        </record>
+        <record id="trx_demo_54" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026054</field>
+            <field name="waktu_transaksi">2026-01-25 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_54_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_54"/>
+            <field name="produk_id" ref="produk_demo_78"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">59000</field>
+        </record>
+        <record id="det_trx_54_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_54"/>
+            <field name="produk_id" ref="produk_demo_98"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">47000</field>
+        </record>
+        <record id="trx_demo_55" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026055</field>
+            <field name="waktu_transaksi">2026-01-26 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_55_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_55"/>
+            <field name="produk_id" ref="produk_demo_28"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">55000</field>
+        </record>
+        <record id="det_trx_55_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_55"/>
+            <field name="produk_id" ref="produk_demo_1"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+        <record id="trx_demo_56" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026056</field>
+            <field name="waktu_transaksi">2026-01-27 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_56_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_56"/>
+            <field name="produk_id" ref="produk_demo_97"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">51000</field>
+        </record>
+        <record id="det_trx_56_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_56"/>
+            <field name="produk_id" ref="produk_demo_86"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">46000</field>
+        </record>
+        <record id="trx_demo_57" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026057</field>
+            <field name="waktu_transaksi">2026-01-28 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_57_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_57"/>
+            <field name="produk_id" ref="produk_demo_34"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">34000</field>
+        </record>
+        <record id="det_trx_57_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_57"/>
+            <field name="produk_id" ref="produk_demo_6"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">43000</field>
+        </record>
+        <record id="trx_demo_58" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026058</field>
+            <field name="waktu_transaksi">2026-01-29 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_58_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_58"/>
+            <field name="produk_id" ref="produk_demo_50"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">16000</field>
+        </record>
+        <record id="det_trx_58_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_58"/>
+            <field name="produk_id" ref="produk_demo_34"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">17000</field>
+        </record>
+        <record id="trx_demo_59" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026059</field>
+            <field name="waktu_transaksi">2026-01-30 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_59_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_59"/>
+            <field name="produk_id" ref="produk_demo_47"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">50000</field>
+        </record>
+        <record id="det_trx_59_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_59"/>
+            <field name="produk_id" ref="produk_demo_36"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">31000</field>
+        </record>
+        <record id="trx_demo_60" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026060</field>
+            <field name="waktu_transaksi">2026-01-01 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_60_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_60"/>
+            <field name="produk_id" ref="produk_demo_1"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">55000</field>
+        </record>
+        <record id="det_trx_60_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_60"/>
+            <field name="produk_id" ref="produk_demo_9"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">19000</field>
+        </record>
+        <record id="trx_demo_61" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026061</field>
+            <field name="waktu_transaksi">2026-01-02 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_61_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_61"/>
+            <field name="produk_id" ref="produk_demo_7"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">19000</field>
+        </record>
+        <record id="det_trx_61_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_61"/>
+            <field name="produk_id" ref="produk_demo_5"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">54000</field>
+        </record>
+        <record id="trx_demo_62" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026062</field>
+            <field name="waktu_transaksi">2026-01-03 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_62_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_62"/>
+            <field name="produk_id" ref="produk_demo_42"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+        <record id="det_trx_62_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_62"/>
+            <field name="produk_id" ref="produk_demo_9"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">22000</field>
+        </record>
+        <record id="trx_demo_63" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026063</field>
+            <field name="waktu_transaksi">2026-01-04 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_63_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_63"/>
+            <field name="produk_id" ref="produk_demo_64"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">56000</field>
+        </record>
+        <record id="det_trx_63_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_63"/>
+            <field name="produk_id" ref="produk_demo_75"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">21000</field>
+        </record>
+        <record id="trx_demo_64" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026064</field>
+            <field name="waktu_transaksi">2026-01-05 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_64_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_64"/>
+            <field name="produk_id" ref="produk_demo_67"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">26000</field>
+        </record>
+        <record id="det_trx_64_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_64"/>
+            <field name="produk_id" ref="produk_demo_68"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="trx_demo_65" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026065</field>
+            <field name="waktu_transaksi">2026-01-06 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_65_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_65"/>
+            <field name="produk_id" ref="produk_demo_1"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">39000</field>
+        </record>
+        <record id="det_trx_65_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_65"/>
+            <field name="produk_id" ref="produk_demo_13"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">17000</field>
+        </record>
+        <record id="trx_demo_66" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026066</field>
+            <field name="waktu_transaksi">2026-01-07 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_66_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_66"/>
+            <field name="produk_id" ref="produk_demo_77"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">48000</field>
+        </record>
+        <record id="det_trx_66_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_66"/>
+            <field name="produk_id" ref="produk_demo_88"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">50000</field>
+        </record>
+        <record id="trx_demo_67" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026067</field>
+            <field name="waktu_transaksi">2026-01-08 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_67_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_67"/>
+            <field name="produk_id" ref="produk_demo_36"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">51000</field>
+        </record>
+        <record id="det_trx_67_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_67"/>
+            <field name="produk_id" ref="produk_demo_23"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+        <record id="trx_demo_68" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026068</field>
+            <field name="waktu_transaksi">2026-01-09 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_68_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_68"/>
+            <field name="produk_id" ref="produk_demo_33"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">58000</field>
+        </record>
+        <record id="det_trx_68_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_68"/>
+            <field name="produk_id" ref="produk_demo_49"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">17000</field>
+        </record>
+        <record id="trx_demo_69" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026069</field>
+            <field name="waktu_transaksi">2026-01-10 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_69_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_69"/>
+            <field name="produk_id" ref="produk_demo_72"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">46000</field>
+        </record>
+        <record id="det_trx_69_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_69"/>
+            <field name="produk_id" ref="produk_demo_98"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">25000</field>
+        </record>
+        <record id="trx_demo_70" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026070</field>
+            <field name="waktu_transaksi">2026-01-11 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_70_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_70"/>
+            <field name="produk_id" ref="produk_demo_5"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">25000</field>
+        </record>
+        <record id="det_trx_70_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_70"/>
+            <field name="produk_id" ref="produk_demo_10"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+        <record id="trx_demo_71" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026071</field>
+            <field name="waktu_transaksi">2026-01-12 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_71_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_71"/>
+            <field name="produk_id" ref="produk_demo_78"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+        <record id="det_trx_71_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_71"/>
+            <field name="produk_id" ref="produk_demo_65"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">38000</field>
+        </record>
+        <record id="trx_demo_72" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026072</field>
+            <field name="waktu_transaksi">2026-01-13 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_72_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_72"/>
+            <field name="produk_id" ref="produk_demo_20"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">44000</field>
+        </record>
+        <record id="det_trx_72_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_72"/>
+            <field name="produk_id" ref="produk_demo_49"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">59000</field>
+        </record>
+        <record id="trx_demo_73" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026073</field>
+            <field name="waktu_transaksi">2026-01-14 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_73_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_73"/>
+            <field name="produk_id" ref="produk_demo_73"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">36000</field>
+        </record>
+        <record id="det_trx_73_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_73"/>
+            <field name="produk_id" ref="produk_demo_93"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+        <record id="trx_demo_74" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026074</field>
+            <field name="waktu_transaksi">2026-01-15 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_74_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_74"/>
+            <field name="produk_id" ref="produk_demo_38"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">23000</field>
+        </record>
+        <record id="det_trx_74_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_74"/>
+            <field name="produk_id" ref="produk_demo_24"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">37000</field>
+        </record>
+        <record id="trx_demo_75" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026075</field>
+            <field name="waktu_transaksi">2026-01-16 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_75_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_75"/>
+            <field name="produk_id" ref="produk_demo_1"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">50000</field>
+        </record>
+        <record id="det_trx_75_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_75"/>
+            <field name="produk_id" ref="produk_demo_36"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">50000</field>
+        </record>
+        <record id="trx_demo_76" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026076</field>
+            <field name="waktu_transaksi">2026-01-17 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_76_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_76"/>
+            <field name="produk_id" ref="produk_demo_71"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">45000</field>
+        </record>
+        <record id="det_trx_76_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_76"/>
+            <field name="produk_id" ref="produk_demo_73"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">50000</field>
+        </record>
+        <record id="trx_demo_77" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026077</field>
+            <field name="waktu_transaksi">2026-01-18 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_77_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_77"/>
+            <field name="produk_id" ref="produk_demo_97"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="det_trx_77_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_77"/>
+            <field name="produk_id" ref="produk_demo_59"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">26000</field>
+        </record>
+        <record id="trx_demo_78" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026078</field>
+            <field name="waktu_transaksi">2026-01-19 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_78_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_78"/>
+            <field name="produk_id" ref="produk_demo_17"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">58000</field>
+        </record>
+        <record id="det_trx_78_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_78"/>
+            <field name="produk_id" ref="produk_demo_37"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">49000</field>
+        </record>
+        <record id="trx_demo_79" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026079</field>
+            <field name="waktu_transaksi">2026-01-20 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_79_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_79"/>
+            <field name="produk_id" ref="produk_demo_67"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">60000</field>
+        </record>
+        <record id="det_trx_79_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_79"/>
+            <field name="produk_id" ref="produk_demo_88"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">44000</field>
+        </record>
+        <record id="trx_demo_80" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026080</field>
+            <field name="waktu_transaksi">2026-01-21 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_80_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_80"/>
+            <field name="produk_id" ref="produk_demo_67"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">33000</field>
+        </record>
+        <record id="det_trx_80_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_80"/>
+            <field name="produk_id" ref="produk_demo_97"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">19000</field>
+        </record>
+        <record id="trx_demo_81" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026081</field>
+            <field name="waktu_transaksi">2026-01-22 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_81_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_81"/>
+            <field name="produk_id" ref="produk_demo_46"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">28000</field>
+        </record>
+        <record id="det_trx_81_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_81"/>
+            <field name="produk_id" ref="produk_demo_2"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">21000</field>
+        </record>
+        <record id="trx_demo_82" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026082</field>
+            <field name="waktu_transaksi">2026-01-23 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_82_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_82"/>
+            <field name="produk_id" ref="produk_demo_55"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+        <record id="det_trx_82_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_82"/>
+            <field name="produk_id" ref="produk_demo_57"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">51000</field>
+        </record>
+        <record id="trx_demo_83" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026083</field>
+            <field name="waktu_transaksi">2026-01-24 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_83_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_83"/>
+            <field name="produk_id" ref="produk_demo_23"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">47000</field>
+        </record>
+        <record id="det_trx_83_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_83"/>
+            <field name="produk_id" ref="produk_demo_13"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">48000</field>
+        </record>
+        <record id="trx_demo_84" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026084</field>
+            <field name="waktu_transaksi">2026-01-25 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_84_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_84"/>
+            <field name="produk_id" ref="produk_demo_41"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">24000</field>
+        </record>
+        <record id="det_trx_84_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_84"/>
+            <field name="produk_id" ref="produk_demo_20"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">41000</field>
+        </record>
+        <record id="trx_demo_85" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026085</field>
+            <field name="waktu_transaksi">2026-01-26 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_85_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_85"/>
+            <field name="produk_id" ref="produk_demo_21"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">58000</field>
+        </record>
+        <record id="det_trx_85_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_85"/>
+            <field name="produk_id" ref="produk_demo_37"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">35000</field>
+        </record>
+        <record id="trx_demo_86" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026086</field>
+            <field name="waktu_transaksi">2026-01-27 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_86_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_86"/>
+            <field name="produk_id" ref="produk_demo_42"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">60000</field>
+        </record>
+        <record id="det_trx_86_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_86"/>
+            <field name="produk_id" ref="produk_demo_23"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">56000</field>
+        </record>
+        <record id="trx_demo_87" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026087</field>
+            <field name="waktu_transaksi">2026-01-28 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_87_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_87"/>
+            <field name="produk_id" ref="produk_demo_80"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">40000</field>
+        </record>
+        <record id="det_trx_87_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_87"/>
+            <field name="produk_id" ref="produk_demo_53"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+        <record id="trx_demo_88" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026088</field>
+            <field name="waktu_transaksi">2026-01-29 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_88_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_88"/>
+            <field name="produk_id" ref="produk_demo_34"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">57000</field>
+        </record>
+        <record id="det_trx_88_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_88"/>
+            <field name="produk_id" ref="produk_demo_44"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">52000</field>
+        </record>
+        <record id="trx_demo_89" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026089</field>
+            <field name="waktu_transaksi">2026-01-30 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_89_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_89"/>
+            <field name="produk_id" ref="produk_demo_15"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">38000</field>
+        </record>
+        <record id="det_trx_89_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_89"/>
+            <field name="produk_id" ref="produk_demo_22"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">55000</field>
+        </record>
+        <record id="trx_demo_90" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026090</field>
+            <field name="waktu_transaksi">2026-01-01 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_90_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_90"/>
+            <field name="produk_id" ref="produk_demo_14"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">20000</field>
+        </record>
+        <record id="det_trx_90_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_90"/>
+            <field name="produk_id" ref="produk_demo_35"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">48000</field>
+        </record>
+        <record id="trx_demo_91" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026091</field>
+            <field name="waktu_transaksi">2026-01-02 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_91_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_91"/>
+            <field name="produk_id" ref="produk_demo_45"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">41000</field>
+        </record>
+        <record id="det_trx_91_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_91"/>
+            <field name="produk_id" ref="produk_demo_26"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">52000</field>
+        </record>
+        <record id="trx_demo_92" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026092</field>
+            <field name="waktu_transaksi">2026-01-03 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_92_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_92"/>
+            <field name="produk_id" ref="produk_demo_38"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">58000</field>
+        </record>
+        <record id="det_trx_92_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_92"/>
+            <field name="produk_id" ref="produk_demo_30"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">57000</field>
+        </record>
+        <record id="trx_demo_93" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026093</field>
+            <field name="waktu_transaksi">2026-01-04 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_93_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_93"/>
+            <field name="produk_id" ref="produk_demo_83"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">56000</field>
+        </record>
+        <record id="det_trx_93_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_93"/>
+            <field name="produk_id" ref="produk_demo_57"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">41000</field>
+        </record>
+        <record id="trx_demo_94" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026094</field>
+            <field name="waktu_transaksi">2026-01-05 00:00:00</field>
+            <field name="divisi">kitchen</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_94_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_94"/>
+            <field name="produk_id" ref="produk_demo_53"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+        <record id="det_trx_94_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_94"/>
+            <field name="produk_id" ref="produk_demo_82"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">25000</field>
+        </record>
+        <record id="trx_demo_95" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026095</field>
+            <field name="waktu_transaksi">2026-01-06 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_95_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_95"/>
+            <field name="produk_id" ref="produk_demo_40"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">42000</field>
+        </record>
+        <record id="det_trx_95_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_95"/>
+            <field name="produk_id" ref="produk_demo_47"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">19000</field>
+        </record>
+        <record id="trx_demo_96" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026096</field>
+            <field name="waktu_transaksi">2026-01-07 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_96_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_96"/>
+            <field name="produk_id" ref="produk_demo_47"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">30000</field>
+        </record>
+        <record id="det_trx_96_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_96"/>
+            <field name="produk_id" ref="produk_demo_2"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">16000</field>
+        </record>
+        <record id="trx_demo_97" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026097</field>
+            <field name="waktu_transaksi">2026-01-08 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">tunai</field>
+        </record>
+        <record id="det_trx_97_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_97"/>
+            <field name="produk_id" ref="produk_demo_19"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">18000</field>
+        </record>
+        <record id="det_trx_97_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_97"/>
+            <field name="produk_id" ref="produk_demo_47"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+        <record id="trx_demo_98" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026098</field>
+            <field name="waktu_transaksi">2026-01-09 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_98_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_98"/>
+            <field name="produk_id" ref="produk_demo_13"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">42000</field>
+        </record>
+        <record id="det_trx_98_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_98"/>
+            <field name="produk_id" ref="produk_demo_10"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">29000</field>
+        </record>
+        <record id="trx_demo_99" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026099</field>
+            <field name="waktu_transaksi">2026-01-10 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">debit</field>
+        </record>
+        <record id="det_trx_99_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_99"/>
+            <field name="produk_id" ref="produk_demo_40"/>
+            <field name="jumlah">2</field>
+            <field name="harga_satuan">50000</field>
+        </record>
+        <record id="det_trx_99_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_99"/>
+            <field name="produk_id" ref="produk_demo_7"/>
+            <field name="jumlah">1</field>
+            <field name="harga_satuan">58000</field>
+        </record>
+        <record id="trx_demo_100" model="plumeria.transaksi.pos">
+            <field name="id_transaksi">POS-DEMO-2026100</field>
+            <field name="waktu_transaksi">2026-01-11 00:00:00</field>
+            <field name="divisi">bar</field>
+            <field name="metode_pembayaran">qris</field>
+        </record>
+        <record id="det_trx_100_1" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_100"/>
+            <field name="produk_id" ref="produk_demo_46"/>
+            <field name="jumlah">4</field>
+            <field name="harga_satuan">15000</field>
+        </record>
+        <record id="det_trx_100_2" model="plumeria.detail.transaksi">
+            <field name="transaksi_id" ref="trx_demo_100"/>
+            <field name="produk_id" ref="produk_demo_43"/>
+            <field name="jumlah">3</field>
+            <field name="harga_satuan">52000</field>
+        </record>
+    </data>
+</odoo>

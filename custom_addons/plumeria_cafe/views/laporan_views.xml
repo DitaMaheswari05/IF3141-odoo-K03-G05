@@ -106,7 +106,7 @@
                 <field name="nomor_referensi"/>
                 <field name="tanggal"/>
                 <field name="divisi"/>
-                <field name="total_pendapatan" widget="monetary" options="{'currency_field': false}"/>
+                <field name="total_pendapatan"/>
                 <field name="jumlah_transaksi"/>
                 <field name="metode_pembayaran"/>
                 <field name="state"
