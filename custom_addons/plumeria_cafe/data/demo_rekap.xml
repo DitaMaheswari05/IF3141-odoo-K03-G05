@@ -4,803 +4,803 @@
 
 
         <record id="rekap_demo_1" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-01</field>
+            <field name="tanggal">2026-04-12</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">955000</field>
-            <field name="total_pos">955000</field>
+            <field name="total_kas">1129000</field>
+            <field name="total_pos">1129000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_1'))]"/>
         </record>
         <record id="rekap_demo_2" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-02</field>
+            <field name="tanggal">2026-04-13</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1060000</field>
-            <field name="total_pos">1060000</field>
+            <field name="total_kas">888000</field>
+            <field name="total_pos">888000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_2'))]"/>
         </record>
         <record id="rekap_demo_3" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-02</field>
+            <field name="tanggal">2026-04-13</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1255000</field>
-            <field name="total_pos">1255000</field>
+            <field name="total_kas">308000</field>
+            <field name="total_pos">308000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_3'))]"/>
         </record>
         <record id="rekap_demo_4" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-03</field>
+            <field name="tanggal">2026-04-14</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">860000</field>
-            <field name="total_pos">860000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">749000</field>
+            <field name="total_pos">734000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_4'))]"/>
         </record>
         <record id="rekap_demo_5" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-03</field>
+            <field name="tanggal">2026-04-14</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">724000</field>
-            <field name="total_pos">724000</field>
+            <field name="total_kas">1293000</field>
+            <field name="total_pos">1293000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_5'))]"/>
         </record>
         <record id="rekap_demo_6" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-04</field>
+            <field name="tanggal">2026-04-15</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">410000</field>
-            <field name="total_pos">395000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">931000</field>
+            <field name="total_pos">931000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_6'))]"/>
         </record>
         <record id="rekap_demo_7" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-04</field>
+            <field name="tanggal">2026-04-15</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1240000</field>
-            <field name="total_pos">1240000</field>
+            <field name="total_kas">525000</field>
+            <field name="total_pos">525000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_7'))]"/>
         </record>
         <record id="rekap_demo_8" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-05</field>
+            <field name="tanggal">2026-04-16</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1412000</field>
-            <field name="total_pos">1412000</field>
+            <field name="total_kas">952000</field>
+            <field name="total_pos">952000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_8'))]"/>
         </record>
         <record id="rekap_demo_9" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-05</field>
+            <field name="tanggal">2026-04-16</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1131000</field>
-            <field name="total_pos">1131000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">638000</field>
+            <field name="total_pos">623000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_9'))]"/>
         </record>
         <record id="rekap_demo_10" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-06</field>
+            <field name="tanggal">2026-04-17</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">622000</field>
-            <field name="total_pos">622000</field>
+            <field name="total_kas">592000</field>
+            <field name="total_pos">592000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_10'))]"/>
         </record>
         <record id="rekap_demo_11" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-06</field>
+            <field name="tanggal">2026-04-17</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">561000</field>
-            <field name="total_pos">561000</field>
+            <field name="total_kas">1227000</field>
+            <field name="total_pos">1227000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_11'))]"/>
         </record>
         <record id="rekap_demo_12" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-07</field>
+            <field name="tanggal">2026-04-18</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">413000</field>
-            <field name="total_pos">398000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">1120000</field>
+            <field name="total_pos">1120000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_12'))]"/>
         </record>
         <record id="rekap_demo_13" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-07</field>
+            <field name="tanggal">2026-04-18</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1073000</field>
-            <field name="total_pos">1073000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">1495000</field>
+            <field name="total_pos">1515000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_13'))]"/>
         </record>
         <record id="rekap_demo_14" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-08</field>
+            <field name="tanggal">2026-04-19</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1028000</field>
-            <field name="total_pos">1028000</field>
+            <field name="total_kas">1382000</field>
+            <field name="total_pos">1382000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_14'))]"/>
         </record>
         <record id="rekap_demo_15" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-08</field>
+            <field name="tanggal">2026-04-19</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">595000</field>
-            <field name="total_pos">595000</field>
+            <field name="total_kas">1082000</field>
+            <field name="total_pos">1082000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_15'))]"/>
         </record>
         <record id="rekap_demo_16" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-09</field>
+            <field name="tanggal">2026-04-20</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">990000</field>
-            <field name="total_pos">990000</field>
+            <field name="total_kas">658000</field>
+            <field name="total_pos">658000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_16'))]"/>
         </record>
         <record id="rekap_demo_17" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-09</field>
+            <field name="tanggal">2026-04-20</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1334000</field>
-            <field name="total_pos">1334000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">1340000</field>
+            <field name="total_pos">1325000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_17'))]"/>
         </record>
         <record id="rekap_demo_18" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-10</field>
+            <field name="tanggal">2026-04-21</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">835000</field>
-            <field name="total_pos">855000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">721000</field>
+            <field name="total_pos">721000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_18'))]"/>
         </record>
         <record id="rekap_demo_19" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-10</field>
+            <field name="tanggal">2026-04-21</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1366000</field>
-            <field name="total_pos">1366000</field>
+            <field name="total_kas">892000</field>
+            <field name="total_pos">892000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_19'))]"/>
         </record>
         <record id="rekap_demo_20" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-11</field>
+            <field name="tanggal">2026-04-22</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">955000</field>
-            <field name="total_pos">955000</field>
+            <field name="total_kas">1038000</field>
+            <field name="total_pos">1038000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_20'))]"/>
         </record>
         <record id="rekap_demo_21" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-11</field>
+            <field name="tanggal">2026-04-22</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">424000</field>
-            <field name="total_pos">424000</field>
+            <field name="total_kas">1128000</field>
+            <field name="total_pos">1128000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_21'))]"/>
         </record>
         <record id="rekap_demo_22" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-12</field>
+            <field name="tanggal">2026-04-23</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">858000</field>
-            <field name="total_pos">858000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">1192000</field>
+            <field name="total_pos">1177000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_22'))]"/>
         </record>
         <record id="rekap_demo_23" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-12</field>
+            <field name="tanggal">2026-04-23</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">731000</field>
-            <field name="total_pos">731000</field>
+            <field name="total_kas">705000</field>
+            <field name="total_pos">705000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_23'))]"/>
         </record>
         <record id="rekap_demo_24" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-13</field>
+            <field name="tanggal">2026-04-24</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1482000</field>
-            <field name="total_pos">1502000</field>
+            <field name="total_kas">687000</field>
+            <field name="total_pos">672000</field>
             <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_24'))]"/>
         </record>
         <record id="rekap_demo_25" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-13</field>
+            <field name="tanggal">2026-04-24</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">302000</field>
-            <field name="total_pos">322000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">1429000</field>
+            <field name="total_pos">1429000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_25'))]"/>
         </record>
         <record id="rekap_demo_26" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-14</field>
+            <field name="tanggal">2026-04-25</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1451000</field>
-            <field name="total_pos">1451000</field>
+            <field name="total_kas">1447000</field>
+            <field name="total_pos">1447000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_26'))]"/>
         </record>
         <record id="rekap_demo_27" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-14</field>
+            <field name="tanggal">2026-04-25</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1234000</field>
-            <field name="total_pos">1254000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">823000</field>
+            <field name="total_pos">823000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_27'))]"/>
         </record>
         <record id="rekap_demo_28" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-15</field>
+            <field name="tanggal">2026-04-26</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1054000</field>
-            <field name="total_pos">1054000</field>
+            <field name="total_kas">873000</field>
+            <field name="total_pos">873000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_28'))]"/>
         </record>
         <record id="rekap_demo_29" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-15</field>
+            <field name="tanggal">2026-04-26</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">381000</field>
-            <field name="total_pos">381000</field>
+            <field name="total_kas">747000</field>
+            <field name="total_pos">747000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_29'))]"/>
         </record>
         <record id="rekap_demo_30" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-16</field>
+            <field name="tanggal">2026-04-27</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">337000</field>
-            <field name="total_pos">337000</field>
+            <field name="total_kas">604000</field>
+            <field name="total_pos">604000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_30'))]"/>
         </record>
         <record id="rekap_demo_31" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-16</field>
+            <field name="tanggal">2026-04-27</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1116000</field>
-            <field name="total_pos">1116000</field>
+            <field name="total_kas">1284000</field>
+            <field name="total_pos">1284000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_31'))]"/>
         </record>
         <record id="rekap_demo_32" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-17</field>
+            <field name="tanggal">2026-04-28</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1053000</field>
-            <field name="total_pos">1073000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">1421000</field>
+            <field name="total_pos">1421000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_32'))]"/>
         </record>
         <record id="rekap_demo_33" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-17</field>
+            <field name="tanggal">2026-04-28</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1313000</field>
-            <field name="total_pos">1313000</field>
+            <field name="total_kas">344000</field>
+            <field name="total_pos">344000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_33'))]"/>
         </record>
         <record id="rekap_demo_34" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-18</field>
+            <field name="tanggal">2026-04-29</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">983000</field>
-            <field name="total_pos">983000</field>
+            <field name="total_kas">1216000</field>
+            <field name="total_pos">1216000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_34'))]"/>
         </record>
         <record id="rekap_demo_35" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-18</field>
+            <field name="tanggal">2026-04-29</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1097000</field>
-            <field name="total_pos">1097000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">1001000</field>
+            <field name="total_pos">986000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_35'))]"/>
         </record>
         <record id="rekap_demo_36" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-19</field>
+            <field name="tanggal">2026-04-30</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1368000</field>
-            <field name="total_pos">1368000</field>
+            <field name="total_kas">715000</field>
+            <field name="total_pos">715000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_36'))]"/>
         </record>
         <record id="rekap_demo_37" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-19</field>
+            <field name="tanggal">2026-04-30</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">431000</field>
-            <field name="total_pos">431000</field>
+            <field name="total_kas">561000</field>
+            <field name="total_pos">561000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_37'))]"/>
         </record>
         <record id="rekap_demo_38" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-20</field>
+            <field name="tanggal">2026-05-01</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">903000</field>
-            <field name="total_pos">903000</field>
+            <field name="total_kas">1330000</field>
+            <field name="total_pos">1330000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_38'))]"/>
         </record>
         <record id="rekap_demo_39" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-20</field>
+            <field name="tanggal">2026-05-01</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">979000</field>
-            <field name="total_pos">979000</field>
+            <field name="total_kas">1341000</field>
+            <field name="total_pos">1341000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_39'))]"/>
         </record>
         <record id="rekap_demo_40" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-21</field>
+            <field name="tanggal">2026-05-02</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1380000</field>
-            <field name="total_pos">1380000</field>
+            <field name="total_kas">1390000</field>
+            <field name="total_pos">1390000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_40'))]"/>
         </record>
         <record id="rekap_demo_41" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-21</field>
+            <field name="tanggal">2026-05-02</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">479000</field>
-            <field name="total_pos">479000</field>
+            <field name="total_kas">911000</field>
+            <field name="total_pos">911000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_41'))]"/>
         </record>
         <record id="rekap_demo_42" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-22</field>
+            <field name="tanggal">2026-05-03</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">643000</field>
-            <field name="total_pos">643000</field>
+            <field name="total_kas">1215000</field>
+            <field name="total_pos">1215000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_42'))]"/>
         </record>
         <record id="rekap_demo_43" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-22</field>
+            <field name="tanggal">2026-05-03</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">895000</field>
-            <field name="total_pos">895000</field>
+            <field name="total_kas">610000</field>
+            <field name="total_pos">610000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_43'))]"/>
         </record>
         <record id="rekap_demo_44" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-23</field>
+            <field name="tanggal">2026-05-04</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">477000</field>
-            <field name="total_pos">477000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">981000</field>
+            <field name="total_pos">1001000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_44'))]"/>
         </record>
         <record id="rekap_demo_45" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-23</field>
+            <field name="tanggal">2026-05-04</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">573000</field>
-            <field name="total_pos">573000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">773000</field>
+            <field name="total_pos">793000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_45'))]"/>
         </record>
         <record id="rekap_demo_46" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-24</field>
+            <field name="tanggal">2026-05-05</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1393000</field>
-            <field name="total_pos">1393000</field>
+            <field name="total_kas">423000</field>
+            <field name="total_pos">423000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_46'))]"/>
         </record>
         <record id="rekap_demo_47" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-24</field>
+            <field name="tanggal">2026-05-05</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">820000</field>
-            <field name="total_pos">820000</field>
+            <field name="total_kas">1166000</field>
+            <field name="total_pos">1166000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_47'))]"/>
         </record>
         <record id="rekap_demo_48" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-25</field>
+            <field name="tanggal">2026-05-06</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">303000</field>
-            <field name="total_pos">303000</field>
+            <field name="total_kas">889000</field>
+            <field name="total_pos">889000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_48'))]"/>
         </record>
         <record id="rekap_demo_49" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-25</field>
+            <field name="tanggal">2026-05-06</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">644000</field>
-            <field name="total_pos">644000</field>
+            <field name="total_kas">747000</field>
+            <field name="total_pos">747000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_49'))]"/>
         </record>
         <record id="rekap_demo_50" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-26</field>
+            <field name="tanggal">2026-05-07</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1012000</field>
-            <field name="total_pos">1012000</field>
+            <field name="total_kas">1420000</field>
+            <field name="total_pos">1420000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_50'))]"/>
         </record>
         <record id="rekap_demo_51" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-26</field>
+            <field name="tanggal">2026-05-07</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">799000</field>
-            <field name="total_pos">799000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">456000</field>
+            <field name="total_pos">476000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_51'))]"/>
         </record>
         <record id="rekap_demo_52" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-27</field>
+            <field name="tanggal">2026-05-08</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">967000</field>
-            <field name="total_pos">987000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">544000</field>
+            <field name="total_pos">544000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_52'))]"/>
         </record>
         <record id="rekap_demo_53" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-27</field>
+            <field name="tanggal">2026-05-08</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1369000</field>
-            <field name="total_pos">1369000</field>
+            <field name="total_kas">1477000</field>
+            <field name="total_pos">1477000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_53'))]"/>
         </record>
         <record id="rekap_demo_54" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-28</field>
+            <field name="tanggal">2026-05-09</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">694000</field>
-            <field name="total_pos">694000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">443000</field>
+            <field name="total_pos">428000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_54'))]"/>
         </record>
         <record id="rekap_demo_55" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-28</field>
+            <field name="tanggal">2026-05-09</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">626000</field>
-            <field name="total_pos">626000</field>
+            <field name="total_kas">312000</field>
+            <field name="total_pos">312000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_55'))]"/>
         </record>
         <record id="rekap_demo_56" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-29</field>
+            <field name="tanggal">2026-05-10</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1089000</field>
-            <field name="total_pos">1089000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">656000</field>
+            <field name="total_pos">676000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_56'))]"/>
         </record>
         <record id="rekap_demo_57" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-29</field>
+            <field name="tanggal">2026-05-10</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">654000</field>
-            <field name="total_pos">639000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">1130000</field>
+            <field name="total_pos">1130000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_57'))]"/>
         </record>
         <record id="rekap_demo_58" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-30</field>
+            <field name="tanggal">2026-05-11</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1076000</field>
-            <field name="total_pos">1076000</field>
+            <field name="total_kas">770000</field>
+            <field name="total_pos">770000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_58'))]"/>
         </record>
         <record id="rekap_demo_59" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-30</field>
+            <field name="tanggal">2026-05-11</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">991000</field>
-            <field name="total_pos">976000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">590000</field>
+            <field name="total_pos">590000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_59'))]"/>
         </record>
         <record id="rekap_demo_60" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-31</field>
+            <field name="tanggal">2026-05-12</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">803000</field>
-            <field name="total_pos">803000</field>
+            <field name="total_kas">479000</field>
+            <field name="total_pos">479000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_60'))]"/>
         </record>
         <record id="rekap_demo_61" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-01-31</field>
+            <field name="tanggal">2026-05-12</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1083000</field>
-            <field name="total_pos">1083000</field>
+            <field name="total_kas">1416000</field>
+            <field name="total_pos">1416000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_61'))]"/>
         </record>
         <record id="rekap_demo_62" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-01</field>
+            <field name="tanggal">2026-05-13</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1158000</field>
-            <field name="total_pos">1158000</field>
+            <field name="total_kas">954000</field>
+            <field name="total_pos">954000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_62'))]"/>
         </record>
         <record id="rekap_demo_63" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-01</field>
+            <field name="tanggal">2026-05-13</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">697000</field>
-            <field name="total_pos">697000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">1449000</field>
+            <field name="total_pos">1434000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_63'))]"/>
         </record>
         <record id="rekap_demo_64" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-02</field>
+            <field name="tanggal">2026-05-14</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">728000</field>
-            <field name="total_pos">728000</field>
+            <field name="total_kas">1258000</field>
+            <field name="total_pos">1258000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_64'))]"/>
         </record>
         <record id="rekap_demo_65" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-02</field>
+            <field name="tanggal">2026-05-14</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">764000</field>
-            <field name="total_pos">764000</field>
+            <field name="total_kas">681000</field>
+            <field name="total_pos">681000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_65'))]"/>
         </record>
         <record id="rekap_demo_66" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-03</field>
+            <field name="tanggal">2026-05-15</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1479000</field>
-            <field name="total_pos">1479000</field>
+            <field name="total_kas">758000</field>
+            <field name="total_pos">758000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_66'))]"/>
         </record>
         <record id="rekap_demo_67" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-03</field>
+            <field name="tanggal">2026-05-15</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">771000</field>
-            <field name="total_pos">771000</field>
+            <field name="total_kas">872000</field>
+            <field name="total_pos">872000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_67'))]"/>
         </record>
         <record id="rekap_demo_68" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-04</field>
+            <field name="tanggal">2026-05-16</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">380000</field>
-            <field name="total_pos">380000</field>
+            <field name="total_kas">513000</field>
+            <field name="total_pos">513000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_68'))]"/>
         </record>
         <record id="rekap_demo_69" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-04</field>
+            <field name="tanggal">2026-05-16</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1194000</field>
-            <field name="total_pos">1194000</field>
+            <field name="total_kas">530000</field>
+            <field name="total_pos">530000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_69'))]"/>
         </record>
         <record id="rekap_demo_70" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-05</field>
+            <field name="tanggal">2026-05-17</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">432000</field>
-            <field name="total_pos">432000</field>
+            <field name="total_kas">405000</field>
+            <field name="total_pos">405000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_70'))]"/>
         </record>
         <record id="rekap_demo_71" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-05</field>
+            <field name="tanggal">2026-05-17</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1120000</field>
-            <field name="total_pos">1120000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">649000</field>
+            <field name="total_pos">669000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_71'))]"/>
         </record>
         <record id="rekap_demo_72" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-06</field>
+            <field name="tanggal">2026-05-18</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1483000</field>
-            <field name="total_pos">1483000</field>
+            <field name="total_kas">368000</field>
+            <field name="total_pos">368000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_72'))]"/>
         </record>
         <record id="rekap_demo_73" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-06</field>
+            <field name="tanggal">2026-05-18</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1240000</field>
-            <field name="total_pos">1240000</field>
+            <field name="total_kas">1322000</field>
+            <field name="total_pos">1322000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_73'))]"/>
         </record>
         <record id="rekap_demo_74" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-07</field>
+            <field name="tanggal">2026-05-19</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">995000</field>
-            <field name="total_pos">995000</field>
+            <field name="total_kas">1238000</field>
+            <field name="total_pos">1238000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_74'))]"/>
         </record>
         <record id="rekap_demo_75" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-07</field>
+            <field name="tanggal">2026-05-19</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">862000</field>
-            <field name="total_pos">862000</field>
+            <field name="total_kas">929000</field>
+            <field name="total_pos">929000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_75'))]"/>
         </record>
         <record id="rekap_demo_76" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-08</field>
+            <field name="tanggal">2026-05-20</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">966000</field>
-            <field name="total_pos">966000</field>
+            <field name="total_kas">510000</field>
+            <field name="total_pos">510000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_76'))]"/>
         </record>
         <record id="rekap_demo_77" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-08</field>
+            <field name="tanggal">2026-05-20</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1057000</field>
-            <field name="total_pos">1057000</field>
+            <field name="total_kas">636000</field>
+            <field name="total_pos">636000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_77'))]"/>
         </record>
         <record id="rekap_demo_78" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-09</field>
+            <field name="tanggal">2026-05-21</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1487000</field>
-            <field name="total_pos">1472000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">704000</field>
+            <field name="total_pos">704000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_78'))]"/>
         </record>
         <record id="rekap_demo_79" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-09</field>
+            <field name="tanggal">2026-05-21</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1193000</field>
-            <field name="total_pos">1193000</field>
+            <field name="total_kas">593000</field>
+            <field name="total_pos">593000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_79'))]"/>
         </record>
         <record id="rekap_demo_80" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-10</field>
+            <field name="tanggal">2026-05-22</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1446000</field>
-            <field name="total_pos">1466000</field>
-            <field name="catatan">Ada selisih kas</field>
+            <field name="total_kas">1101000</field>
+            <field name="total_pos">1101000</field>
+            <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_80'))]"/>
         </record>
         <record id="rekap_demo_81" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-10</field>
+            <field name="tanggal">2026-05-22</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">770000</field>
-            <field name="total_pos">770000</field>
+            <field name="total_kas">1243000</field>
+            <field name="total_pos">1243000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_81'))]"/>
         </record>
         <record id="rekap_demo_82" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-11</field>
+            <field name="tanggal">2026-05-23</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1124000</field>
-            <field name="total_pos">1124000</field>
+            <field name="total_kas">1189000</field>
+            <field name="total_pos">1189000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_82'))]"/>
         </record>
         <record id="rekap_demo_83" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-11</field>
+            <field name="tanggal">2026-05-23</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">467000</field>
-            <field name="total_pos">467000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">898000</field>
+            <field name="total_pos">883000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_83'))]"/>
         </record>
         <record id="rekap_demo_84" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-12</field>
+            <field name="tanggal">2026-05-24</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1408000</field>
-            <field name="total_pos">1408000</field>
+            <field name="total_kas">1240000</field>
+            <field name="total_pos">1240000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_84'))]"/>
         </record>
         <record id="rekap_demo_85" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-12</field>
+            <field name="tanggal">2026-05-24</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1343000</field>
-            <field name="total_pos">1343000</field>
+            <field name="total_kas">1119000</field>
+            <field name="total_pos">1119000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_85'))]"/>
         </record>
         <record id="rekap_demo_86" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-13</field>
+            <field name="tanggal">2026-05-25</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1249000</field>
-            <field name="total_pos">1249000</field>
+            <field name="total_kas">320000</field>
+            <field name="total_pos">320000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_86'))]"/>
         </record>
         <record id="rekap_demo_87" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-13</field>
+            <field name="tanggal">2026-05-25</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">594000</field>
-            <field name="total_pos">614000</field>
+            <field name="total_kas">970000</field>
+            <field name="total_pos">955000</field>
             <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_87'))]"/>
         </record>
         <record id="rekap_demo_88" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-14</field>
+            <field name="tanggal">2026-05-26</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">773000</field>
-            <field name="total_pos">773000</field>
+            <field name="total_kas">745000</field>
+            <field name="total_pos">745000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_88'))]"/>
         </record>
         <record id="rekap_demo_89" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-14</field>
+            <field name="tanggal">2026-05-26</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">612000</field>
-            <field name="total_pos">612000</field>
+            <field name="total_kas">452000</field>
+            <field name="total_pos">452000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_89'))]"/>
         </record>
         <record id="rekap_demo_90" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-15</field>
+            <field name="tanggal">2026-05-27</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">382000</field>
-            <field name="total_pos">382000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">1476000</field>
+            <field name="total_pos">1496000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_90'))]"/>
         </record>
         <record id="rekap_demo_91" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-15</field>
+            <field name="tanggal">2026-05-27</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1496000</field>
-            <field name="total_pos">1496000</field>
+            <field name="total_kas">1330000</field>
+            <field name="total_pos">1330000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_91'))]"/>
         </record>
         <record id="rekap_demo_92" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-16</field>
+            <field name="tanggal">2026-05-28</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">698000</field>
-            <field name="total_pos">698000</field>
+            <field name="total_kas">642000</field>
+            <field name="total_pos">642000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_92'))]"/>
         </record>
         <record id="rekap_demo_93" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-16</field>
+            <field name="tanggal">2026-05-28</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">633000</field>
-            <field name="total_pos">633000</field>
+            <field name="total_kas">1420000</field>
+            <field name="total_pos">1420000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_93'))]"/>
         </record>
         <record id="rekap_demo_94" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-17</field>
+            <field name="tanggal">2026-05-29</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">723000</field>
-            <field name="total_pos">743000</field>
+            <field name="total_kas">921000</field>
+            <field name="total_pos">941000</field>
             <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_94'))]"/>
         </record>
         <record id="rekap_demo_95" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-17</field>
+            <field name="tanggal">2026-05-29</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">735000</field>
-            <field name="total_pos">735000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">684000</field>
+            <field name="total_pos">669000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_95'))]"/>
         </record>
         <record id="rekap_demo_96" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-18</field>
+            <field name="tanggal">2026-05-30</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">839000</field>
-            <field name="total_pos">839000</field>
+            <field name="total_kas">811000</field>
+            <field name="total_pos">811000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_96'))]"/>
         </record>
         <record id="rekap_demo_97" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-18</field>
+            <field name="tanggal">2026-05-30</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">488000</field>
-            <field name="total_pos">488000</field>
+            <field name="total_kas">1305000</field>
+            <field name="total_pos">1305000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_97'))]"/>
         </record>
         <record id="rekap_demo_98" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-19</field>
+            <field name="tanggal">2026-05-31</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">1252000</field>
-            <field name="total_pos">1237000</field>
+            <field name="total_kas">1275000</field>
+            <field name="total_pos">1295000</field>
             <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_98'))]"/>
         </record>
         <record id="rekap_demo_99" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-19</field>
+            <field name="tanggal">2026-05-31</field>
             <field name="divisi">kitchen</field>
-            <field name="total_kas">1224000</field>
-            <field name="total_pos">1224000</field>
+            <field name="total_kas">519000</field>
+            <field name="total_pos">519000</field>
             <field name="catatan">Sesuai.</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_99'))]"/>
         </record>
         <record id="rekap_demo_100" model="plumeria.rekap.keuangan">
-            <field name="tanggal">2026-02-20</field>
+            <field name="tanggal">2026-06-01</field>
             <field name="divisi">bar</field>
-            <field name="total_kas">673000</field>
-            <field name="total_pos">673000</field>
-            <field name="catatan">Sesuai.</field>
+            <field name="total_kas">803000</field>
+            <field name="total_pos">823000</field>
+            <field name="catatan">Ada selisih kas</field>
             <field name="laporan_ids" eval="[(4, ref('lap_demo_100'))]"/>
         </record>
     </data>

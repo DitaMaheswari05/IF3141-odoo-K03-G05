@@ -8,7 +8,7 @@ TOTAL_TRANSAKSI = 100
 TOTAL_LAPORAN = 100
 TOTAL_REKAP = 100
 
-START_DATE = date(2026, 1, 1)
+START_DATE = date.today() - timedelta(days=30)
 
 def write_xml(filename, content):
     with open(filename, 'w', encoding='utf-8') as f:
