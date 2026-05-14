@@ -7,6 +7,7 @@
     'author': 'Kelompok 05 Kelas K03',
     'depends': ['base', 'mail'],
     'data': [
+        'data/demo_users.xml',
         'security/groups.xml',
         'security/ir.model.access.csv',
         'data/sequence_data.xml',

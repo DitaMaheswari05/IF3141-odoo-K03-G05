@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Head of Operations User -->
+        <record id="user_ops_agus" model="res.users">
+            <field name="name">Agus Pratama</field>
+            <field name="login">agus.ops@demo.com</field>
+            <field name="password">ops123</field>
+            <field name="email">agus.ops@demo.com</field>
+            <field name="groups_id" eval="[
+                (4, ref('plumeria_cafe.group_head_operations')),
+                (4, ref('base.group_user'))
+            ]"/>
+        </record>
+
+        <!-- Finance User -->
+        <record id="user_finance_siti" model="res.users">
+            <field name="name">Siti Aminah</field>
+            <field name="login">siti.finance@demo.com</field>
+            <field name="password">finance123</field>
+            <field name="email">siti.finance@demo.com</field>
+            <field name="groups_id" eval="[
+                (4, ref('plumeria_cafe.group_finance')),
+                (4, ref('base.group_user'))
+            ]"/>
+        </record>
+
+        <!-- Operational Coordinator User -->
+        <record id="user_coordinator_rudi" model="res.users">
+            <field name="name">Rudi Hermawan</field>
+            <field name="login">rudi.coordinator@demo.com</field>
+            <field name="password">coordinator123</field>
+            <field name="email">rudi.coordinator@demo.com</field>
+            <field name="groups_id" eval="[
+                (4, ref('plumeria_cafe.group_operational_coordinator')),
+                (4, ref('base.group_user'))
+            ]"/>
+        </record>
+
+        <!-- Marketing User -->
+        <record id="user_marketing_dina" model="res.users">
+            <field name="name">Dina Mariana</field>
+            <field name="login">dina.marketing@demo.com</field>
+            <field name="password">marketing123</field>
+            <field name="email">dina.marketing@demo.com</field>
+            <field name="groups_id" eval="[
+                (4, ref('plumeria_cafe.group_marketing')),
+                (4, ref('base.group_user'))
+            ]"/>
+        </record>
+
+        <!-- Head Kitchen User -->
+        <record id="user_kitchen_juna" model="res.users">
+            <field name="name">Juna Rorimpandey</field>
+            <field name="login">juna.kitchen@demo.com</field>
+            <field name="password">kitchen123</field>
+            <field name="email">juna.kitchen@demo.com</field>
+            <field name="groups_id" eval="[
+                (4, ref('plumeria_cafe.group_head_kitchen')),
+                (4, ref('base.group_user'))
+            ]"/>
+        </record>
+
+        <!-- Head Bar User -->
+        <record id="user_bar_eko" model="res.users">
+            <field name="name">Eko Susilo</field>
+            <field name="login">eko.bar@demo.com</field>
+            <field name="password">bar123</field>
+            <field name="email">eko.bar@demo.com</field>
+            <field name="groups_id" eval="[
+                (4, ref('plumeria_cafe.group_head_bar')),
+                (4, ref('base.group_user'))
+            ]"/>
+        </record>
+
+    </data>
+</odoo>
