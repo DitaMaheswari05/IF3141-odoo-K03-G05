@@ -69,6 +69,7 @@ class RekapKeuangan(models.Model):
                 ('waktu_transaksi', '<', str(date_end) + ' 00:00:00'),
             ])
             rec.total_pos = sum(transaksi.mapped('total_transaksi'))
+            rec.action_tarik_laporan()
 
     def write(self, vals):
         result = super().write(vals)
@@ -80,3 +81,26 @@ class RekapKeuangan(models.Model):
                 if laporan_approved:
                     laporan_approved.write({'state': 'archived'})
         return result
+    
+    @api.onchange('tanggal', 'divisi')
+    def _onchange_tarik_laporan(self):
+        if self.tanggal and self.divisi:
+            laporan_terkait = self.env['plumeria.laporan.operasional'].search([
+                ('tanggal', '=', self.tanggal),
+                ('divisi', '=', self.divisi),
+            ])
+            self.laporan_ids = [(6, 0, laporan_terkait.ids)]
+
+    def action_tarik_laporan(self):
+        for rec in self:
+            if not rec.tanggal or not rec.divisi:
+                continue
+            laporan_terkait = self.env['plumeria.laporan.operasional'].search([
+                ('tanggal', '=', rec.tanggal),
+                ('divisi', '=', rec.divisi),
+                ('state', '=', 'approved')
+            ])
+            if laporan_terkait:
+                rec.laporan_ids = [(6, 0, laporan_terkait.ids)]
+            else:
+                pass

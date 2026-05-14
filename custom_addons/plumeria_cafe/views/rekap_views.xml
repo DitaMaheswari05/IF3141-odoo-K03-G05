@@ -10,8 +10,14 @@
         <field name="arch" type="xml">
             <form string="Rekap Keuangan Harian">
                 <header>
-                    <field name="status_rekonsiliasi" widget="statusbar"
-                        statusbar_visible="pending,cocok,selisih"/>
+                    <button name="action_tarik_laporan" 
+                        type="object" 
+                        string="Tarik Laporan Operasional" 
+                        class="btn-primary" 
+                        groups="plumeria_cafe.group_finance"/>
+                
+                <field name="status_rekonsiliasi" widget="statusbar"
+                    statusbar_visible="pending,cocok,selisih"/>
                 </header>
                 <sheet>
                     <div class="oe_title">

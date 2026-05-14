@@ -26,6 +26,10 @@
             <field name="category_id" ref="module_category_plumeria"/>
             <field name="comment">Input rekap keuangan harian, terima laporan tervalidasi</field>
         </record>
+        <record id="group_plumeria_finance" model="res.groups">
+            <field name="name">Finance</field>
+            <field name="comment">Grup akses untuk tim Finance (Rekap &amp; Rekonsiliasi)</field>
+        </record>
 
         <!-- JB-03: Operational Coordinator -->
         <record id="group_operational_coordinator" model="res.groups">
